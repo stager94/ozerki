@@ -1,0 +1,5 @@
+= title "Новости"
+
+-@news.each do |n|
+	= link_to(news_path(n)) do
+		= n.title

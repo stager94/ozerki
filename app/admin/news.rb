@@ -49,7 +49,7 @@ ActiveAdmin.register New do
 
 		f.inputs "SEO Information" do
 			f.input :snippet
-			# f.input :keywords
+			f.input :tag_list
 			f.input :author
 		end
 

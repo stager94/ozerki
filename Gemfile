@@ -8,6 +8,7 @@ gem 'russian', '~> 0.6.0'
 gem 'activeadmin'
 gem 'meta_search',    '>= 1.1.0.pre'
 gem 'awesome_nested_set'
+gem 'acts-as-taggable-on'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
