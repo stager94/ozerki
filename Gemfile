@@ -9,6 +9,8 @@ gem 'activeadmin'
 gem 'meta_search',    '>= 1.1.0.pre'
 gem 'awesome_nested_set'
 gem 'acts-as-taggable-on'
+gem 'ckeditor'
+gem 'paperclip'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

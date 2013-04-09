@@ -37,12 +37,12 @@ ActiveAdmin.register New do
 			f.input :title
 			f.input :slug
 
-			f.input :category_new_id, :as => 'select', :collection => Hash[Category::New.main.map{|b| 
+			f.input :category_new_id, as: 'select', collection: Hash[Category::New.main.map{|b| 
 	      	@tabs = '----'*b.level
 	      	[@tabs+b.title, b.id]}]
 
 			f.input :precontent
-			f.input :content
+			f.input :content, :input_html => {:class => "ckeditor"}, label: false
 			f.input :display
 			f.input :root
 		end

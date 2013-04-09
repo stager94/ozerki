@@ -149,4 +149,6 @@ ActiveAdmin.setup do |config|
   #
   # Set the CSV builder options (default is {})
   # config.csv_options = {}
+  config.register_javascript 'ckeditor/ckeditor.js' 
+  config.register_javascript 'ckeditor/init.js'
 end
