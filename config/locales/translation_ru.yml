@@ -2,6 +2,9 @@ ru:
   activerecord:
     models:
       configuration: 'Настройки сайта'
+      new: 'Новости'
+      category:
+        new: 'Категория новостей'
 
     attributes:
       configuration:
@@ -9,3 +12,19 @@ ru:
         title_separator: 'Разделитель title'
         created_at: 'Создано'
         updated_at: 'Обновлено'
+      new:
+        title: 'Название'
+        slug: 'Алиас'
+        snippet: 'META description'
+        author: 'Автор'
+        root: 'На главной?'
+        display: 'Включена?'
+        content: 'Полное содержание'
+        precontent: 'Краткое содержание'
+        category_new_id: 'Категория'
+      category_new:
+        title: 'Название'
+        slug: 'Алиас'
+        snippet: 'META description'
+        keywords: 'Ключевые слова'
+        display: 'Включена'

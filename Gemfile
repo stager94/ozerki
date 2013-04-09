@@ -6,7 +6,8 @@ gem 'paperclip'
 gem 'rails-i18n'
 gem 'russian', '~> 0.6.0'
 gem 'activeadmin'
-gem "meta_search",    '>= 1.1.0.pre'
+gem 'meta_search',    '>= 1.1.0.pre'
+gem 'awesome_nested_set'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -16,6 +17,7 @@ end
 
 group :development do
 	gem 'sqlite3'
+	gem 'pry'
 end
 
 gem 'jquery-rails'
