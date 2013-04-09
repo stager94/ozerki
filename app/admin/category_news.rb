@@ -5,6 +5,9 @@ ActiveAdmin.register Category::New do
 		column :title
 		column :parent_id
 		column :display
+		column "asdasd" do |f|
+			link_to(admin_category_news_path(f), :method => :delete, :confirm => "Sure? A bunny will die")
+		end
 		default_actions
 	end
 
