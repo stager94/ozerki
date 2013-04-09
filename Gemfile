@@ -5,6 +5,8 @@ gem 'haml'
 gem 'paperclip'
 gem 'rails-i18n'
 gem 'russian', '~> 0.6.0'
+gem 'activeadmin'
+gem "meta_search",    '>= 1.1.0.pre'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
