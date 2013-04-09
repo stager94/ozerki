@@ -1,2 +1,6 @@
 = title "Главная страница"
-This is index page of SKMZ Hostel WEB-site!
+
+/ News displaying
+- @news.each do |n|
+	%h2= n.title
+	%div= simple_format n.content

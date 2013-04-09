@@ -8,7 +8,7 @@ ActiveAdmin.register New do
 		end
 
 		column :category_new_id do |f|
-			link_to "#{f.category.title}", admin_category_news_path(f.category)
+			link_to "#{f.category.title}", admin_category_news_path(f.category) unless !f.category_new_id
 		end
 
 		column :display do |f|

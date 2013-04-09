@@ -10,7 +10,8 @@ class New < ActiveRecord::Base
   validates_presence_of :title, :content
   validates_uniqueness_of :slug
 
-  scope :displayed, where('display != 0 AND root != 1').order('created_at DESC')
+  scope :displayed, where('display = ?', true).where('root = ?', false).order('created_at DESC')
+  scope :root, where('root = ?', true).where('root = ?', true)
 
   def to_param
     "#{id} #{slug}".parameterize
