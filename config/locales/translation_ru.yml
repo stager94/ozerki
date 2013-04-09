@@ -3,8 +3,8 @@ ru:
     models:
       configuration: 'Настройки сайта'
       new: 'Новости'
-      category:
-        new: 'Категория новостей'
+      category_new: 'Категория новостей'
+      admin_user: 'Пользователи'
 
     attributes:
       configuration:

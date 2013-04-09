@@ -1,5 +1,5 @@
-class Category::New < ActiveRecord::Base
-	has_many :new
+class CategoryNew < ActiveRecord::Base
+	has_many :new, :dependent => :destroy
 	before_create :create_alias
 	before_save :create_alias
 

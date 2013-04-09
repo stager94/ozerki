@@ -37,7 +37,7 @@ ActiveAdmin.register New do
 			f.input :title
 			f.input :slug
 
-			f.input :category_new_id, as: 'select', collection: Hash[Category::New.main.map{|b| 
+			f.input :category_new_id, as: 'select', collection: Hash[CategoryNew.main.map{|b| 
 	      	@tabs = '----'*b.level
 	      	[@tabs+b.title, b.id]}]
 

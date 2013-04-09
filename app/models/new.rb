@@ -1,5 +1,5 @@
 class New < ActiveRecord::Base
-  belongs_to :new, class_name: 'Category::New'
+  belongs_to :category_new
   acts_as_taggable
 
 	before_create :create_alias
@@ -18,7 +18,7 @@ class New < ActiveRecord::Base
   end
 
   def category
-    Category::New.find(self.category_new_id)
+    CategoryNew.find(self.category_new_id)
   end
 
   private
