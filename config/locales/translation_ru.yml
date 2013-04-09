@@ -1,0 +1,11 @@
+ru:
+  activerecord:
+    models:
+      configuration: 'Настройки сайта'
+
+    attributes:
+      configuration:
+        site_title: 'Название сайта'
+        title_separator: 'Разделитель title'
+        created_at: 'Создано'
+        updated_at: 'Обновлено'
