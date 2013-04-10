@@ -20,5 +20,5 @@ ActiveAdmin.register CategoryNew do
   	  	f.input :display
   	end
   	f.buttons
-  end  
+  end    
 end
