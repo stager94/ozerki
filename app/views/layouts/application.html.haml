@@ -16,6 +16,11 @@
     .container
       .row
         .span11
+          = image_tag 'template/logo.png', class: 'mt40'
           = render 'shared/slider'
           = render 'shared/menu'
+          - unless !@h1
+            %h1=@h1
+          = render_breadcrumbs
+          
           = yield

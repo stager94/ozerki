@@ -641,7 +641,7 @@ h1 {
   font-size: 38.5px;
 }
 h2 {
-  font-size: 31.5px;
+  font-size: 20px;
 }
 h3 {
   font-size: 24.5px;
@@ -3827,7 +3827,7 @@ input[type="submit"].btn.btn-mini {
 }
 .navbar-inverse .nav > li > a:focus,
 .navbar-inverse .nav > li > a:hover {
-  background-color: transparent;
+  background-color: #648a22;
   color: #ffffff;
 }
 .navbar-inverse .nav .active > a,
@@ -5315,6 +5315,7 @@ button.close {
   body {
     padding-left: 20px;
     padding-right: 20px;
+    background: none !important;
   }
   .navbar-fixed-top,
   .navbar-fixed-bottom,

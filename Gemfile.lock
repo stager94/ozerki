@@ -51,6 +51,7 @@ GEM
     bourbon (3.0.1)
       sass (>= 3.2.0)
       thor
+    breadcrumbs_on_rails (2.3.0)
     builder (3.0.4)
     ckeditor (4.0.4)
       mime-types
@@ -196,6 +197,7 @@ DEPENDENCIES
   activeadmin
   acts-as-taggable-on
   awesome_nested_set
+  breadcrumbs_on_rails
   ckeditor
   coffee-rails (~> 3.2.1)
   haml
