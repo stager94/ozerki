@@ -239,7 +239,7 @@ a:focus {
   border-radius: 500px;
 }
 .row {
-  margin-left: -20px;
+  /*margin-left: -20px;*/
   *zoom: 1;
 }
 .row:before,
@@ -254,7 +254,7 @@ a:focus {
 [class*="span"] {
   float: left;
   min-height: 1px;
-  margin-left: 20px;
+  /*margin-left: 20px;*/
 }
 .container,
 .navbar-static-top .container,
@@ -266,7 +266,7 @@ a:focus {
   width: 940px;
 }
 .span11 {
-  width: 860px;
+  /*width: 860px;*/
 }
 .span10 {
   width: 780px;
@@ -3449,7 +3449,13 @@ input[type="submit"].btn.btn-mini {
   padding-left: 20px;
   padding-right: 20px;
   background-color: #fafafa;
-  background: url(template/menu.png) repeat-x top left;
+  background-image: -moz-linear-gradient(top, #ffffff, #f2f2f2);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#f2f2f2));
+  background-image: -webkit-linear-gradient(top, #ffffff, #f2f2f2);
+  background-image: -o-linear-gradient(top, #ffffff, #f2f2f2);
+  background-image: linear-gradient(to bottom, #ffffff, #f2f2f2);
+  background-repeat: repeat-x;
+  /*background: url(template/menu.png) repeat-x top left;*/
   *zoom: 1;
 }
 .navbar-inner:before,
@@ -3798,18 +3804,13 @@ input[type="submit"].btn.btn-mini {
 }
 .navbar-inverse .navbar-inner {
   background-color: #1b1b1b;
-  background-image: -moz-linear-gradient(top, #222222, #111111);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#222222), to(#111111));
-  background-image: -webkit-linear-gradient(top, #222222, #111111);
-  background-image: -o-linear-gradient(top, #222222, #111111);
-  background-image: linear-gradient(to bottom, #222222, #111111);
-  background-repeat: repeat-x;
+  background: url(template/menu.png) repeat top left;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff222222', endColorstr='#ff111111', GradientType=0);
   border-color: #252525;
 }
 .navbar-inverse .brand,
 .navbar-inverse .nav > li > a {
-  color: #999999;
+  color: #fff;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 }
 .navbar-inverse .brand:hover,
@@ -3833,7 +3834,7 @@ input[type="submit"].btn.btn-mini {
 .navbar-inverse .nav .active > a:hover,
 .navbar-inverse .nav .active > a:focus {
   color: #ffffff;
-  background-color: #111111;
+  background-color: #648a22;
 }
 .navbar-inverse .navbar-link {
   color: #999999;
@@ -3849,7 +3850,7 @@ input[type="submit"].btn.btn-mini {
 .navbar-inverse .nav li.dropdown.open > .dropdown-toggle,
 .navbar-inverse .nav li.dropdown.active > .dropdown-toggle,
 .navbar-inverse .nav li.dropdown.open.active > .dropdown-toggle {
-  background-color: #111111;
+  background-color: #648a22;
   color: #ffffff;
 }
 .navbar-inverse .nav li.dropdown > a:hover .caret,
@@ -3904,13 +3905,14 @@ input[type="submit"].btn.btn-mini {
   color: #ffffff;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
   background-color: #0e0e0e;
-  background-image: -moz-linear-gradient(top, #151515, #040404);
+  /*background-image: -moz-linear-gradient(top, #151515, #040404);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#151515), to(#040404));
   background-image: -webkit-linear-gradient(top, #151515, #040404);
   background-image: -o-linear-gradient(top, #151515, #040404);
   background-image: linear-gradient(to bottom, #151515, #040404);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff151515', endColorstr='#ff040404', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff151515', endColorstr='#ff040404', GradientType=0);*/
+  background: url(template/menu.png) repeat top left;
   border-color: #040404 #040404 #000000;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   *background-color: #040404;
@@ -3925,7 +3927,7 @@ input[type="submit"].btn.btn-mini {
 .navbar-inverse .btn-navbar.disabled,
 .navbar-inverse .btn-navbar[disabled] {
   color: #ffffff;
-  background-color: #040404;
+  background: #648a22;
   *background-color: #000000;
 }
 .navbar-inverse .btn-navbar:active,
@@ -5271,6 +5273,18 @@ button.close {
   .hidden-tablet {
     display: none !important;
   }
+  .navbar-inverse .navbar-inner {
+    background-color: #1b1b1b;
+    /*background-image: -moz-linear-gradient(top, #222222, #111111);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#222222), to(#111111));
+    background-image: -webkit-linear-gradient(top, #222222, #111111);
+    background-image: -o-linear-gradient(top, #222222, #111111);
+    background-image: linear-gradient(to bottom, #222222, #111111);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff222222', endColorstr='#ff111111', GradientType=0);*/
+    background: url(template/menu.png) repeat top left;
+    border-color: #252525;
+  }
 }
 @media (max-width: 767px) {
   .hidden-desktop {
@@ -5474,7 +5488,7 @@ button.close {
     width: 724px;
   }
   .span11 {
-    width: 662px;
+    /*width: 662px;*/
   }
   .span10 {
     width: 600px;
@@ -5784,6 +5798,15 @@ button.close {
   .uneditable-input.span1 {
     width: 28px;
   }
+}
+@media (min-width: 1024px) {
+  .navbar-inverse .navbar-inner{
+    background: url(template/menu.png) repeat-x top left !important;
+  }
+  .navbar-inverse .brand, .navbar-inverse .nav > li > a{
+    color: #fff;
+  }
+
 }
 @media (min-width: 1200px) {
   .row {
@@ -6138,6 +6161,14 @@ button.close {
   body {
     padding-top: 0;
   }
+  .navbar-inverse .nav .active > a, .navbar-inverse .nav .active > a:hover, .navbar-inverse .nav .active > a:focus {
+    color: #ffffff;
+    background-color: #648a22;
+  }
+  .navbar-inverse .nav > li > a:focus, .navbar-inverse .nav > li > a:hover {
+    background-color: transparent;
+    color: #ffffff;
+  }
   .navbar-fixed-top,
   .navbar-fixed-bottom {
     position: static;
@@ -6208,13 +6239,13 @@ button.close {
   }
   .navbar-inverse .nav-collapse .nav > li > a,
   .navbar-inverse .nav-collapse .dropdown-menu a {
-    color: #999999;
+    color: #fff;
   }
   .navbar-inverse .nav-collapse .nav > li > a:hover,
   .navbar-inverse .nav-collapse .nav > li > a:focus,
   .navbar-inverse .nav-collapse .dropdown-menu a:hover,
   .navbar-inverse .nav-collapse .dropdown-menu a:focus {
-    background-color: #111111;
+    background-color: #648a22;
   }
   .nav-collapse.in .btn-group {
     margin-top: 5px;

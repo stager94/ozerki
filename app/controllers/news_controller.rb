@@ -1,5 +1,6 @@
 class NewsController < ApplicationController
 	before_filter :find_new, only: [:show]
+	before_filter :settings
 	def index
 		@news = New.displayed
 	end
@@ -13,6 +14,10 @@ class NewsController < ApplicationController
 	protected
 	def find_new
 		@new = New.find(params[:id])
+	end
+
+	def settings
+		@active_menu = 'news'
 	end
 
 end
