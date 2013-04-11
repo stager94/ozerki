@@ -12,6 +12,10 @@ gem 'acts-as-taggable-on'
 gem 'ckeditor'
 gem 'paperclip'
 
+gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
+gem "twitter-bootstrap-rails"
+gem 'therubyracer'
+
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
