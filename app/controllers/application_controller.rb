@@ -4,8 +4,8 @@ class ApplicationController < ActionController::Base
   add_breadcrumb I18n.t('pages.home'), :root_path
 
   def index
-  	@news = New.root
-  	@active_menu = 'home'
+  	@news        = New.root
+    @h1          = I18n.t 'pages.home' 
   end
 
   private

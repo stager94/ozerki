@@ -12,6 +12,7 @@ class NewsController < ApplicationController
 		@meta_description  = @new.snippet
 		@meta_keywords     = @new.tag_list
 		@meta_author       = @new.author
+		
 		add_breadcrumb @new.title, news_path(@new)
 	end
 
