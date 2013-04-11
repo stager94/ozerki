@@ -22,6 +22,9 @@
           - unless !@h1
             %h1=@h1
           = render_breadcrumbs
-          
-          = yield
+          .span7.none.w724
+            = yield
+          .span3
+            .block-title Новости
+            Блок новостей
     = render 'shared/footer'
