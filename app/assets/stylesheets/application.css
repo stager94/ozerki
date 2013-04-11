@@ -10,5 +10,7 @@
  *
  *= require_self
  *= require style
+ *= require bootstrap
+ *= require margins
  *= require_tree .
  */
