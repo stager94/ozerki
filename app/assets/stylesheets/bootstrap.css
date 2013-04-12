@@ -266,7 +266,7 @@ a:focus {
   width: 940px;
 }
 .span11 {
-  /*width: 860px;*/
+  width: 940px;
 }
 .span10 {
   width: 780px;
@@ -2428,7 +2428,7 @@ input[type="submit"].btn.btn-mini {
   *margin-right: .3em;
   line-height: 14px;
   vertical-align: text-top;
-  background-image: url("../img/glyphicons-halflings.png");
+  background-image: url(glyphicons-halflings.png);
   background-position: 14px 14px;
   background-repeat: no-repeat;
   margin-top: 1px;
@@ -5462,7 +5462,7 @@ button.close {
 }
 @media (min-width: 768px) and (max-width: 979px) {
   .row {
-    margin-left: -20px;
+    /*margin-left: -20px;*/
     *zoom: 1;
   }
   .row:before,
@@ -5489,7 +5489,7 @@ button.close {
     width: 724px;
   }
   .span11 {
-    /*width: 662px;*/
+    width: 724px;
   }
   .span10 {
     width: 600px;
@@ -5570,7 +5570,19 @@ button.close {
   .row-fluid:after {
     clear: both;
   }
+  [class*="span"],
+  .uneditable-input[class*="span"],
   .row-fluid [class*="span"] {
+    float: none;
+    display: block;
+    width: 100%;
+    margin-left: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+/*  .row-fluid [class*="span"] {
+    float: none;
     display: block;
     width: 100%;
     min-height: 30px;
@@ -5580,7 +5592,7 @@ button.close {
     float: left;
     margin-left: 2.7624309392265194%;
     *margin-left: 2.709239449864817%;
-  }
+  }*/
   .row-fluid [class*="span"]:first-child {
     margin-left: 0;
   }

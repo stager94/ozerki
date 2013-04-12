@@ -1,0 +1,6 @@
+-news.each do |_new|
+	= link_to (news_path(_new)), class: "news-link" do 
+		= _new.title
+
+	.news-date= Russian::strftime(_new.created_at, "%d %B %Y")
+	.news-description= truncate _new.snippet, length: 100, separator: ' '
