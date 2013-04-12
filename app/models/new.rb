@@ -7,7 +7,7 @@ class New < ActiveRecord::Base
 	
   attr_accessible :slug, :author, :content, :display, :root, :snippet, :title, :precontent, :category_new_id, :tag_list
 
-  validates_presence_of :title, :content
+  validates_presence_of :title, :content, :snippet, :tag_list
   validates_uniqueness_of :slug
 
   scope :displayed, where('display = ?', true).where('root = ?', false).order('created_at DESC')

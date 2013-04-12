@@ -33,21 +33,28 @@ ActiveAdmin.register New do
 
 
 	form do |f|
-		f.inputs "General Information" do 
+		f.inputs I18n.t 'admin.news.general' do 
 			f.input :title
 			f.input :slug
 
 			f.input :category_new_id, as: 'select', collection: Hash[CategoryNew.main.map{|b| 
 	      	@tabs = '----'*b.level
 	      	[@tabs+b.title, b.id]}]
+	  end
+	  f.inputs I18n.t 'admin.news.short' do
+			f.input :precontent, :input_html => {:class => "ckeditor"}, label: false
+		end
 
-			f.input :precontent
+		f.inputs I18n.t 'admin.news.full' do
 			f.input :content, :input_html => {:class => "ckeditor"}, label: false
+		end
+
+		f.inputs I18n.t 'admin.news.additional' do
 			f.input :display
 			f.input :root
 		end
 
-		f.inputs "SEO Information" do
+		f.inputs I18n.t 'admin.news.seo' do
 			f.input :snippet
 			f.input :tag_list
 			f.input :author

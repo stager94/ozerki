@@ -22,6 +22,9 @@ ru:
         content: 'Полное содержание'
         precontent: 'Краткое содержание'
         category_new_id: 'Категория'
+        tag_list: 'Основные теги'
+        created_at: 'Создано'
+        updated_at: 'Обновлено'
       category_new:
         title: 'Название'
         slug: 'Алиас'
