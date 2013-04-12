@@ -1,10 +1,11 @@
 ru:
   activerecord:
     models:
-      configuration: 'Настройки сайта'
+      configure: 'Настройки сайта'
       new: 'Новости'
-      category_new: 'Категория новостей'
+      category_new: 'Категории новостей'
       admin_user: 'Пользователи'
+      page: 'Статические страницы'
 
     attributes:
       configure:
@@ -33,3 +34,12 @@ ru:
         snippet: 'META description'
         keywords: 'Ключевые слова'
         display: 'Включена'
+      page:
+        title: 'Название'
+        slug: 'Алиас'
+        created_at: 'Создано'
+        updated_at: 'Обновлено'
+        keywords: 'Ключевые слова'
+        snippet: 'META description'
+        text: 'Текст'
+        author: 'Автор'

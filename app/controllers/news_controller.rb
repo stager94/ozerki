@@ -5,6 +5,9 @@ class NewsController < ApplicationController
 	def index
 		@news   = New.displayed
 		@h1			= I18n.t 'pages.news'
+		
+		@meta_description  = @category.snippet
+		@meta_keywords     = @category.keywords
 	end
 
 	def show
@@ -13,16 +16,18 @@ class NewsController < ApplicationController
 		@meta_author       = @new.author
 		@h1    			 			 = @new.title
 		
-		add_breadcrumb @new.title, news_path(@new)
+		add_breadcrumb @new.title, category_news_news_index_path(@category_id, @new)
 	end
 
-	protected
+	private
 	def find_new
 		@new = New.find(params[:id])
 	end
 
 	def settings
-		add_breadcrumb I18n.t('pages.news'), :news_index_path
+		@category_id = params[:category_news_id]
+		@category = CategoryNew.find(@category_id)
+		add_breadcrumb I18n.t('pages.news'), category_news_news_index_path(params[:category_news_id])
 		@active_menu = 'news'
 	end
 end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130412174955) do
+ActiveRecord::Schema.define(:version => 20130412190049) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -92,6 +92,8 @@ ActiveRecord::Schema.define(:version => 20130412174955) do
     t.string   "module_news_per_page"
     t.datetime "created_at",           :null => false
     t.datetime "updated_at",           :null => false
+    t.string   "site_keywords"
+    t.text     "site_snippet"
   end
 
   create_table "news", :force => true do |t|
@@ -107,6 +109,17 @@ ActiveRecord::Schema.define(:version => 20130412174955) do
     t.text     "precontent"
     t.string   "slug"
     t.string   "tag_list"
+  end
+
+  create_table "pages", :force => true do |t|
+    t.string   "title"
+    t.text     "text"
+    t.text     "snippet"
+    t.string   "keywords"
+    t.string   "author"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.string   "slug"
   end
 
   create_table "taggings", :force => true do |t|

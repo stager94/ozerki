@@ -1,7 +1,7 @@
 = title "Новости"
 
 -@news.each do |n|
-	= link_to(news_path(n)) do
+	= link_to(category_news_news_path(n.category, n)) do
 		%h2
 			%small= Russian::strftime(n.created_at, "%d %b %Y")
 			= n.title

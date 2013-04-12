@@ -1,3 +1,5 @@
+- uslugi = Page.find(1)
+- news   = CategoryNew.find(1)
 .navbar.navbar-inverse
   .navbar-inner
     .container
@@ -8,12 +10,12 @@
       %a.brand{:href => "#"} &nbsp
       .nav-collapse.navbar-responsive-collapse.in.collapse{:style => "height: auto;"}
         %ul.nav
-          %li{class: @active_menu == 'home' ? "active" : ""}
+          %li{class: params[:controller] == 'application' && params[:action] == 'index' ? "active" : ""}
             = link_to "Главная", root_path
-          %li{class: @active_menu == 'news' ? "active" : ""}
-            = link_to "Новости", news_index_path
-          %li{class: @active_menu == 'home' ? "" : ""}
-            = link_to "Услуги", root_path
+          %li{class: params[:controller] == 'news' ? "active" : ""}
+            = link_to "Новости", category_news_news_index_path(news)
+          %li{class: params[:controller] == 'pages' && params[:id] == uslugi.to_param  ? "active" : ""}
+            = link_to "Услуги", page_path(uslugi)
           %li{class: @active_menu == 'home' ? "" : ""}
             = link_to "Туры", root_path            
           %li{class: @active_menu == 'home' ? "" : ""}

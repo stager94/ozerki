@@ -1,0 +1,2 @@
+class CategoryNewsController < ApplicationController
+end

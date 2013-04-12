@@ -3,8 +3,10 @@ class ApplicationController < ActionController::Base
   before_filter :private_settings, :public_settings
 
   def index
-  	@news        = New.root
-    @h1          = I18n.t 'pages.home'
+  	@news              = New.root
+    @h1                = I18n.t 'pages.home'
+    @meta_description  = @site_snippet
+    @meta_keywords     = @site_keywords
   end
 
   public
@@ -16,6 +18,8 @@ class ApplicationController < ActionController::Base
 
   private
   def private_settings
-  	@active_menu = 'home'
+  	@active_menu   = 'home'
+    @site_snippet  = Configure.first[:site_snippet]
+    @site_keywords = Configure.first[:site_keywords]
   end
 end
