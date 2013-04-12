@@ -1,4 +1,4 @@
-= title "Новости"
+= title @category.title
 
 -@news.each do |n|
 	= link_to(category_news_news_path(n.category, n)) do

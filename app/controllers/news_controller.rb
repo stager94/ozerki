@@ -4,7 +4,7 @@ class NewsController < ApplicationController
 
 	def index
 		@news   = New.displayed.where(category_new_id: @category_id)
-		@h1			= I18n.t 'pages.news'
+		@h1			= @category.title
 		
 		@meta_description  = @category.snippet
 		@meta_keywords     = @category.keywords

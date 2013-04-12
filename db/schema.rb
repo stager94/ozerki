@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130412190049) do
+ActiveRecord::Schema.define(:version => 20130412205535) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -109,6 +109,7 @@ ActiveRecord::Schema.define(:version => 20130412190049) do
     t.text     "precontent"
     t.string   "slug"
     t.string   "tag_list"
+    t.integer  "position",                       :default => 0
   end
 
   create_table "pages", :force => true do |t|

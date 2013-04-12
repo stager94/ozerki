@@ -1,4 +1,14 @@
 ActiveAdmin.register Page do
+	index do
+		selectable_column
+		column :title
+		column :slug
+		column :author
+		column :created_at
+		column :updated_at
+		default_actions
+	end
+
 	form do |f|
 		f.inputs I18n.t 'admin.general' do
 			f.input :title

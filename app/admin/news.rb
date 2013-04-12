@@ -1,5 +1,8 @@
 ActiveAdmin.register New do
 
+	scope I18n.t('admin.scope.news'), :admin_news
+	scope I18n.t('admin.scope.root'), :admin_root
+
 	index do
 		selectable_column
 		column :id
@@ -27,6 +30,7 @@ ActiveAdmin.register New do
   		end
 		end
 
+		column :position
 		column :author
 		default_actions
 	end
@@ -52,6 +56,7 @@ ActiveAdmin.register New do
 		f.inputs I18n.t 'admin.additional' do
 			f.input :display
 			f.input :root
+			f.input :position
 		end
 
 		f.inputs I18n.t 'admin.seo' do

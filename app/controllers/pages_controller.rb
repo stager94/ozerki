@@ -2,8 +2,7 @@ class PagesController < ApplicationController
 	before_filter :find_page, :settings
 
 	def show
-		@h1 = @page.title
-		add_breadcrumb @page.title, page_path(@page)	
+		
 	end
 
 	public
@@ -12,6 +11,10 @@ class PagesController < ApplicationController
 	end
 
 	def settings
-		@h1 = ''	
+		@h1 = @page.title
+		add_breadcrumb @page.title, page_path(@page)
+
+		@meta_description = @page.snippet
+		@meta_keywords = @page.keywords
 	end
 end

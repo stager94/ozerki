@@ -28,6 +28,7 @@ ru:
         tag_list: 'Основные теги'
         created_at: 'Создано'
         updated_at: 'Обновлено'
+        position: 'Позиция'
       category_new:
         title: 'Название'
         slug: 'Алиас'
