@@ -33,7 +33,7 @@ ActiveAdmin.register New do
 
 
 	form do |f|
-		f.inputs I18n.t 'admin.news.general' do 
+		f.inputs I18n.t 'admin.general' do 
 			f.input :title
 			f.input :slug
 
@@ -41,20 +41,20 @@ ActiveAdmin.register New do
 	      	@tabs = '----'*b.level
 	      	[@tabs+b.title, b.id]}]
 	  end
-	  f.inputs I18n.t 'admin.news.short' do
+	  f.inputs I18n.t 'admin.short' do
 			f.input :precontent, :input_html => {:class => "ckeditor"}, label: false
 		end
 
-		f.inputs I18n.t 'admin.news.full' do
+		f.inputs I18n.t 'admin.full' do
 			f.input :content, :input_html => {:class => "ckeditor"}, label: false
 		end
 
-		f.inputs I18n.t 'admin.news.additional' do
+		f.inputs I18n.t 'admin.additional' do
 			f.input :display
 			f.input :root
 		end
 
-		f.inputs I18n.t 'admin.news.seo' do
+		f.inputs I18n.t 'admin.seo' do
 			f.input :snippet
 			f.input :tag_list
 			f.input :author
