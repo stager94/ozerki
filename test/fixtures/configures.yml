@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  site_title: MyString
+  title_separator: MyString
+  news_per_page: MyString
+  module_news_per_page: MyString
+
+two:
+  site_title: MyString
+  title_separator: MyString
+  news_per_page: MyString
+  module_news_per_page: MyString

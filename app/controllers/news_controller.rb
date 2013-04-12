@@ -1,11 +1,10 @@
 class NewsController < ApplicationController
-	before_filter :set_locale
-
 	before_filter :find_new, only: [:show]
 	before_filter :settings
 
 	def index
 		@news   = New.displayed
+		@h1			= I18n.t 'pages.news'
 	end
 
 	def show
@@ -25,9 +24,5 @@ class NewsController < ApplicationController
 	def settings
 		add_breadcrumb I18n.t('pages.news'), :news_index_path
 		@active_menu = 'news'
-	end
-
-	def set_locale
-	  I18n.locale = 'ru'
 	end
 end

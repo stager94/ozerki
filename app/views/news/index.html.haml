@@ -2,5 +2,7 @@
 
 -@news.each do |n|
 	= link_to(news_path(n)) do
-		%h2= n.title
-	%div=n.precontent
+		%h2
+			%small= Russian::strftime(n.created_at, "%d %b %Y")
+			= n.title
+	%div= raw n.precontent

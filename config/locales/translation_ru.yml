@@ -7,11 +7,13 @@ ru:
       admin_user: 'Пользователи'
 
     attributes:
-      configuration:
+      configure:
         site_title: 'Название сайта'
         title_separator: 'Разделитель title'
         created_at: 'Создано'
         updated_at: 'Обновлено'
+        news_per_page: 'Кол-во новостей/страницу'
+        module_news_per_page: 'Модуль новостей: кол-во на страницу'
       new:
         title: 'Название'
         slug: 'Алиас'

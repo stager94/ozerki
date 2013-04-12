@@ -6,7 +6,7 @@ module ApplicationHelper
 	end
 
 	def news_module
-		news = New.displayed.limit(5)
+		news = New.displayed.limit(@module_news_per_page)
 		render 'shared/modules/news', news: news
 	end
 end
