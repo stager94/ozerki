@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
 
   public
   def public_settings
-    add_breadcrumb I18n.t('pages.home', locale: :ru), :root_path    
+    add_breadcrumb I18n.t('pages.home', locale: :ru), :root_path
   end
 
   private
