@@ -3961,14 +3961,14 @@ input[type="submit"].btn.btn-mini {
 .pagination {
   margin: 20px 0;
 }
-.pagination ul {
-  display: inline-block;
-  *display: inline;
-  /* IE7 inline-block hack */
+.pagination {
+  text-align: center;
+  display: table;
+  margin: 30px auto 10px auto;
 
   *zoom: 1;
-  margin-left: 0;
-  margin-bottom: 0;
+  /*margin-left: 0;*/
+  /*margin-bottom: 0;*/
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
@@ -3979,23 +3979,25 @@ input[type="submit"].btn.btn-mini {
 .pagination ul > li {
   display: inline;
 }
-.pagination ul > li > a,
-.pagination ul > li > span {
+.pagination span > a,
+.pagination span.current,
+.pagination span.gap{
   float: left;
-  padding: 4px 12px;
+  padding: 7px 15px;
   line-height: 20px;
   text-decoration: none;
   background-color: #ffffff;
-  border: 1px solid #dddddd;
+  border: 1px solid white;
   border-left-width: 0;
+  background: #eee;
 }
-.pagination ul > li > a:hover,
-.pagination ul > li > a:focus,
-.pagination ul > .active > a,
-.pagination ul > .active > span {
+.pagination span > a:hover,
+.pagination span > a:focus,
+.pagination span.active > a,
+.pagination span.active > span {
   background-color: #f5f5f5;
 }
-.pagination ul > .active > a,
+.pagination span.active > a,
 .pagination ul > .active > span {
   color: #999999;
   cursor: default;
@@ -4008,24 +4010,24 @@ input[type="submit"].btn.btn-mini {
   background-color: transparent;
   cursor: default;
 }
-.pagination ul > li:first-child > a,
-.pagination ul > li:first-child > span {
-  border-left-width: 1px;
+.pagination span:first-child > a,
+.pagination span:first-child > span {
+  /*border-left-width: 1px;
   -webkit-border-top-left-radius: 4px;
   -moz-border-radius-topleft: 4px;
   border-top-left-radius: 4px;
   -webkit-border-bottom-left-radius: 4px;
   -moz-border-radius-bottomleft: 4px;
-  border-bottom-left-radius: 4px;
+  border-bottom-left-radius: 4px;*/
 }
-.pagination ul > li:last-child > a,
-.pagination ul > li:last-child > span {
-  -webkit-border-top-right-radius: 4px;
+.pagination span:last-child > a,
+.pagination span:last-child > span {
+/*  -webkit-border-top-right-radius: 4px;
   -moz-border-radius-topright: 4px;
   border-top-right-radius: 4px;
   -webkit-border-bottom-right-radius: 4px;
   -moz-border-radius-bottomright: 4px;
-  border-bottom-right-radius: 4px;
+  border-bottom-right-radius: 4px;*/
 }
 .pagination-centered {
   text-align: center;

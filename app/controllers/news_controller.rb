@@ -3,7 +3,7 @@ class NewsController < ApplicationController
 	before_filter :settings
 
 	def index
-		@news   = New.displayed.where(category_new_id: @category_id)
+		@news   = New.displayed.where(category_new_id: @category_id).page(params[:page]).per(@news_per_page)
 		@h1			= @category.title
 		
 		@meta_description  = @category.snippet

@@ -46,7 +46,7 @@ $(document).ready(function(){
         // [boolean] show/hide stop and play buttons
       pauseOnHover: true,
         // [boolean] pause a playing slideshow on hover
-      restartDelay: 2500
+      restartDelay: 0
         // [number] restart delay on inactive slideshow
     }
   });

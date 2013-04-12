@@ -6,3 +6,5 @@
 			%small= Russian::strftime(n.created_at, "%d %b %Y")
 			= n.title
 	%div= raw n.precontent
+
+= paginate @news

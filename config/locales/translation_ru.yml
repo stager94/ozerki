@@ -1,4 +1,11 @@
 ru:
+  views:
+    pagination:
+      truncate: '...'
+      first: '<<'
+      last: '>>'
+      previous: '<'
+      next: '>'
   activerecord:
     models:
       configure: 'Настройки сайта'
