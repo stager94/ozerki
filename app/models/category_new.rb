@@ -13,6 +13,10 @@ class CategoryNew < ActiveRecord::Base
   validates_presence_of :title
   validates_uniqueness_of :slug
 
+  def to_param
+    "#{id} #{slug}".parameterize
+  end
+
   private
   def create_alias
 		self.slug = self.title.parameterize unless !self.slug.blank?

@@ -112,3 +112,45 @@ footer{
   font-size: 13px;
   margin-bottom: 20px;
 }
+
+/*Inputs and areas*/
+textarea, input[type="text"]{
+  border-radius: 0 !important;
+  outline: none !important;
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  resize: none;
+
+  &:focus{
+    border-color: #739c0f !important;
+  }
+}
+
+/*Well*/
+.well{
+  border: 0 !important;
+  border-radius: 0 !important;
+  -webkit-border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+  box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+}
+
+/*Buttons*/
+.button{
+  border: 0;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #739c0f;
+
+  &:hover{
+    background-color: #90c513;
+  }
+}
+
+#form-errors{
+  list-style-type: none;
+  margin-left: 0;
+}

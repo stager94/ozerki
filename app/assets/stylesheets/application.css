@@ -12,5 +12,8 @@
  *= require style
  *= require bootstrap
  *= require margins
+ *= require testimonals
+ *= require sizes
+ *= require widths
  *= require_tree .
  */

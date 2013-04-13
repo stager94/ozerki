@@ -28,8 +28,8 @@
             = link_to "Фотогалерея", root_path
           %li{class: @active_menu == 'home' ? "" : ""}
             = link_to "Цены", root_path
-          %li{class: @active_menu == 'home' ? "" : ""}
-            = link_to "Отзывы", root_path
+          %li{class: params[:controller] == 'testimonals' ? "active" : ""}
+            = link_to "Отзывы", testimonals_path
           %li{class: params[:controller] == 'pages' && params[:id] == kontacts.to_param  ? "active" : ""}
             = link_to "Контакты", page_path(kontacts)
           / %li.dropdown

@@ -13,3 +13,7 @@ ru:
     home: 'Главная'
     news: 'Новости'
     services: 'Услуги'
+    testimonals: 'Отзывы'
+  errors:
+    validates:
+      empty: 'Не все поля заполнены!'

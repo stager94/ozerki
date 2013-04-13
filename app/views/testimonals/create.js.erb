@@ -1,0 +1,5 @@
+<% if @testimonal.valid? %>
+	window.location.href = "<%= testimonals_path %>";
+<% else %>
+	$('#form-errors').html("<%= j(raw generate_errors_list_for @testimonal.errors) %>");
+<% end %>

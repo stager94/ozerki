@@ -1,0 +1,34 @@
+= title I18n.t 'pages.testimonals'
+
+- @testimonals.each do |testimonal|
+	.testimonal-container
+		.testimonal-author
+			= testimonal.author
+			.testimonal-address= raw "<i class='icon-map-marker'></i>#{testimonal.address}" unless testimonal.address.blank?
+		.testimonal-body
+			.testimonal-quote &ldquo;
+			.testimonal-text= simple_format testimonal.testimonal
+
+= paginate @testimonals
+
+.well
+	%h2{class: "text-center"} Написать свой отзыв
+	= form_for @testimonal, html: { class: "form-horizontal" }, remote: true do |f|
+		.control-group
+			.controls
+				%ul#form-errors.text-error
+
+		.control-group
+			= f.label :testimonal, class: :'control-label'
+			.controls= f.text_area :testimonal, class: "span5 h200"
+		
+		.control-group
+			= f.label :author, class: :'control-label'
+			.controls= f.text_field :author, class: :span5
+
+		.control-group
+			= f.label :email, class: :'control-label'
+			.controls= f.text_field :email, class: :span5
+
+		.control-group
+			.controls= f.submit "Отправить отзыв", class: "button"

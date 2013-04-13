@@ -6,6 +6,7 @@ ru:
       last: '>>'
       previous: '<'
       next: '>'
+
   activerecord:
     models:
       configure: 'Настройки сайта'
@@ -13,6 +14,7 @@ ru:
       category_new: 'Категории новостей'
       admin_user: 'Пользователи'
       page: 'Статические страницы'
+      testimonal: 'Отзывы'
 
     attributes:
       configure:
@@ -51,3 +53,11 @@ ru:
         snippet: 'META description'
         text: 'Текст'
         author: 'Автор'
+      testimonal:
+        testimonal: 'Отзыв'
+        author: 'Автор'
+        address: 'Адрес'
+        email: 'Email'
+        created_at: 'Создано'
+        updated_at: 'Обновлено'
+        display: 'Отображать?'
