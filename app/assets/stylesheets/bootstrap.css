@@ -278,7 +278,7 @@ a:focus {
   width: 620px;
 }
 .span7 {
-  width: 540px;
+  width: 640px;
 }
 .span6 {
   width: 460px;
@@ -290,7 +290,7 @@ a:focus {
   width: 300px;
 }
 .span3 {
-  width: 220px;
+  width: 280px;
 }
 .span2 {
   width: 140px;
@@ -3643,7 +3643,7 @@ input[type="submit"].btn.btn-mini {
 }
 .navbar .nav > li > a {
   float: none;
-  padding: 10px 15px 10px;
+  padding: 10px 18px 10px;
   color: #fff;
   text-decoration: none;
   text-shadow: 0 1px 0 rgba(0, 0, 0, .3);
@@ -5792,6 +5792,12 @@ button.close {
   textarea.span5,
   .uneditable-input.span5 {
     width: 276px;
+    display: block;
+    width: 100%;
+    min-height: 30px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
   }
   input.span4,
   textarea.span4,
@@ -6335,5 +6341,7 @@ button.close {
   .nav-collapse.collapse {
     height: auto !important;
     overflow: visible !important;
+    display: table;
+    margin: 0 auto;
   }
 }

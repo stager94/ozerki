@@ -82,6 +82,12 @@ footer{
   }  
 }
 
+@media (max-width: 1024px) {
+  .span3{
+    margin-left: 20px;
+  }
+}
+
 @media (min-width: 1200px) {
   footer{
     .inline-footer{

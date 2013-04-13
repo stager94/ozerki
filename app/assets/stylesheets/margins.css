@@ -12,15 +12,17 @@
 	.mt70{
 		margin-top: 70px;
 	}
-
-	.rml20-max979{
-		margin-left: 20px;
-	}
 }
 
 @media (max-width: 1024px){
 	.mt70{
 		margin-top: 30px;
+	}
+}
+
+@media (max-width: 1200px){
+	.rml20-max979{
+		margin-left: 20px;
 	}
 }
 
