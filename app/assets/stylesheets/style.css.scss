@@ -160,3 +160,14 @@ textarea, input[type="text"]{
   list-style-type: none;
   margin-left: 0;
 }
+
+nav.pagination{
+  .page{
+    &.current{
+      font-weight: bold;
+      background: none;
+      border: 1px solid #eee;
+      color: #a8a8a8;
+    }
+  }
+}
