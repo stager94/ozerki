@@ -1,5 +1,6 @@
-class CategoryNew < ActiveRecord::Base
-	has_many :new, :dependent => :destroy
+class CategoryGallery < ActiveRecord::Base
+  has_many :gallery
+  
 	before_create :create_alias
 	before_save :create_alias
 
@@ -7,8 +8,9 @@ class CategoryNew < ActiveRecord::Base
 
 	attr_protected :lft, :rgt
 
-	scope :main, order('lft ASC')
-  attr_accessible :keywords, :parent_id, :slug, :snippet, :title, :display, :lft, :rgt, :depth
+  attr_accessible :depth, :display, :keywords, :lft, :parent_id, :rgt, :slug, :snippet, :title
+
+  scope :main, order('lft ASC')
 
   validates_presence_of :title
   validates_uniqueness_of :slug, :title

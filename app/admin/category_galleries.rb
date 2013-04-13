@@ -1,22 +1,32 @@
-ActiveAdmin.register CategoryNew do
+ActiveAdmin.register CategoryGallery do
+  batch_action :destroy do |selection|
+  	CategoryGallery.find(selection).each do |cat|
+  		cat.delete
+  	end
+  	redirect_to collection_path, notice: "Successfully deleted!"
+  end
+
   member_action :move_to_left do
-  	category = CategoryNew.find(params[:id])
+  	category = CategoryGallery.find(params[:id])
   	category.move_left
   	redirect_to collection_path, notice: "Successfully moved!"
   end
 
 
   member_action :move_to_right do
-  	category = CategoryNew.find(params[:id])
+  	category = CategoryGallery.find(params[:id])
   	category.move_right
   	redirect_to collection_path, notice: "Successfully moved!"
   end
+
 
 	index do
 		selectable_column
 		column :id
 		column :title
 		column :parent_id
+		# column :lft
+		# column :rgt
 		column "#{I18n.t 'admin.category.level'}" do |category|
 			raw "#{category.lft/2}"
 		end
@@ -28,17 +38,17 @@ ActiveAdmin.register CategoryNew do
   		end
 		end
 		column "" do |category|
-      link_to "#{I18n.t 'admin.category.up'}", move_to_right_admin_category_news_path(category)
+      link_to "#{I18n.t 'admin.category.up'}", move_to_right_admin_category_gallery_path(category)
     end
 		column "" do |category|
-      link_to "#{I18n.t 'admin.category.down'}", move_to_left_admin_category_news_path(category)
+      link_to "#{I18n.t 'admin.category.down'}", move_to_left_admin_category_gallery_path(category)
     end
 		default_actions
 	end
 
 	form do |f|
       f.inputs "Edit" do
-	      f.input :parent_id, as: :select, collection: nested_set_options(CategoryNew) {|i| "#{'--' * i.level} #{i.title}" }
+ 	      f.input :parent_id, as: :select, collection: nested_set_options(CategoryGallery) {|i| "#{'--' * i.level} #{i.title}" }
   	  	f.input :title
  				f.input :slug
  				f.input :snippet
@@ -46,5 +56,5 @@ ActiveAdmin.register CategoryNew do
   	  	f.input :display
   	end
   	f.buttons
-  end    
+  end  
 end

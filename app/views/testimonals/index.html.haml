@@ -29,7 +29,7 @@
 
 		.control-group
 			= f.label :address, class: :'control-label'
-			.controls= f.text_field :address, class: :span5
+			.controls= f.text_field :address, class: :span5, value: "#{request.location.country} #{request.location.city}"
 
 		.control-group
 			= f.label :email, class: :'control-label'

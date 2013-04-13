@@ -11,11 +11,12 @@ gem 'awesome_nested_set'
 gem 'acts-as-taggable-on'
 gem 'ckeditor'
 gem 'paperclip'
-gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
-gem "twitter-bootstrap-rails"
+gem 'less-rails'
+gem 'twitter-bootstrap-rails'
 gem 'therubyracer'
-gem "breadcrumbs_on_rails"
+gem 'breadcrumbs_on_rails'
 gem 'russian', '~> 0.6.0'
+gem 'geocoder'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

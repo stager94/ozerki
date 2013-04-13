@@ -1,0 +1,2 @@
+class CategoryGalleriesController < ApplicationController
+end

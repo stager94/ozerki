@@ -80,6 +80,7 @@ GEM
     fastercsv (1.5.5)
     formtastic (2.2.1)
       actionpack (>= 3.0)
+    geocoder (1.1.5)
     haml (3.1.7)
     has_scope (0.5.1)
     hike (1.2.2)
@@ -200,6 +201,7 @@ DEPENDENCIES
   breadcrumbs_on_rails
   ckeditor
   coffee-rails (~> 3.2.1)
+  geocoder
   haml
   jquery-rails
   less-rails
