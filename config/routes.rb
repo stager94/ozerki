@@ -6,10 +6,11 @@ Hostel::Application.routes.draw do
   
   root to: "application#index"
 
-  resources :pages, only: [:show]
-  resources :category_news, only: [:index] do
+  resources :pages, path: :page, only: [:show]
+  resources :category_news, path: :category, only: [:index] do
     resources :news, only: [:show, :index]
   end
+  resources :testimonals, path: :testimonals, only: [:index]
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
