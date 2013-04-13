@@ -10,6 +10,9 @@ Hostel::Application.routes.draw do
   resources :category_news, path: :category, only: [:index] do
     resources :news, path: :new, only: [:show, :index]
   end
+  resources :category_galleries, path: :gallery, only: [:index, :show] do
+    resources :galleries, path: :photo, only: [:show]
+  end
   resources :testimonals, path: :testimonals, only: [:index, :create]
   # The priority is based upon order of creation:
   # first created -> highest priority.
