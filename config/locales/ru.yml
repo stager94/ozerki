@@ -18,6 +18,7 @@ ru:
     news: 'Новости'
     services: 'Услуги'
     testimonals: 'Отзывы'
+    gallery: 'Фотогалерея'
   errors:
     validates:
       empty: 'Не все поля заполнены!'

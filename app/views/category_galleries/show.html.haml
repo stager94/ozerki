@@ -1,4 +1,4 @@
-= title I18n.t 'pages.gallery'
+= title @category.title
 
 .gallery-wrapper
 	- @categories.each do |category|
@@ -10,5 +10,3 @@
 					= raw "#{category.title} (#{info['count']})"
 				- info['images'].each do |image|
 					= image_tag image.photo(:small)
-
-		
