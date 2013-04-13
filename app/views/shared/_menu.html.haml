@@ -24,8 +24,8 @@
             = link_to "Досуг", root_path
           %li{class: params[:controller] == 'news' && params[:category_news_id] == akcii.id.to_s ? "active" : ""}
             = link_to "Акции", category_news_news_index_path(akcii)
-          %li{class: @active_menu == 'home' ? "" : ""}
-            = link_to "Фотогалерея", root_path
+          %li{class: params[:controller] == 'category_galleries' ? "active" : ""}
+            = link_to "Фотогалерея", category_galleries_path
           %li{class: @active_menu == 'home' ? "" : ""}
             = link_to "Цены", root_path
           %li{class: params[:controller] == 'testimonals' ? "active" : ""}

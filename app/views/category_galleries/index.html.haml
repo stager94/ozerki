@@ -1,0 +1,7 @@
+- @categories.each do |category|
+	- categories_array = CategoryGallery.where('parent_id = ? OR id = ?', category.id, category.id)
+	- category_image = Gallery.where('category_gallery_id IN (?)', categories_array).order('RANDOM()').first()
+	= category.title
+	= image_tag category_image.photo(:medium)
+
+	

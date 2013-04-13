@@ -1,6 +1,6 @@
 class CategoryGallery < ActiveRecord::Base
   has_many :gallery
-  
+
 	before_create :create_alias
 	before_save :create_alias
 
@@ -11,6 +11,7 @@ class CategoryGallery < ActiveRecord::Base
   attr_accessible :depth, :display, :keywords, :lft, :parent_id, :rgt, :slug, :snippet, :title
 
   scope :main, order('lft ASC')
+  scope :displayed, where('display = ?', true).where('depth = ?', 0).order('lft ASC')
 
   validates_presence_of :title
   validates_uniqueness_of :slug, :title
