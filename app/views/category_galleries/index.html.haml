@@ -1,17 +1,12 @@
 .gallery-wrapper
 	- @categories.each do |category|
-		- res = Array.new
-		- @all_categories.each do |cat|
-			- res << cat if cat.root == category
-		- category_image = Gallery.where('category_gallery_id IN (?)', res).order('RANDOM()')
-		- count = 0
-		- res.each do |cat|
-			- count = count+cat.galleries_count
+		- info = get_params_to_page category, @all_categories
 
-		.gallery-category
-			.gallery-category-title
-				= raw "<i class='icon-picture icon-white'></i>#{count}  #{category.title}"
-			- category_image.each do |image|
-				= image_tag image.photo(:small)
+		= link_to category do
+			.gallery-category
+				.gallery-category-title
+					= raw "#{category.title} (#{info['count']})"
+				- info['images'].each do |image|
+					= image_tag image.photo(:small)
 
 		
