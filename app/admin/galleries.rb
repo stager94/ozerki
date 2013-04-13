@@ -7,7 +7,7 @@ ActiveAdmin.register Gallery do
 		column :title
 		column :category_gallery do |category|
 			link_to admin_category_gallery_path(category) do
-				raw "#{category.title}"
+				raw "#{category.category_gallery.id} - #{category.category_gallery.title}"
 			end
 		end
 		default_actions

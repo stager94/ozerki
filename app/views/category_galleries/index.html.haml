@@ -1,7 +1,17 @@
-- @categories.each do |category|
-	- categories_array = CategoryGallery.where('parent_id = ? OR id = ?', category.id, category.id)
-	- category_image = Gallery.where('category_gallery_id IN (?)', categories_array).order('RANDOM()').first()
-	= category.title
-	= image_tag category_image.photo(:medium)
+.gallery-wrapper
+	- @categories.each do |category|
+		- res = Array.new
+		- @all_categories.each do |cat|
+			- res << cat if cat.root == category
+		- category_image = Gallery.where('category_gallery_id IN (?)', res).order('RANDOM()')
+		- count = 0
+		- res.each do |cat|
+			- count = count+cat.galleries_count
 
-	
+		.gallery-category
+			.gallery-category-title
+				= raw "<i class='icon-picture icon-white'></i>#{count}  #{category.title}"
+			- category_image.each do |image|
+				= image_tag image.photo(:small)
+
+		

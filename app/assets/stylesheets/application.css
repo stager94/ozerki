@@ -15,5 +15,6 @@
  *= require testimonals
  *= require sizes
  *= require widths
+ *= category_galleries
  *= require_tree .
  */

@@ -27,6 +27,7 @@ ActiveAdmin.register CategoryGallery do
 		column :parent_id
 		# column :lft
 		# column :rgt
+    column :galleries_count
 		column "#{I18n.t 'admin.category.level'}" do |category|
 			raw "#{category.lft/2}"
 		end

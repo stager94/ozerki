@@ -2,7 +2,7 @@ class Gallery < ActiveRecord::Base
 	before_create :create_alias
 	before_save :create_alias
 
-  belongs_to :category_gallery
+  belongs_to :category_gallery, counter_cache: true
 
   attr_accessible :author, :description, :display, :keywords, :photo, :slug, :title, :category_gallery_id
 
