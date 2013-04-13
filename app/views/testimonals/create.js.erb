@@ -1,5 +1,9 @@
 <% if @testimonal.valid? %>
-	window.location.href = "<%= testimonals_path %>";
+	// window.location.href = "<%= testimonals_path %>";
+	$('#form-errors').html('');
+	$('#form-notices').html('Спасибо за отзыв. После модерации он обязательно появится в списке на сайте!');
+	$('#new_testimonal').closest('form').find("input[type=text], textarea").val("");
 <% else %>
+	$('#form-notices').html('');
 	$('#form-errors').html("<%= j(raw generate_errors_list_for @testimonal.errors) %>");
 <% end %>
