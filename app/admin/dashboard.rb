@@ -14,9 +14,9 @@ ActiveAdmin.register_page "Dashboard" do
     #
     columns do
       column do
-        panel "Recent Posts" do
+        panel "#{I18n.t 'admin.recent.post'}" do
           ul do
-            New.last(5).map do |post|
+            New.order('created_at DESC').last(5).map do |post|
               li link_to(post.title, admin_news_path(post))
             end
           end
@@ -24,8 +24,12 @@ ActiveAdmin.register_page "Dashboard" do
       end
 
       column do
-        panel "Info" do
-          para "Welcome to ActiveAdmin."
+        panel "#{I18n.t 'admin.recent.testimonal'}" do
+          ul do
+            Testimonal.order('created_at DESC').last(5).map do |testimonal|
+                li link_to(testimonal.testimonal, admin_testimonal_path(testimonal))
+            end
+          end
         end
       end
     end
