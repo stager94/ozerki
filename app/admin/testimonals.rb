@@ -1,4 +1,9 @@
 ActiveAdmin.register Testimonal do
+	filter :author
+	filter :email
+	filter :address
+	filter :display
+
 	index do
 		selectable_column
 		column :testimonal do |f|

@@ -1,6 +1,9 @@
 ActiveAdmin.register Configure do
+	config.clear_sidebar_sections!
+	config.batch_actions = false
 	config.clear_action_items!
-  index as: :block do |config|
+
+  index as: :block, download_links: false do |config|
   	div for: config do
 	  	h2 "#{I18n.t('activerecord.models.configure')}"
 	  	attributes_table_for Configure.first, :site_title, :title_separator, :news_per_page, :module_news_per_page, :site_snippet, :site_keywords

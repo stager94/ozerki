@@ -1,5 +1,6 @@
 ru:
   admin:
+    site_title: 'Турбаза СКМЗ'
     general: 'Общая информация'
     short: 'Краткое содержание'
     full: 'Содержание'
@@ -13,6 +14,9 @@ ru:
       up: 'Поднять'
       down: 'Опустить'
       level: 'Уровень'
+    menu:
+      category: 'Категории'
+      materials: 'Материалы'
   pages:
     home: 'Главная'
     news: 'Новости'

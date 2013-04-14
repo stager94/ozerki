@@ -1,4 +1,6 @@
 ActiveAdmin.register CategoryGallery do
+  menu :parent => "#{I18n.t 'admin.menu.category'}"
+
   batch_action :destroy do |selection|
   	CategoryGallery.find(selection).each do |cat|
   		cat.delete
