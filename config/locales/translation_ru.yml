@@ -28,6 +28,7 @@ ru:
         module_news_per_page: 'Модуль новостей: кол-во на страницу'
         site_keywords: 'META ключевые слова'
         site_snippet: 'META описание сайта'
+        news_id: 'Категория для новостей'
       new:
         title: 'Название'
         slug: 'Алиас'

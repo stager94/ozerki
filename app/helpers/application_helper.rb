@@ -6,7 +6,7 @@ module ApplicationHelper
 	end
 
 	def news_module
-		news = New.displayed.limit(@config[:module_news_per_page])
+		news = New.displayed.where('category_new_id = ?', @config[:news_id]).limit(@config[:module_news_per_page])
 		render 'shared/modules/news', news: news
 	end
 

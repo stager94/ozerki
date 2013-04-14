@@ -5,7 +5,7 @@ class New < ActiveRecord::Base
 	before_create :create_alias
 	before_update :create_alias
 	
-  attr_accessible :slug, :author, :content, :display, :root, :snippet, :title, :precontent, :category_new_id, :tag_list, :position
+  attr_accessible :slug, :author, :content, :display, :root, :snippet, :title, :precontent, :category_new_id, :tag_list, :position, :news_id
 
   validates_presence_of :title, :content, :snippet, :tag_list
   validates_uniqueness_of :slug
