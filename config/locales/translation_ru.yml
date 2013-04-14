@@ -26,6 +26,8 @@ ru:
         updated_at: 'Обновлено'
         news_per_page: 'Кол-во новостей/страницу'
         module_news_per_page: 'Модуль новостей: кол-во на страницу'
+        site_keywords: 'META ключевые слова'
+        site_snippet: 'META описание сайта'
       new:
         title: 'Название'
         slug: 'Алиас'
