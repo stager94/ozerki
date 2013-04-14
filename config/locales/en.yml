@@ -1,2 +1,4 @@
 en:
-  test: 'Test'
+  configure:
+    success: 'Site settings initialized successfully!'
+    fail: 'When initializing site configuration error has occurred! Try again later or contact at: stager94@gmail.com'
