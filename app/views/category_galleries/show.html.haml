@@ -1,11 +1,15 @@
 = title @category.title
 
 .gallery-wrapper
-	- info = get_params_to_page @category, @all_categories
+	- @categories.each do |category|
+		- info = get_params_to_cat_page category, @all_categories
 
-	= link_to @category do
-		.gallery-category
-			.gallery-category-title
-				= raw "#{@category.title} (#{info['count']})"
-			- info['images'].each do |image|
-				= image_tag image.photo(:small)
+		= link_to category do
+			.gallery-category
+				.gallery-category-title
+					= raw "#{category.title} (#{info['count']})"
+				- info['images'].each do |image|
+					= image_tag image.photo(:small)
+
+- @photos.each do |photo|
+	= image_tag photo.photo.url(:medium)
