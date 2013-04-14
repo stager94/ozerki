@@ -4,7 +4,7 @@ class Gallery < ActiveRecord::Base
 
   belongs_to :category_gallery, counter_cache: true
 
-  attr_accessible :author, :description, :display, :keywords, :photo, :slug, :title, :category_gallery_id
+  attr_accessible :author, :description, :display, :keywords, :photo, :slug, :title, :category_gallery_id, :display_on_root
 
   validates_presence_of :title, :category_gallery
 

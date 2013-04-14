@@ -1,6 +1,12 @@
 ActiveAdmin.register New do
 	menu :parent => "#{I18n.t 'admin.menu.materials'}"
 
+	filter :category_new
+	filter :title
+	filter :display
+	filter :root
+	filter :author
+
 	scope I18n.t('admin.scope.news'), :admin_news
 	scope I18n.t('admin.scope.root'), :admin_root
 

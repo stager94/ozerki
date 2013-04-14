@@ -1,6 +1,10 @@
 ActiveAdmin.register CategoryNew do
   menu :parent => "#{I18n.t 'admin.menu.category'}"
 
+  filter :parent_id
+  filter :title
+  filter :display
+
   member_action :move_to_left do
   	category = CategoryNew.find(params[:id])
   	category.move_left

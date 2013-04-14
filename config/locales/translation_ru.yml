@@ -38,6 +38,7 @@ ru:
         content: 'Полное содержание'
         precontent: 'Краткое содержание'
         category_new_id: 'Категория'
+        category_new: 'Категория'
         tag_list: 'Основные теги'
         created_at: 'Создано'
         updated_at: 'Обновлено'
@@ -49,6 +50,7 @@ ru:
         keywords: 'Ключевые слова'
         display: 'Включена'
         parent_id: 'Родительская категория'
+        parent: 'Родительская категория'
       category_gallery:
         title: 'Название'
         slug: 'Алиас'
@@ -56,6 +58,7 @@ ru:
         keywords: 'Ключевые слова'
         display: 'Включена'
         parent_id: 'Родительская категория'
+        parent: 'Родительская категория'
         galleries_count: 'Количество фотографий'
       page:
         title: 'Название'
@@ -85,6 +88,11 @@ ru:
         keywords: 'Ключевые слова'
         display: 'Отображать?'
         display_on_root: 'На главной?'
+      admin_user:
+        email: 'Email'
+        current_sign_in_at: 'Текущая сессия с'
+        last_sign_in_at: 'Предыдущая сессия'
+        sign_in_count: 'Кол-во посещений'
   active_admin:
     dashboard: Админ-панель
     dashboard_welcome:

@@ -13,8 +13,18 @@ ActiveAdmin.register Gallery do
 	# 	default_actions
 	# end
 
+	filter :category_gallery
+	filter :title
+	filter :author
+	filter :display
+	filter :display_on_root
+
 	index as: :grid, columns: 5 do |image|
-		link_to(image_tag(image.photo.url(:medium)), admin_gallery_path(image))
+		if image.display_on_root
+			link_to(image_tag(image.photo.url(:medium)), admin_gallery_path(image), class: "main")
+		else
+			link_to(image_tag(image.photo.url(:medium)), admin_gallery_path(image)) if !image.display_on_root
+		end
 	end
 
 	show do
