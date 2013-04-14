@@ -1,16 +1,20 @@
 ActiveAdmin.register Gallery do
-	index do
-		selectable_column
-		column :photo do |image|
-			image_tag "#{image.photo.url}", style: "max-width: 200px;"
-		end
-		column :title
-		column :category_gallery do |category|
-			link_to admin_category_gallery_path(category) do
-				raw "#{category.category_gallery.id} - #{category.category_gallery.title}"
-			end
-		end
-		default_actions
+	# index do
+	# 	selectable_column
+	# 	column :photo do |image|
+	# 		image_tag "#{image.photo.url}", style: "max-width: 200px;"
+	# 	end
+	# 	column :title
+	# 	column :category_gallery do |category|
+	# 		link_to admin_category_gallery_path(category) do
+	# 			raw "#{category.category_gallery.id} - #{category.category_gallery.title}"
+	# 		end
+	# 	end
+	# 	default_actions
+	# end
+
+	index as: :grid, columns: 5 do |image|
+		link_to(image_tag(image.photo.url(:medium)), admin_gallery_path(image))
 	end
 
   form do |f|
@@ -23,6 +27,7 @@ ActiveAdmin.register Gallery do
   		f.input :author
   		f.input :keywords
   		f.input :display
+  		f.input :display_on_root
   	end
 
   	f.buttons

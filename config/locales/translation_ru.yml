@@ -26,6 +26,8 @@ ru:
         updated_at: 'Обновлено'
         news_per_page: 'Кол-во новостей/страницу'
         module_news_per_page: 'Модуль новостей: кол-во на страницу'
+        site_keywords: 'META ключевые слова'
+        site_snippet: 'META описание сайта'
       new:
         title: 'Название'
         slug: 'Алиас'
@@ -82,8 +84,9 @@ ru:
         description: 'Описание'
         keywords: 'Ключевые слова'
         display: 'Отображать?'
+        display_on_root: 'На главной?'
   active_admin:
-    dashboard: Dashboard
+    dashboard: Админ-панель
     dashboard_welcome:
       welcome: "Добро пожаловать в Active Admin. Это стандартная страница управления сайтом."
       call_to_action: "Чтобы добавить сюда что-нибудь загляните в 'app/admin/dashboard.rb'"

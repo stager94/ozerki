@@ -1,4 +1,6 @@
 ActiveAdmin.register Page do
+	menu :parent => "#{I18n.t 'admin.menu.materials'}"
+
 	index do
 		selectable_column
 		column :title

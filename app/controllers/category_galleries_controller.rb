@@ -14,6 +14,8 @@ class CategoryGalleriesController < ApplicationController
 	def show
 		@photos = Gallery.where('category_gallery_id = ?', @category)
 
+		@meta_description = @category.snippet
+		@meta_keywords    = @category.keywords
 		@h1 = @category.title
 	end
 
