@@ -1,3 +1,5 @@
 = title @new.title
 / %h2= @new.title
-%div= raw @new.content
+%p= raw @new.content
+%p 
+	%b= Russian::strftime(@new.created_at, :long)
