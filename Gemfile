@@ -17,6 +17,7 @@ gem 'therubyracer'
 gem 'breadcrumbs_on_rails'
 gem 'russian', '~> 0.6.0'
 gem 'geocoder'
+gem 'fancybox2-rails', '~> 0.2.4'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

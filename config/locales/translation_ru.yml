@@ -54,6 +54,7 @@ ru:
         keywords: 'Ключевые слова'
         display: 'Включена'
         parent_id: 'Родительская категория'
+        galleries_count: 'Количество фотографий'
       page:
         title: 'Название'
         slug: 'Алиас'

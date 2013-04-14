@@ -8,7 +8,7 @@ ActiveAdmin.register CategoryGallery do
 
   member_action :move_to_left do
   	category = CategoryGallery.find(params[:id])
-  	category.move_left
+    category.move_left if category.level > 0
   	redirect_to collection_path, notice: "Successfully moved!"
   end
 

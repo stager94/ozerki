@@ -1,3 +1,20 @@
+:javascript
+	$(document).ready(function(){
+		$("a.original-image-link").fancybox({
+			openEffect	: 'elastic',
+			closeEffect	: 'elastic',
+		 	helpers : {
+				title : {
+					type : 'over'
+				},
+				thumbs	: {
+					width	: 50,
+					height	: 50
+				}
+			}
+		});
+	});
+
 = title @category.title
 
 .gallery-wrapper
@@ -12,4 +29,5 @@
 					= image_tag image.photo(:small)
 
 - @photos.each do |photo|
-	= image_tag photo.photo.url(:medium)
+	= link_to(photo.photo.url(:original), class: "original-image-link", rel: :image, title: photo.description) do
+		= image_tag photo.photo.url(:medium)

@@ -16,5 +16,6 @@
  *= require sizes
  *= require widths
  *= category_galleries
+ *= require fancybox
  *= require_tree .
  */

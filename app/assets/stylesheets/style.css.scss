@@ -63,6 +63,13 @@ footer{
   margin-bottom: 10px;
 }
 
+@media (max-width: 500px){
+  .fancybox-title{
+    visibility: hidden !important;
+    display: none !important;
+  }
+}
+
 @media (max-width: 767px){
   footer{
     .inline-footer{

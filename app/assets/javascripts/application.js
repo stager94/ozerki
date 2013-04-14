@@ -14,6 +14,8 @@
 //= require jquery_ujs
 //= require jquery.slides
 //= require twitter/bootstrap
+//= require mousewheel
+//= require fancybox
 //= require ckeditor/init
 //= require_tree .
 
