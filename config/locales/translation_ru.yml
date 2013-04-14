@@ -84,6 +84,7 @@ ru:
         description: 'Описание'
         keywords: 'Ключевые слова'
         display: 'Отображать?'
+        display_on_root: 'На главной?'
   active_admin:
     dashboard: Админ-панель
     dashboard_welcome:

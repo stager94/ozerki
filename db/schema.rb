@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130413194610) do
+ActiveRecord::Schema.define(:version => 20130414111934) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -123,8 +123,9 @@ ActiveRecord::Schema.define(:version => 20130413194610) do
     t.text     "description"
     t.string   "keywords"
     t.boolean  "display",             :default => true
-    t.datetime "created_at",                            :null => false
-    t.datetime "updated_at",                            :null => false
+    t.datetime "created_at",                             :null => false
+    t.datetime "updated_at",                             :null => false
+    t.boolean  "display_on_root",     :default => false
   end
 
   add_index "galleries", ["category_gallery_id"], :name => "index_galleries_on_category_gallery_id"

@@ -27,6 +27,7 @@ ActiveAdmin.register Gallery do
   		f.input :author
   		f.input :keywords
   		f.input :display
+  		f.input :display_on_root
   	end
 
   	f.buttons
