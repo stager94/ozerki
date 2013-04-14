@@ -9,11 +9,11 @@ class ApplicationController < ActionController::Base
     @meta_keywords     = @config[:site_keywords]
 
     render layout: "index"
+    add_breadcrumb I18n.t('pages.home'), root_path
   end
 
   public
   def public_settings
-    add_breadcrumb I18n.t('pages.home', locale: :ru), :root_path
     # @news_per_page = Configure.first[:news_per_page]
     # @module_news_per_page= Configure.first[:module_news_per_page]
 

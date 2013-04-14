@@ -170,6 +170,12 @@ a{
   h2{
     color: #222831;
   }
+  &:hover{
+    text-decoration: none !important;
+    h2{
+      color: #0088cc;
+    }
+  }
 }
 
 
