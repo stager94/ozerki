@@ -11,6 +11,19 @@ ActiveAdmin.register Page do
 		default_actions
 	end
 
+	show do
+		attributes_table do
+			row :title
+			row :slug
+			row :text do |page|
+				raw "#{page.text}"
+			end
+			row :author
+			row :snippet
+			row :keywords
+		end
+	end
+
 	form do |f|
 		f.inputs I18n.t 'admin.general' do
 			f.input :title

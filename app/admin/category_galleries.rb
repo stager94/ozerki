@@ -26,7 +26,9 @@ ActiveAdmin.register CategoryGallery do
 		selectable_column
 		column :id
 		column :title
-		column :parent_id
+		column :parent_id do |category|
+      link_to CategoryGallery.find(category.parent_id).title, admin_category_gallery_path(category.parent_id) if category.parent_id
+    end
 		# column :lft
 		# column :rgt
     column :galleries_count
@@ -48,6 +50,23 @@ ActiveAdmin.register CategoryGallery do
     end
 		default_actions
 	end
+
+  show do
+    attributes_table do
+      row :title
+      row :parent_id do |cat|
+        link_to CategoryGallery.find(cat.parent_id).title, admin_category_gallery_path(cat.parent_id) if cat.parent_id
+      end
+      row :galleries_count
+      row :display do |f|
+        if f.display == true
+          raw "<span class='status_tag complete'>true</span>"
+        else
+          raw "<span class='status_tag in_progress'>false</span>"
+        end
+      end
+    end
+  end
 
 	form do |f|
       f.inputs "Edit" do

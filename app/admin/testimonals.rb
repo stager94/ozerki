@@ -4,8 +4,21 @@ ActiveAdmin.register Testimonal do
 	filter :address
 	filter :display
 
-	show do
-		
+	show do |testimonal|
+		attributes_table do
+			row :testimonal
+			row :author
+			row :email
+			row :display do |f|
+  			if f.display == true
+  				raw "<span class='status_tag complete'>true</span>"
+  			else
+  				raw "<span class='status_tag in_progress'>false</span>"
+  			end
+		end
+			row :created_at
+			row :updated_at
+		end
 	end
 
 	index do

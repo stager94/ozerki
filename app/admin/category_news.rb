@@ -18,7 +18,9 @@ ActiveAdmin.register CategoryNew do
 		selectable_column
 		column :id
 		column :title
-		column :parent_id
+		column :parent_id do |category|
+      link_to CategoryNew.find(category.parent_id).title, admin_category_news_path(category.parent_id) if category.parent_id
+    end
 		column "#{I18n.t 'admin.category.level'}" do |category|
 			raw "#{category.lft/2}"
 		end
@@ -37,6 +39,22 @@ ActiveAdmin.register CategoryNew do
     end
 		default_actions
 	end
+
+  show do
+    attributes_table do
+      row :title
+      row :parent_id do |category|
+        link_to CategoryNew.find(category.parent_id).title, admin_category_news_path(category.parent_id) if category.parent_id
+      end
+      row :display do |category|
+        if category.display == true
+          raw "<span class='status_tag complete'>true</span>"
+        else
+          raw "<span class='status_tag in_progress'>false</span>"
+        end
+      end
+    end
+  end
 
 	form do |f|
       f.inputs "Edit" do

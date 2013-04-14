@@ -36,6 +36,26 @@ ActiveAdmin.register New do
 		default_actions
 	end
 
+	show do
+		attributes_table do
+			row :title
+			row :slug
+			row :precontent do |news|
+				raw "#{news.precontent}"
+			end
+			row :content do |news|
+				raw "#{news.content}"
+			end
+			row :category_new_id
+			row :display
+			row :root
+			row :position
+			row :snippet
+			row :tag_list
+			row :author
+		end
+	end
+
 
 	form do |f|
 		f.inputs I18n.t 'admin.general' do 
