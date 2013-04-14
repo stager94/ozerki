@@ -4,6 +4,10 @@ ActiveAdmin.register Testimonal do
 	filter :address
 	filter :display
 
+	show do
+		
+	end
+
 	index do
 		selectable_column
 		column :testimonal do |f|
