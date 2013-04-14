@@ -1,6 +1,10 @@
 = title "Главная страница"
 
-/ News displaying
-- @news.each do |n|
-	%h2= n.title
-	%div= raw n.content
+.span7.none.w724
+	- @news.each do |article|
+		= render 'shared/partials/root_new', article: article
+.span3.rml20-max979= news_module
+
+.clr-fx
+
+.well= gallery_module

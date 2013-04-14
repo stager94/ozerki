@@ -1,0 +1,6 @@
+= link_to category_galleries_path do
+	%h2 Наши фотографии
+#gallery-module
+	- images.each do |image|
+		= link_to image.photo(:original), class: 'original-image-link', rel: 'module' do
+			= image_tag image.photo(:medium), class: 'img-circle'

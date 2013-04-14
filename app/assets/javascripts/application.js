@@ -52,4 +52,19 @@ $(document).ready(function(){
         // [number] restart delay on inactive slideshow
     }
   });
+
+  $("a.original-image-link").fancybox({
+    openEffect  : 'elastic',
+    closeEffect : 'elastic',
+    helpers : {
+      title : {
+        type : 'over'
+      },
+      thumbs  : {
+        width : 50,
+        height  : 50
+      }
+    }
+  });
 });
+

@@ -7,6 +7,8 @@ class ApplicationController < ActionController::Base
     @h1                = I18n.t 'pages.home'
     @meta_description  = @config[:site_snippet]
     @meta_keywords     = @config[:site_keywords]
+
+    render layout: "index"
   end
 
   public

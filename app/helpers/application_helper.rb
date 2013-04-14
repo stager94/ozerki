@@ -28,4 +28,9 @@ module ApplicationHelper
 
 		return result
 	end
+
+	def gallery_module
+		images = Gallery.module
+		render 'shared/modules/gallery', images: images
+	end
 end
