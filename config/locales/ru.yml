@@ -21,6 +21,10 @@ ru:
     menu:
       category: 'Категории'
       materials: 'Материалы'
+    collect:
+      new: 'Материал'
+      page: 'Страница'
+      path: 'URL'
   pages:
     home: 'Главная'
     news: 'Новости'

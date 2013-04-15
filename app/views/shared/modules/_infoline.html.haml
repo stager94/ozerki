@@ -1,0 +1,20 @@
+.marquee	
+	#infoline-title 
+		%i.icon-fire.icon-white
+		Внимание
+	#webtricker
+		- infos.each do |info|
+			%span.item
+				- case info.route
+				- when 'new'
+					- material = New.find(info.new_id)
+					= link_to category_news_news_path(material.category, material) do
+						= info.title
+				- when 'page'
+					= link_to info.page do
+						= info.title
+				- when 'path'
+					= link_to info.path do
+						= info.title
+
+.clr-fx

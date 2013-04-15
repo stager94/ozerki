@@ -5,11 +5,6 @@ module ApplicationHelper
 		end
 	end
 
-	def news_module
-		news = New.displayed.where('category_new_id = ?', @config[:news_id]).limit(@config[:module_news_per_page])
-		render 'shared/modules/news', news: news
-	end
-
 	def generate_errors_list_for(errors = nil, type = 'full')
 		result = ''
 		if !errors.nil?
@@ -29,8 +24,21 @@ module ApplicationHelper
 		return result
 	end
 
+	# Modules
+
 	def gallery_module
 		images = Gallery.module
 		render 'shared/modules/gallery', images: images
 	end
+
+	def news_module
+		news = New.displayed.where('category_new_id = ?', @config[:news_id]).limit(@config[:module_news_per_page])
+		render 'shared/modules/news', news: news
+	end
+
+	def infoline_module
+		infos = Infoline.displayed
+		render 'shared/modules/infoline', infos: infos
+	end
+
 end

@@ -17,6 +17,7 @@ ru:
       page: 'Статические страницы'
       testimonal: 'Отзывы'
       gallery: 'Галерея'
+      infoline: 'Бегущая строка'
 
     attributes:
       configure:
@@ -94,6 +95,16 @@ ru:
         current_sign_in_at: 'Текущая сессия с'
         last_sign_in_at: 'Предыдущая сессия'
         sign_in_count: 'Кол-во посещений'
+      infoline:
+        title: 'Название'
+        new: 'Материал'
+        page: 'Страница'
+        created_at: 'Создано'
+        updated_at: 'Обновлено'
+        route: 'Направление'
+        display: 'Включена?'
+        path: 'URL'
+        position: 'Позиция'
   active_admin:
     dashboard: Админ-панель
     dashboard_welcome:

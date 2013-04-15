@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.webticker
 //= require jquery.slides
 //= require twitter/bootstrap
 //= require mousewheel
@@ -20,6 +21,19 @@
 //= require_tree .
 
 $(document).ready(function(){
+  $('#webtricker').liMarquee({
+      direction: 'left',
+      //Указывает направление движения содержимого контейнера (left | up)
+      loop: -1,
+      //Задает, сколько раз будет прокручиваться содержимое. "-1" для бесконечного воспроизведения движения
+      scrolldelay: 0,
+      //Величина задержки в миллисекундах между движениями
+      scrollamount: 50,
+      //Скорость движения контента (px/sec)
+      circular: true,
+      //Если "true" - строка непрерывная 
+      drag: false //Если "true" - включено перетаскивание строки
+  });
 	$("#slides").slidesjs({
     width: 1024,
     height: 310,

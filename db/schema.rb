@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130414144937) do
+ActiveRecord::Schema.define(:version => 20130415173419) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -130,6 +130,21 @@ ActiveRecord::Schema.define(:version => 20130414144937) do
   end
 
   add_index "galleries", ["category_gallery_id"], :name => "index_galleries_on_category_gallery_id"
+
+  create_table "infolines", :force => true do |t|
+    t.string   "title"
+    t.string   "route"
+    t.integer  "new_id"
+    t.integer  "page_id"
+    t.string   "path"
+    t.boolean  "display",    :default => true
+    t.datetime "created_at",                   :null => false
+    t.datetime "updated_at",                   :null => false
+    t.integer  "position"
+  end
+
+  add_index "infolines", ["new_id"], :name => "index_infolines_on_new_id"
+  add_index "infolines", ["page_id"], :name => "index_infolines_on_page_id"
 
   create_table "news", :force => true do |t|
     t.string   "title"
