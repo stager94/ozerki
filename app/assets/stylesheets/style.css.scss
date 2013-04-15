@@ -343,3 +343,35 @@ nav.pagination{
     visibility: hidden;
   }
 }
+
+.icons-big{
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  line-height: 30px;
+  vertical-align: text-top;
+  background-repeat: no-repeat;
+  background: url(glyphicons-big-white.png) no-repeat;
+
+  &.weather{
+    background-position: -104px -439px;
+  }
+
+  &.tipped-umbrella{
+    background-position: -153px -57px;
+  }
+
+  &.in-time{
+    background-position: -344px -249px;
+  }
+}
+
+.h40-vcenter{
+  height: 40px;
+  line-height: 40px;
+  display: inline-block;
+}
+
+.mt-4{
+  margin-top: -4px;
+}
