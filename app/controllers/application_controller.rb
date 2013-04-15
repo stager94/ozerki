@@ -3,13 +3,13 @@ class ApplicationController < ActionController::Base
   before_filter :private_settings, :public_settings
 
   def index
+    add_breadcrumb I18n.t('pages.home'), root_path
   	@news              = New.root
     @h1                = I18n.t 'pages.home'
     @meta_description  = @config[:site_snippet]
     @meta_keywords     = @config[:site_keywords]
 
     render layout: "index"
-    add_breadcrumb I18n.t('pages.home'), root_path
   end
 
   public

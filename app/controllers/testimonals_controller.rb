@@ -19,6 +19,7 @@ class TestimonalsController < ApplicationController
 	private
 	def private_settings
 		@h1 = I18n.t 'pages.testimonals'
+		add_breadcrumb I18n.t('pages.home'), root_path
 		add_breadcrumb I18n.t('pages.testimonals'), testimonals_path
 	end
 end

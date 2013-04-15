@@ -12,6 +12,7 @@ class PagesController < ApplicationController
 
 	def settings
 		@h1 = @page.title
+		add_breadcrumb I18n.t('pages.home'), root_path
 		add_breadcrumb @page.title, page_path(@page)
 
 		@meta_description = @page.snippet

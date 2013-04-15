@@ -3,8 +3,6 @@ class CategoryGalleriesController < ApplicationController
 	before_filter :get_category, only: [:show]
 	before_filter :set_breadcrumb_tree, only: [:show]
 
-	
-
 	def index
 		@categories = CategoryGallery.displayed
 
@@ -21,6 +19,7 @@ class CategoryGalleriesController < ApplicationController
 
 	private
 	def private_settings
+		add_breadcrumb I18n.t('pages.home'), root_path
 		add_breadcrumb I18n.t('pages.gallery'), :category_galleries_path
 		@all_categories = CategoryGallery.main
 	end
