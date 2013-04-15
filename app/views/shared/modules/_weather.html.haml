@@ -1,0 +1,22 @@
+.block-title
+  %i.icon-tint.icon-white{style: "margin-top: 4px;"}
+  Погода в регионе
+
+/ Gismeteo informer START
+%link{:href => "http://www.gismeteo.ua/static/css/informer2/gs_informerClient.min.css", :rel => "stylesheet", :type => "text/css"}/
+#gsInformerID-pO2FsNpGdYD6k5.gsInformer{:style => "width:274px;height:241px"}
+  .gsIContent
+    #cityLink
+      %a{:href => "http://www.gismeteo.ua/city/daily/12373/", :target => "_blank"} Погода в Красном Лимане
+    .gsLinks
+      %table
+        %tr
+          %td
+            .leftCol
+              %a{:href => "http://www.gismeteo.ua", :target => "_blank"}
+                %img{:align => "absmiddle", :alt => "Gismeteo", :border => "0", :src => "http://www.gismeteo.ua/static/images/informer2/logo-mini2.png", :title => "Gismeteo"}/
+                %span Gismeteo
+            .rightCol
+              %a{:href => "http://www.gismeteo.ua/city/weekly/12373/", :target => "_blank"} Прогноз на 2 недели
+%script{:src => "http://www.gismeteo.ua/ajax/getInformer/?hash=pO2FsNpGdYD6k5", :type => "text/javascript"}
+/ Gismeteo informer END

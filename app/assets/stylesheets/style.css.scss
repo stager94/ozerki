@@ -336,3 +336,10 @@ nav.pagination{
 .marquee{
   margin: 10px 0;
 }
+
+.gsInformer{
+  width: 100% !important;
+  .gsLinks{
+    visibility: hidden;
+  }
+}

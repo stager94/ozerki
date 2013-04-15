@@ -3,8 +3,9 @@
 .span7.none.w724
 	- @news.each do |article|
 		= render 'shared/partials/root_new', article: article
-.span3.rml20-max979= news_module
-
+.span3.rml20-max979
+	= news_module
+	= weather_module
 .clr-fx
 
 .well= gallery_module

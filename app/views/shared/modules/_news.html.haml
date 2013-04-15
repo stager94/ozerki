@@ -1,6 +1,6 @@
 .block-title 
 	%i.icon-star.icon-white{style: "margin-top: 4px;"}
-	Новости
+	Актуальные новости
 -news.each do |_new|
 	= link_to (category_news_news_path(_new.category, _new)), class: "news-link" do 
 		= _new.title

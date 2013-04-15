@@ -41,4 +41,7 @@ module ApplicationHelper
 		render 'shared/modules/infoline', infos: infos
 	end
 
+	def weather_module
+		render 'shared/modules/weather'
+	end
 end
