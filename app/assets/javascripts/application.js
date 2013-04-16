@@ -92,8 +92,10 @@ $(document).ready(function(){
   $('.box-media').hover(function(){
     console.log('On');
     $('.overlay', this).stop().fadeIn('fast');
+    $('.duration', this).stop().animate({ 'backgroundColor': 'transparent' }, "fast");
   }, function(){
     $('.overlay', this).stop().fadeOut('fast');
+    $('.duration', this).stop().animate({ 'backgroundColor': 'rgba(0, 0, 0, 0.7)' }, "fast");
   });
 
 });
