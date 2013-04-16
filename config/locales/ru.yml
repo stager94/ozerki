@@ -21,6 +21,7 @@ ru:
     menu:
       category: 'Категории'
       materials: 'Материалы'
+      gallery: 'Галерея'
     collect:
       new: 'Материал'
       page: 'Страница'
@@ -31,6 +32,7 @@ ru:
     services: 'Услуги'
     testimonals: 'Отзывы'
     gallery: 'Фотогалерея'
+    video: 'Видео'
   errors:
     validates:
       empty: 'Не все поля заполнены!'

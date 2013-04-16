@@ -16,8 +16,9 @@ ru:
       admin_user: 'Пользователи'
       page: 'Статические страницы'
       testimonal: 'Отзывы'
-      gallery: 'Галерея'
+      gallery: 'Фото'
       infoline: 'Бегущая строка'
+      video: 'Видео'
 
     attributes:
       configure:
@@ -105,6 +106,14 @@ ru:
         display: 'Включена?'
         path: 'URL'
         position: 'Позиция'
+      video:
+        title: 'Название'
+        description: 'Описание'
+        path: 'YouTube URL'
+        display: 'Отображать?'
+        position: 'Позиция'
+        created_at: 'Создано'
+        updated_at: 'Обновлено'
   active_admin:
     dashboard: Админ-панель
     dashboard_welcome:

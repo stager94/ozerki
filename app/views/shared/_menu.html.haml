@@ -9,7 +9,7 @@
         %span.icon-bar
         %span.icon-bar
         %span.icon-bar
-      %a.brand{:href => "#"} &nbsp
+      .brand Главное меню
       .nav-collapse.navbar-responsive-collapse.in.collapse{:style => "height: auto;"}
         %ul.nav
           %li{class: params[:controller] == 'application' && params[:action] == 'index' ? "active" : ""}
@@ -24,34 +24,17 @@
             = link_to "Акции", category_news_news_index_path(akcii)
           %li{class: params[:controller] == 'news' && params[:category_news_id] == news.to_param ? "active" : ""}
             = link_to "Новости", category_news_news_index_path(news)
-          / %li{class: @active_menu == 'home' ? "" : ""}          
-          /   = link_to "Туры", root_path            
           %li{class: params[:controller] == 'pages' && params[:id] == uslugi.to_param  ? "" : ""}
             = link_to "История", root_path
           %li{class: params[:controller] == 'category_galleries' ? "active" : ""}
-            = link_to "Галерея", category_galleries_path
+            = link_to "Фото", category_galleries_path
+          %li{class: params[:controller] == 'videos' ? "active" : ""}
+            = link_to "Видео", video_index_path
           %li{class: params[:controller] == 'testimonals' ? "active" : ""}
             = link_to "Отзывы", testimonals_path
           %li{class: params[:controller] == 'pages' && params[:id] == kontacts.to_param  ? "active" : ""}
             = link_to "Контакты", page_path(kontacts)
-          / %li.dropdown
-          /   %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
-          /     Dropdown
-          /     %b.caret
-          /   %ul.dropdown-menu
-          /     %li
-          /       %a{:href => "#"} Action
-          /     %li
-          /       %a{:href => "#"} Another action
-          /     %li
-          /       %a{:href => "#"} Something else here
-          /     %li.divider
-          /     %li.nav-header Nav header
-          /     %li
-          /       %a{:href => "#"} Separated link
-          /     %li
-          /       %a{:href => "#"} One more separated link
-      / /.nav-collapse
-  / /navbar-inner
+      /.nav-collapse
+  /navbar-inner
 
 .clr-fx

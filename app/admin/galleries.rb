@@ -1,17 +1,5 @@
 ActiveAdmin.register Gallery do
-	# index do
-	# 	selectable_column
-	# 	column :photo do |image|
-	# 		image_tag "#{image.photo.url}", style: "max-width: 200px;"
-	# 	end
-	# 	column :title
-	# 	column :category_gallery do |category|
-	# 		link_to admin_category_gallery_path(category) do
-	# 			raw "#{category.category_gallery.id} - #{category.category_gallery.title}"
-	# 		end
-	# 	end
-	# 	default_actions
-	# end
+	menu :parent => "#{I18n.t 'admin.menu.gallery'}"
 
 	filter :category_gallery
 	filter :title
