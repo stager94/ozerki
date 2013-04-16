@@ -28,7 +28,7 @@ class NewsController < ApplicationController
 		@category_id = params[:category_news_id]
 		@category = CategoryNew.find(@category_id)
 		add_breadcrumb I18n.t('pages.home'), root_path
-		add_breadcrumb I18n.t('pages.news'), category_news_news_index_path(params[:category_news_id])
+		add_breadcrumb @category.title, category_news_news_index_path(params[:category_news_id])
 		@active_menu = 'news'
 	end
 end
