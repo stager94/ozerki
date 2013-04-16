@@ -8,7 +8,7 @@ class Video < ActiveRecord::Base
 
   validates_presence_of :title, :path
 
-  has_attached_file :image, styles: { original: "320x180#" }
+  has_attached_file :image, styles: { original: "320x180#", default: "120x90" }
 
   scope :displayed, where('display = ?', true).order('created_at DESC')
 
