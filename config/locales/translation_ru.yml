@@ -112,6 +112,7 @@ ru:
         path: 'YouTube URL'
         display: 'Отображать?'
         position: 'Позиция'
+        image: 'Изображение (320х180)'
         created_at: 'Создано'
         updated_at: 'Обновлено'
   active_admin:

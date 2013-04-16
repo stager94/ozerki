@@ -3,7 +3,12 @@
 #videos
 	- @videos.each do |video|
 		.video-item
-			.picture= image_tag "http://i1.ytimg.com/vi/#{video.path}/mqdefault.jpg"
+			.picture
+				= link_to video.link, class: 'box-media' do
+					.overlay 
+						%i.icons-big.play
+						Воспроизвести
+					= image_tag video.draw
 			.info-block
 				.title= video.title
 				.description= video.description

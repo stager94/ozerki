@@ -67,6 +67,14 @@ $(document).ready(function(){
     }
   });
 
+  $('.box-media').fancybox({
+    openEffect  : 'none',
+    closeEffect : 'none',
+    helpers : {
+      media : {}
+    }
+  });
+
   $("a.original-image-link").fancybox({
     openEffect  : 'elastic',
     closeEffect : 'elastic',
@@ -80,5 +88,13 @@ $(document).ready(function(){
       }
     }
   });
+
+  $('.box-media').hover(function(){
+    console.log('On');
+    $('.overlay', this).stop().fadeIn('fast');
+  }, function(){
+    $('.overlay', this).stop().fadeOut('fast');
+  });
+
 });
 

@@ -1,3 +1,60 @@
 // Place all the styles related to the videos controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#videos{
+	width: 100%;
+	.video-item{
+		width: 100%;
+		margin: 0 0 30px 0;
+		.picture{
+			display: table;
+			float: left;
+
+			.overlay{
+				position: absolute;
+				background: rgba(0, 0, 0, .75);
+				color: white;
+				width: 320px;
+				height: 180px;
+				text-align: center;
+				line-height: 180px;
+				font-size: 27px;
+				display: none;
+			}
+		}
+		.info-block{
+			padding-left: 330px;
+
+			.title{
+				font-size: 20px;
+				margin-bottom: 10px;
+				font-weight: bold;
+			}
+			.description{
+				font-size: 13px;
+			}
+		}
+	}
+}
+
+@media (max-width: 730px){
+	#videos{
+		.video-item{
+			.picture{
+				width: 100%;
+				text-align: center;
+				background: rgb(241, 241, 241);
+				float: initial;
+				margin: 0 0 10px 0;
+			}
+
+			.info-block{
+				padding: initial;
+
+				.description{
+					font-size: 14px;
+				}
+			}
+		}
+	}
+}

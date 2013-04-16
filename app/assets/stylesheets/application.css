@@ -17,5 +17,6 @@
  *= require widths
  *= category_galleries
  *= require fancybox
+ *= require videos
  *= require_tree .
  */
