@@ -8,15 +8,15 @@ class Video < ActiveRecord::Base
 
   validates_presence_of :title, :path
 
-  has_attached_file :image, styles: { original: "320x180#", default: "120x90" }
+  has_attached_file :image, styles: { original: "320x180#", default: "120x90", mqdefault: "320x180" }
 
   scope :displayed, where('display = ?', true).order('created_at DESC')
 
-  def draw
+  def draw(size = 'mqdefault')
   	if self.image.exists?
-  		"#{image}"
+  		image(:"#{size}")
   	else
-  		"http://i1.ytimg.com/vi/#{self.path}/mqdefault.jpg"
+		  "http://i1.ytimg.com/vi/#{path}/#{size}.jpg"
   	end
   end
 

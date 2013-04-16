@@ -9,7 +9,7 @@ ActiveAdmin.register Video do
   index do
   	selectable_column
   	column :image do |f|
-  		image_tag f.draw
+  		image_tag f.draw(:default)
   	end
   	column :title
   	column :duration
@@ -31,7 +31,7 @@ ActiveAdmin.register Video do
   		row :title
   		row :duration
   		row :image do |f|
-  			image_tag f.draw
+  			image_tag f.draw(:default)
   		end
   		row :description
   		row :path
