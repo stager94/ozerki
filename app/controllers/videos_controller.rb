@@ -2,7 +2,7 @@ class VideosController < ApplicationController
 	before_filter :private_settings
 
 	def index
-		@videos = Video.displayed
+		@videos = Video.displayed.page(params[:page]).per(10)
 	end
 
 	private
