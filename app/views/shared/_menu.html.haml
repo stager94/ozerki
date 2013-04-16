@@ -29,7 +29,7 @@
           %li{class: params[:controller] == 'category_galleries' ? "active" : ""}
             = link_to "Фото", category_galleries_path
           %li{class: params[:controller] == 'videos' ? "active" : ""}
-            = link_to "Видео", video_index_path
+            = link_to "Видео", videos_path
           %li{class: params[:controller] == 'testimonals' ? "active" : ""}
             = link_to "Отзывы", testimonals_path
           %li{class: params[:controller] == 'pages' && params[:id] == kontacts.to_param  ? "active" : ""}

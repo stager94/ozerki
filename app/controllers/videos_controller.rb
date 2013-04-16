@@ -8,7 +8,7 @@ class VideosController < ApplicationController
 	private
 	def private_settings
 		add_breadcrumb I18n.t('pages.home'), root_path
-		add_breadcrumb I18n.t('pages.video'), video_index_path
+		add_breadcrumb I18n.t('pages.video'), videos_path
 		@h1 = I18n.t('pages.video')
 	end
 end

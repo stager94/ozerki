@@ -1,6 +1,8 @@
 class Video < ActiveRecord::Base
 	before_create :auto_position
 	before_update :auto_position
+	before_create :set_duration
+	before_update :set_duration
 
   attr_accessible :description, :display, :path, :position, :title, :image
 
@@ -20,6 +22,16 @@ class Video < ActiveRecord::Base
 
   def link
   	"http://www.youtube.com/watch?v=#{self.path}"
+  end
+
+  def get_duration
+  	Time.at(self.duration).gmtime.strftime('%M:%S')
+  end
+
+  private
+
+  def set_duration
+  	self.duration = YoutubeSearch.search(self.path).first['duration']
   end
 
   def auto_position

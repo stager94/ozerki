@@ -12,6 +12,7 @@ ActiveAdmin.register Video do
   		image_tag f.draw
   	end
   	column :title
+  	column :duration
   	column :description
   	column :path
   	column :display do |f|
@@ -28,6 +29,7 @@ ActiveAdmin.register Video do
   show do
   	attributes_table do
   		row :title
+  		row :duration
   		row :image do |f|
   			image_tag f.draw
   		end

@@ -19,6 +19,7 @@ gem 'russian', '~> 0.6.0'
 gem 'geocoder'
 gem 'fancybox2-rails', '~> 0.2.4'
 gem 'sublimevideo_rails'
+gem 'youtube_search'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
