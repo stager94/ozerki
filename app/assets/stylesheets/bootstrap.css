@@ -5315,7 +5315,7 @@ button.close {
   body {
     padding-left: 20px;
     padding-right: 20px;
-    background: none !important;
+    background: url(template/gradient.jpg) repeat-x top left;
   }
   .navbar-fixed-top,
   .navbar-fixed-bottom,
@@ -6342,5 +6342,24 @@ button.close {
     overflow: visible !important;
     display: table;
     margin: 0 auto;
+  }
+}
+
+@media (max-width: 800px){
+  .form-horizontal .control-label {
+    float: none;
+    width: auto;
+    padding-top: 0;
+    text-align: left;
+  }
+  .form-horizontal .controls {
+    margin-left: 0;
+  }
+  .form-horizontal .control-list {
+    padding-top: 0;
+  }
+  .form-horizontal .form-actions {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
