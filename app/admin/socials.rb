@@ -7,6 +7,22 @@ ActiveAdmin.register Social do
   filter :position
   filter :display
 
+
+  form do |f|
+    f.inputs I18n.t 'admin.general' do
+      f.input :title
+      f.input :path
+      f.input :image_class, as: :select, collection: [["#{I18n.t('socials.vk')}", "vkontakte"], 
+                                                      ["#{I18n.t('socials.facebook')}", "facebook"], 
+                                                      ["#{I18n.t('socials.twitter')}", "twitter"],
+                                                      ["#{I18n.t('socials.odnoklassniki')}", "odnoklassniki"],
+                                                      ["#{I18n.t('socials.youtube')}", "youtube"]]
+      f.input :position
+      f.input :display
+    end
+    f.buttons
+  end
+
   index do
   	selectable_column
   	column :title
@@ -37,16 +53,5 @@ ActiveAdmin.register Social do
   		end
   		row :position
   	end
-  end
-
-  form do |f|
-  	f.inputs I18n.t 'admin.general' do
-  		f.input :title
-  		f.input :path
-  		f.input :image_class, as: :select, collection: [["#{I18n.t('socials.vk')}", "vkontakte"], ['Facebook', "facebook"], ["#{I18n.t('socials.twitter')}", "twitter"]]
-  		f.input :position
-  		f.input :display
-  	end
-  	f.buttons
   end
 end
