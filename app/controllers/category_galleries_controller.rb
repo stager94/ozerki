@@ -26,7 +26,7 @@ class CategoryGalleriesController < ApplicationController
 
 	def get_category
 		@category = CategoryGallery.find(params[:id])
-		@categories = @category.children
+		@categories = @category.children.where("display = ?", true)
 	end
 
 	def set_breadcrumb_tree
