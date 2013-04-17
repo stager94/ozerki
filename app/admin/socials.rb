@@ -27,7 +27,9 @@ ActiveAdmin.register Social do
   	selectable_column
   	column :title
   	column :path
-    column :image_class
+    column :image_class do |f|
+    	raw "<div class='social-icon #{f.image_class}'></div> #{f.image_class}"
+    end
   	column :display do |f|
   		if f.display == true
   			raw "<span class='status_tag complete'>true</span>"
