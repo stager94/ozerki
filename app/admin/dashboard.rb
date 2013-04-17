@@ -1,5 +1,5 @@
 ActiveAdmin.register_page "Dashboard" do
-
+  I18n.locale = :ru
   menu :priority => 1, :label => proc{ I18n.t("active_admin.dashboard") }
 
   content :title => proc{ I18n.t("active_admin.dashboard") } do

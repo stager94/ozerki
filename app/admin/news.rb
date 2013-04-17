@@ -1,5 +1,6 @@
 ActiveAdmin.register New do
-	menu :parent => "#{I18n.t 'admin.menu.materials'}"
+	I18n.locale = :ru
+	menu :parent => I18n.t('admin.menu.news')
 
 	filter :category_new
 	filter :title

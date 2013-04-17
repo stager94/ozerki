@@ -1,5 +1,5 @@
 ActiveAdmin.register Social do
-  menu :parent => "#{I18n.t 'admin.menu.settings'}"
+  menu :parent => I18n.t('admin.menu.settings')
 
   filter :title
   filter :path

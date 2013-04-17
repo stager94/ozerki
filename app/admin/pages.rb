@@ -1,5 +1,5 @@
 ActiveAdmin.register Page do
-	menu :parent => "#{I18n.t 'admin.menu.materials'}"
+	menu :parent => I18n.t('admin.menu.news')
 
 	filter :title
 	filter :author

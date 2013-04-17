@@ -1,5 +1,5 @@
 ActiveAdmin.register Configure do
-  menu :parent => "#{I18n.t 'admin.menu.settings'}"
+  menu :parent => I18n.t('admin.menu.settings')
 
 	config.clear_sidebar_sections!
 	config.batch_actions = false
