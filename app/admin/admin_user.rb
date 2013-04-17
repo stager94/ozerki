@@ -1,4 +1,5 @@
 ActiveAdmin.register AdminUser do  
+  menu :parent => I18n.t('admin.menu.settings')
   show do |user|
     attributes_table do
       row :email

@@ -44,4 +44,9 @@ module ApplicationHelper
 	def weather_module
 		render 'shared/modules/weather'
 	end
+
+	def social_model
+		socials = Social.displayed
+		render 'shared/modules/social', socials: socials
+	end
 end

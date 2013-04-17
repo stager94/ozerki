@@ -167,6 +167,7 @@ ru:
         path: 'Ссылка'
         image: 'Изображение'
         position: 'Позиция'
+        image_class: 'Класс'
         display: 'Отображать?'
         created_at: 'Создано'
         updated_at: 'Обновлено'

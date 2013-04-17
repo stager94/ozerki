@@ -4,9 +4,11 @@ class Social < ActiveRecord::Base
 
 	has_attached_file :image
 
-  attr_accessible :display, :image, :path, :position, :title
+  attr_accessible :display, :image, :path, :position, :title, :image_class
 
-  validates_presence_of :title, :image, :path
+  validates_presence_of :title, :image, :path, :image_class
+
+  scope :displayed, where('display = ?', true).order('position ASC')
 
   def auto_position
   	if self.position.blank?
