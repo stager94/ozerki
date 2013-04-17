@@ -1,4 +1,6 @@
 ActiveAdmin.register Configure do
+  menu :parent => "#{I18n.t 'admin.menu.settings'}"
+
 	config.clear_sidebar_sections!
 	config.batch_actions = false
 	config.clear_action_items!
@@ -13,7 +15,7 @@ ActiveAdmin.register Configure do
 	  end
   end
 
-  show do |configure|
+  show do
   	attributes_table do
   		row :site_title
   		row :title_separator

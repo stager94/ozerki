@@ -9,7 +9,7 @@ ru:
 
   activerecord:
     models:
-      configure: 'Настройки сайта'
+      configure: 'Настройки'
       new: 'Новости'
       category_new: 'Категории новостей'
       category_gallery: 'Категории галереи'
@@ -19,6 +19,7 @@ ru:
       gallery: 'Фото'
       infoline: 'Бегущая строка'
       video: 'Видео'
+      social: 'Социальные ссылки'
 
     attributes:
       configure:
@@ -113,6 +114,14 @@ ru:
         display: 'Отображать?'
         position: 'Позиция'
         image: 'Изображение (320х180)'
+        created_at: 'Создано'
+        updated_at: 'Обновлено'
+      social:
+        title: 'Название'
+        path: 'Ссылка'
+        image: 'Изображение'
+        position: 'Позиция'
+        display: 'Отображать?'
         created_at: 'Создано'
         updated_at: 'Обновлено'
   active_admin:

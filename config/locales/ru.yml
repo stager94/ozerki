@@ -22,6 +22,7 @@ ru:
       category: 'Категории'
       materials: 'Материалы'
       gallery: 'Галерея'
+      setting: 'Настройки сайта'
     collect:
       new: 'Материал'
       page: 'Страница'
