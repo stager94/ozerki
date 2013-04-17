@@ -7,6 +7,8 @@ Hostel::Application.routes.draw do
   
   root to: "application#index"
 
+  match "/rss", to: "news#feed"
+
   resources :pages, path: :page, only: [:show]
   resources :category_news, path: :category, only: [:index] do
     resources :news, path: :new, only: [:show, :index]

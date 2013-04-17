@@ -1,6 +1,6 @@
 class NewsController < ApplicationController
 	before_filter :find_new, only: [:show]
-	before_filter :settings
+	before_filter :settings, except: [:feed]
 
 	def index
 		@news   = New.displayed.where(category_new_id: @category_id).page(params[:page]).per(@config[:news_per_page])
