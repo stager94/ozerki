@@ -1,5 +1,7 @@
 = title @category.title
 
+%h2
+	= "Категории:" if @categories.size > 0
 .gallery-wrapper
 	- @categories.each do |category|
 		- info = get_params_to_cat_page category, @all_categories
@@ -11,6 +13,9 @@
 				- info['images'].each do |image|
 					= image_tag image.photo(:small)
 
+
+%h2 
+	= "Фотографии:" if @photos.size > 0
 #photos-wrapper
 	- @photos.each do |photo|
 		= link_to(photo.photo.url(:original), class: "original-image-link", rel: :image, title: photo.description) do
