@@ -410,3 +410,14 @@ nav.pagination{
 .odnoklassniki{
   background: url(socials/ok.png);
 }
+
+#photos-wrapper{
+  width: 100%;
+  text-align: center;
+
+  a{
+    img{
+      margin: 5px;
+    }
+  }
+}

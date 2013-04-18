@@ -11,6 +11,7 @@
 				- info['images'].each do |image|
 					= image_tag image.photo(:small)
 
-- @photos.each do |photo|
-	= link_to(photo.photo.url(:original), class: "original-image-link", rel: :image, title: photo.description) do
-		= image_tag photo.photo.url(:medium)
+#photos-wrapper
+	- @photos.each do |photo|
+		= link_to(photo.photo.url(:original), class: "original-image-link", rel: :image, title: photo.description) do
+			= image_tag photo.photo.url(:medium)
