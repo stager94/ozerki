@@ -49,4 +49,8 @@ module ApplicationHelper
 		socials = Social.displayed
 		render 'shared/modules/social', socials: socials
 	end
+
+	def map_model
+		render 'shared/modules/map'
+	end
 end

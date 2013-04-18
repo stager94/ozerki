@@ -6,6 +6,12 @@
 .span3.rml20-max979
 	= news_module
 	= weather_module
+	.metro-block.turquoise
+		%strong Есть вопросы?
+		Свяжитесь с нами подробнее в разделе 
+		= link_to '"Контакты"', page_path(Page.find(2))
 .clr-fx
 
+
+= map_model
 .well= gallery_module

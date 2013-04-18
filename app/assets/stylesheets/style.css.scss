@@ -421,3 +421,44 @@ nav.pagination{
     }
   }
 }
+
+.metro-block{
+  padding: 20px;
+  color: white;
+  margin: 10px 0;
+
+  strong{
+    font-size: 16px;
+    font-weight: bold;
+    clear: both;
+    display: block;
+  }
+
+  a{
+    color: #80fffb;
+    text-decoration: underline;
+
+    &:hover{
+      color: #80fffb;
+      text-decoration: none;
+    }
+  }
+}
+
+.turquoise{ background: #439d9a !important; }
+.red{ background: #bf1e4b !important; }
+.purple{ background: #7200ac !important; }
+.yellow{ background: #f5a802 !important; }
+.blue{ background: #2d89ef !important; }
+.green{ background: #00a300 !important; }
+.dark-green{ background: #1e7145 !important;}
+.light-green{ background: #99b433 !important; }
+.pink{ background: #9f00a7 !important; }
+.dark-pink { background: #7e3878 !important; }
+.yellow{ background: #ffc40d !important; }
+.darken{ background: #1d1d1d !important;}
+.dark-blue{ background: #2b5797 !important; }
+.light-blue{ background: #eff4ff !important; }
+.orange{ background: #e3a21a !important; }
+.dark-orange{ background: #da532c !important;}
+.white{ background: #ffffff !important; }

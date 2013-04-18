@@ -7,11 +7,11 @@ class New < ActiveRecord::Base
 	
   attr_accessible :slug, :author, :content, :display, :root, :snippet, :title, :precontent, :category_new_id, :tag_list, :position, :news_id
 
-  validates_presence_of :title, :content, :snippet, :tag_list
+  validates_presence_of :title, :content, :snippet
   validates_uniqueness_of :slug
 
   scope :displayed, where('display = ?', true).where('root = ?', false).order('created_at DESC')
-  scope :root, where('root = ?', true).where('root = ?', true).order('position ASC')
+  scope :root, where('display = ?', true).where('root = ?', true).where('root = ?', true).order('position ASC')
 
   scope :admin_news, where('root != ?', true)
   scope :admin_root, where('root = ?', true)
