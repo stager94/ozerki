@@ -4,12 +4,7 @@
 	- @news.each do |article|
 		= render 'shared/partials/root_new', article: article
 .span3.rml20-max979
-	= news_module
-	= weather_module
-	.metro-block.turquoise
-		%strong Есть вопросы?
-		Свяжитесь с нами подробнее в разделе 
-		= link_to '"Контакты"', page_path(Page.find(2))
+	= render 'shared/sidebar'
 .clr-fx
 
 
