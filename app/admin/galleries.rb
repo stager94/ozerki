@@ -9,9 +9,11 @@ ActiveAdmin.register Gallery do
 
 	index as: :grid, columns: 5 do |image|
 		if image.display_on_root
-			link_to(image_tag(image.photo.url(:medium)), admin_gallery_path(image), class: "main")
+			link_to(admin_gallery_path(image)) do
+				raw "<div class='main'></div> <img src='#{image.photo.url(:medium)}' />"
+			end
 		else
-			link_to(image_tag(image.photo.url(:medium)), admin_gallery_path(image)) if !image.display_on_root
+			link_to(image_tag(image.photo.url(:medium)), admin_gallery_path(image))
 		end
 	end
 

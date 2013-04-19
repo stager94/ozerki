@@ -27,10 +27,15 @@
 // .active_admin       applies to any Active Admin namespace
 // .admin_namespace    applies to the admin namespace (eg: /admin)
 // .other_namespace    applies to a custom namespace named other (eg: /other)
-a.main{
-	border: 3px solid rgb(163, 35, 35) !important;
-	display: table !important;
-	position: relative !important;
+
+div.main{
+  background: url(/assets/on_main.png) no-repeat top right;
+  display: table !important;
+  position: relative !important;
+  width: 200px;
+  height: 200px;
+  position: absolute !important;
+  z-index: 99999;
 
 	img{
 		float: left;
