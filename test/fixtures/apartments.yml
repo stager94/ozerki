@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  class: MyString
+  room_number: 1
+  free_room: 1
+  display: false
+
+two:
+  title: MyString
+  class: MyString
+  room_number: 1
+  free_room: 1
+  display: false

@@ -66,8 +66,17 @@ ru:
       infoline: 'Бегущая строка'
       video: 'Видео'
       social: 'Социальные ссылки'
+      apartment: 'Домики'
 
     attributes:
+      apartment:
+        title: 'Название'
+        display: 'Отображать?'
+        free_room: 'Количество свободных комнат'
+        room_number: 'Общее количество комнат'
+        apartment_class: 'Класс'
+        created_at: 'Создано'
+        updated_at: 'Обновлено'
       configure:
         site_title: 'Название сайта'
         title_separator: 'Разделитель title'
