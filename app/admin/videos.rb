@@ -13,7 +13,9 @@ ActiveAdmin.register Video do
   	end
   	column :title
   	column :duration
-  	column :description
+  	column :description do |f|
+      raw "#{truncate f.description}"
+    end
   	column :path
   	column :display do |f|
 			if f.display == true
@@ -31,7 +33,7 @@ ActiveAdmin.register Video do
   		row :title
   		row :duration
   		row :image do |f|
-  			image_tag f.draw(:default)
+  			image_tag f.draw(:mqdefault)
   		end
   		row :description
   		row :path

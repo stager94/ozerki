@@ -165,7 +165,7 @@ ru:
       video:
         title: 'Название'
         description: 'Описание'
-        path: 'YouTube URL'
+        path: 'YouTube ID'
         display: 'Отображать?'
         position: 'Позиция'
         image: 'Изображение (320х180)'
