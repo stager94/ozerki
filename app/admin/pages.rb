@@ -6,6 +6,7 @@ ActiveAdmin.register Page do
 
 	index do
 		selectable_column
+		id_column
 		column :title
 		column :slug
 		column :author

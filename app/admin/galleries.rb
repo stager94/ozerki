@@ -7,7 +7,7 @@ ActiveAdmin.register Gallery do
 	filter :display
 	filter :display_on_root
 
-	index as: :grid, columns: 5 do |image|
+	index as: :grid, columns: 4 do |image|
 		if image.display_on_root
 			link_to(admin_gallery_path(image)) do
 				raw "<div class='main'></div> <img src='#{image.photo.url(:medium)}' />"
