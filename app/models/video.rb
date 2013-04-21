@@ -27,7 +27,7 @@ class Video < ActiveRecord::Base
   end
 
   def get_duration
-  	Time.at(self.duration).gmtime.strftime('%M:%S')
+  	Time.at(self.duration).gmtime.strftime('%H:%M:%S')
   end
 
   private
