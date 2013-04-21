@@ -10,7 +10,7 @@ class Gallery < ActiveRecord::Base
 
   has_attached_file :photo, styles: { small: "100x100#", medium: "200x200#" }
 
-  scope :module, where('display_on_root = ?', true).order('random()').limit(5)
+  scope :module, where('display_on_root = ?', true).order('random()').limit(4)
 
   def to_param
     "#{id} #{slug}".parameterize
