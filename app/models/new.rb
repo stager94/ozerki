@@ -24,6 +24,14 @@ class New < ActiveRecord::Base
     CategoryNew.find(self.category_new_id)
   end
 
+  def next
+    New.first(conditions: ['id > ? AND category_new_id = ? AND display = ?', self.id, self.category_new_id, true], order: 'created_at ASC')
+  end
+
+  def prev
+    New.first(conditions: ['id < ? AND category_new_id = ? AND display = ?', self.id, self.category_new_id, true], order: 'created_at DESC')
+  end
+
   private
   def create_alias
 		self.slug = self.title.parameterize unless !self.slug.blank?

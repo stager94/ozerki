@@ -17,6 +17,7 @@ class NewsController < ApplicationController
 		@h1    			 			 = @new.title
 		
 		add_breadcrumb @new.title, category_news_news_index_path(@category_id, @new)
+		@news = New.displayed.where(category_new_id: @category_id)
 	end
 
 	private
