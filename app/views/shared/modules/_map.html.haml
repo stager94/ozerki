@@ -1,1 +1,9 @@
-= image_tag 'ozerki_1.jpg'
+#ozerki-map
+	.static-map
+	.dynamic-map
+		- houses.each do |house|
+			%div{class: "#{house.apartment_class} house-item"}
+				.item-title= house.title
+				= image_tag house.image
+				.item-badge{class: house.badge}
+					= house.free_room

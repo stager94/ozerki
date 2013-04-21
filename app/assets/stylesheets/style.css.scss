@@ -462,3 +462,217 @@ nav.pagination{
 .orange{ background: #e3a21a !important; }
 .dark-orange{ background: #da532c !important;}
 .white{ background: #ffffff !important; }
+
+#ozerki-map{
+  width: 100%;
+  .static-map{
+    min-height: 500px;
+    background: url(ozerki_1.png) no-repeat top center;
+    margin: 10px 0;
+  }
+
+  .dynamic-map{
+    min-height: 500px;
+    background: url(ozerki_layout.png) no-repeat top center;
+    margin: 10px 0;
+    position: relative;
+
+    .house-item{
+      display: block;
+      width: 40px;
+      position: absolute;
+
+      img{
+        margin-top: 17px;
+      }
+    }
+
+    .item-title{
+      position: absolute;
+      color: white;
+      text-shadow: 1px 0 2px rgba(0, 0, 0, .7);
+      width: 40px;
+      text-align: center;
+    }
+  }
+}
+
+.item-badge{
+  text-align: center;
+  line-height: 25px;
+  color: white;
+  position: absolute;
+  margin-top: -17px;
+  margin-left: 20px;  
+
+  &.green{
+    background: url(green_badge.png) no-repeat top left !important;
+    width: 26px;
+    height: 28px;
+  }
+  &.yellow{
+    background: url(yellow_badge.png) no-repeat top left !important;
+    width: 26px;
+    height: 28px;
+  }
+  &.red{
+    background: url(red_badge.png) no-repeat top left !important;
+    width: 26px;
+    height: 28px;
+  }
+}
+
+@media (max-width: 979px){
+  #ozerki-map{
+    display: none;
+  }
+}
+
+.house_15{
+  top: 18px;
+  left: 556px;
+}
+.house_16{
+  top: 70px;
+  left: 631px;
+}
+.house_17{
+  top: 53px;
+  left: 709px;
+}
+.house_18{
+  top: 38px;
+  left: 794px;
+}
+.house_19{
+  top: 71px;
+  left: 881px;
+}
+.house_20{
+  top: 143px;
+  left: 879px;
+}
+.house_21{
+  top: 212px;
+  left: 843px;
+}
+.house_22{
+  top: 271px;
+  left: 814px;
+}
+.house_23{
+  top: 334px;
+  left: 788px;
+}
+.house_24{
+  top: 403px;
+  left: 764px;
+}
+.house_25{
+  top: 345px;
+  left: 705px;
+}
+.house_26{
+  top: 301px;
+  left: 650px;
+}
+.house_27{
+  top: 246px;
+  left: 597px;
+}
+.house_28{
+  top: 210px;
+  left: 538px;
+}
+.house_30{
+  top: 114px;
+  left: 541px;
+}
+.house_34{
+  top: 245px;
+  left: 738px;
+}
+.house_35{
+  top: 152px;
+  left: 766px;
+}
+.house_36{
+  top: 55px;
+  left: 476px;
+}
+
+
+@media (min-width: 1200px){
+  .house_15{
+    top: 18px;
+    left: 600px;
+  }
+  .house_16{
+    top: 70px;
+    left: 675px;
+  }
+  .house_17{
+    top: 53px;
+    left: 753px;
+  }
+  .house_18{
+    top: 38px;
+    left: 838px;
+  }
+  .house_19{
+    top: 71px;
+    left: 925px;
+  }
+  .house_20{
+    top: 143px;
+    left: 923px;
+  }
+  .house_21{
+    top: 212px;
+    left: 887px;
+  }
+  .house_22{
+    top: 271px;
+    left: 858px;
+  }
+  .house_23{
+    top: 334px;
+    left: 832px;
+  }
+  .house_24{
+    top: 403px;
+    left: 808px;
+  }
+  .house_25{
+    top: 345px;
+    left: 749px;
+  }
+  .house_26{
+    top: 301px;
+    left: 694px;
+  }
+  .house_27{
+    top: 246px;
+    left: 641px;
+  }
+  .house_28{
+    top: 210px;
+    left: 582px;
+  }
+  .house_30{
+    top: 114px;
+    left: 585px;
+  }
+  .house_34{
+    top: 245px;
+    left: 782px;
+  }
+  .house_35{
+    top: 152px;
+    left: 810px;
+  }
+  .house_36{
+    top: 55px;
+    left: 520px;
+  }
+}

@@ -51,6 +51,7 @@ module ApplicationHelper
 	end
 
 	def map_model
-		render 'shared/modules/map'
+		houses = Apartment.displayed
+		render 'shared/modules/map', houses: houses
 	end
 end
