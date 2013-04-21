@@ -1,4 +1,5 @@
 ActiveAdmin.register CategoryGallery do
+  I18n.locale = :ru
   menu :parent => "#{I18n.t 'admin.menu.category'}"
   
   filter :parent_id

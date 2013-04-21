@@ -1,4 +1,7 @@
 ActiveAdmin.register Testimonal do
+	I18n.locale = :ru
+	menu :parent => I18n.t('admin.menu.news')
+	
 	filter :author
 	filter :email
 	filter :address

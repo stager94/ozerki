@@ -3,7 +3,7 @@ class TestimonalsController < ApplicationController
 	respond_to :html, :js
 
 	def index
-		@testimonals = Testimonal.displayed.page(params[:page]).per(10)
+		@testimonals = Testimonal.displayed.page(params[:page]).per(5)
 		@testimonal = Testimonal.new
 	end
 

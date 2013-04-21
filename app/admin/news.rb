@@ -37,7 +37,7 @@ ActiveAdmin.register New do
   			raw "<span class='status_tag in_progress'>false</span>"
   		end
 		end
-
+		column :tag_list
 		column :position
 		column :author
 		default_actions
