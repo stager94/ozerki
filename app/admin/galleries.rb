@@ -4,8 +4,8 @@ ActiveAdmin.register Gallery do
 	filter :category_gallery
 	filter :title
 	filter :author
-	filter :display
-	filter :display_on_root
+	filter :display, as: :select
+	filter :display_on_root, as: :select
 
 	index as: :grid, columns: 4 do |image|
 		if image.display_on_root

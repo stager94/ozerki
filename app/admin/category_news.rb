@@ -4,7 +4,7 @@ ActiveAdmin.register CategoryNew do
 
   filter :parent_id
   filter :title
-  filter :display
+  filter :display, as: :select
 
   member_action :move_to_left do
   	category = CategoryNew.find(params[:id])

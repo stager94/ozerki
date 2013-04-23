@@ -3,7 +3,7 @@ ActiveAdmin.register Video do
 
   filter :title
   filter :path
-  filter :display
+  filter :display, as: :select
   filter :position
 
   index do

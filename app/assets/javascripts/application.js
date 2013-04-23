@@ -98,5 +98,9 @@ $(document).ready(function(){
     $('.duration', this).stop().animate({ 'backgroundColor': 'rgba(0, 0, 0, 0.7)' }, "fast");
   });
 
+  var a = 'Sd';
+  // Weather informer text
+  var weather = $('.gsCity span');
+  weather.text('Погода в "Озерках"');
 });
 

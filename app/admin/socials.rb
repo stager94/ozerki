@@ -5,7 +5,7 @@ ActiveAdmin.register Social do
   filter :image_class
   filter :path
   filter :position
-  filter :display
+  filter :display, as: :select
 
 
   form do |f|

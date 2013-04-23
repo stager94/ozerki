@@ -4,7 +4,7 @@ ActiveAdmin.register CategoryGallery do
   
   filter :parent_id
   filter :title
-  filter :display
+  filter :display, as: :select
 
   batch_action :destroy do |selection|
   	CategoryGallery.find(selection).each do |cat|

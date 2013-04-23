@@ -5,7 +5,7 @@ ActiveAdmin.register Testimonal do
 	filter :author
 	filter :email
 	filter :address
-	filter :display
+	filter :display, as: :select
 
 	show do |testimonal|
 		attributes_table do

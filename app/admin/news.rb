@@ -4,7 +4,7 @@ ActiveAdmin.register New do
 
 	filter :category_new
 	filter :title
-	filter :display
+	filter :display, as: :select
 	filter :root
 	filter :author
 

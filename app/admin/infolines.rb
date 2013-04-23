@@ -8,7 +8,7 @@ ActiveAdmin.register Infoline do
   filter :page
   filter :path
   filter :position
-  filter :display
+  filter :display, as: :select
 
   index do
     selectable_column

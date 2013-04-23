@@ -3,7 +3,7 @@ ActiveAdmin.register Apartment do
 	filter :class
 	filter :room_number
 	filter :free_room
-	filter :display
+	filter :display, as: :select
 
 	index do
 		selectable_column
