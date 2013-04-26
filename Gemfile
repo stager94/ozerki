@@ -20,6 +20,8 @@ gem 'geocoder'
 gem 'fancybox2-rails', '~> 0.2.4'
 gem 'sublimevideo_rails'
 gem 'youtube_search'
+gem 'capistrano'
+gem 'rvm-capistrano'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -30,6 +32,11 @@ end
 group :development do
 	gem 'sqlite3'
 	gem 'pry'
+	gem 'capistrano_colors', '0.5.4', :require => false
+end
+
+group :production do
+	gem 'mysql2', '>= 0.2'
 end
 
 gem 'jquery-rails'
