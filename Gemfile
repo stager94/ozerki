@@ -22,6 +22,7 @@ gem 'sublimevideo_rails'
 gem 'youtube_search'
 gem 'capistrano'
 gem 'rvm-capistrano'
+gem 'unicorn'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
