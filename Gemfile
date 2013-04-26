@@ -20,25 +20,23 @@ gem 'geocoder'
 gem 'fancybox2-rails', '~> 0.2.4'
 gem 'sublimevideo_rails'
 gem 'youtube_search'
-gem 'capistrano'
-gem 'rvm-capistrano'
-gem 'unicorn'
 
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
-  gem 'uglifier', '>= 1.0.3'
+	gem 'sass-rails',   '~> 3.2.3'
+	gem 'coffee-rails', '~> 3.2.1'
+	gem 'uglifier', '>= 1.0.3'
 end
 
 group :development do
 	gem 'sqlite3'
 	gem 'pry'
 	gem 'capistrano_colors', '0.5.4', :require => false
+	gem 'capistrano'
+	gem 'rvm-capistrano'
+	gem 'unicorn'
 end
 
-group :production do
-	gem 'mysql2', '>= 0.2'
-end
+
 
 gem 'jquery-rails'
 
