@@ -1,9 +1,3 @@
-development:
-	adapter: sqlite3
-	database: db/skmz.hostel.dev.sqlite3
-	pool: 5
-	timeout: 5000
-
 production:
 	adapter: mysql2
 	encoding: utf8
@@ -11,3 +5,9 @@ production:
 	database: skmz_ozerki24
 	username: skmz_ozerki24
 	password: VYWWvdTn
+
+development:
+	adapter: sqlite3
+	database: db/skmz.hostel.dev.sqlite3
+	pool: 5
+	timeout: 5000
