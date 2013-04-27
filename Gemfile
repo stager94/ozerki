@@ -36,7 +36,9 @@ group :development do
 	gem 'unicorn'
 end
 
-
+group :production do
+	gem 'mysql2'
+end
 
 gem 'jquery-rails'
 
