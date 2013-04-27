@@ -7,7 +7,11 @@ production:
   adapter: mysql2
   encoding: utf8
   host: mysql5.locum.ru
-  reconnect: false
-  database: skmz_ozerky74
-  username: skmz_ozerky74
-  password: 5jQim6iw
+  database: skmz_hostel41
+  username: skmz_hostel41
+  password: QQmc2E9A
+# production:
+#   adapter: sqlite3
+#   database: db/skmz.hostel.dev.sqlite3
+#   pool: 5
+#   timeout: 5000

@@ -32,7 +32,7 @@ require 'bundler/capistrano'
 load 'deploy/assets'
 
 # Для удобства работы мы рекомендуем вам настроить авторизацию
-# SSH по ключу. При работе capistrano будет использоватaьсяa
+# SSH по ключу. При работе capistrano будет использоваться
 # ssh-agent, который предоставляет возможность пробрасывать
 # авторизацию на другие хосты.
 # Если вы не используете авторизацию SSH по ключам И ssh-agent,
@@ -41,7 +41,7 @@ ssh_options[:forward_agent] = true
 
 # Имя вашего проекта в панели управления.
 # Не меняйте это значение без необходимости, оно используется дальше.
-set :application,     "ozerky"
+set :application,     "hostel"
 
 # Сервер размещения проекта.
 set :deploy_server,   "fluorine.locum.ru"
@@ -74,10 +74,10 @@ set :scm,             :git
 # домашнем каталоге в подкаталоге git/<имя проекта>.git.
 # Подробнее о создании репозитория читайте в нашем блоге
 # http://locum.ru/blog/hosting/git-on-locum
-set :repository,      "git@github.com:stager94/ozerki.git"
+# set :repository,      "ssh://#{user}@#{deploy_server}/home/#{user}/git/#{application}.git"
 
 ## Если ваш репозиторий в GitHub, используйте такую конфигурацию
-# set :repository,    "git@github.com:username/project.git"
+set :repository,    "git@github.com:stager94/ozerki.git"
 
 ## --- Ниже этого места ничего менять скорее всего не нужно ---
 
