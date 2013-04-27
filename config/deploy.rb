@@ -8,7 +8,7 @@ ssh_options[:forward_agent] = true
 set :using_rvm, true
 set :rvm_type, :system
 
-set :application,     "hostel"
+set :application,     "hostels"
 
 set :deploy_server,   "fluorine.locum.ru"
 
