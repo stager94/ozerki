@@ -8,7 +8,8 @@ module CategoryGalleriesHelper
 		end
 		puts res
 
-		category_image = Gallery.where('category_gallery_id IN (?)', res).order('RANDOM()')
+		category_image = Gallery.where('category_gallery_id IN (?)', res).order('RANDOM()') if Rails.env.development?
+		category_image = Gallery.where('category_gallery_id IN (?)', res).order('RAND()') if Rails.env.production?
 		
 		count = 0
 		res.each do |cat|
@@ -31,7 +32,8 @@ module CategoryGalleriesHelper
 		end
 		puts res
 
-		category_image = Gallery.where('category_gallery_id IN (?)', res).order('RANDOM()')
+		category_image = Gallery.where('category_gallery_id IN (?)', res).order('RANDOM()') if Rails.env.development?
+		category_image = Gallery.where('category_gallery_id IN (?)', res).order('RAND()') if Rails.env.production?
 		
 		count = 0
 		res.each do |cat|
