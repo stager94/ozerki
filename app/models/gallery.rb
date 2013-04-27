@@ -10,7 +10,7 @@ class Gallery < ActiveRecord::Base
 
   has_attached_file :photo, styles: { small: "100x100#", medium: "200x200#" }
 
-  scope :module, where('display_on_root = ?', true).order('random()').limit(4) unless Rails.env.production?
+  scope :module, where('display_on_root = ?', true).order('random()').limit(4) if Rails.env.development?
   scope :module, where('display_on_root = ?', true).order('RAND()').limit(4) if Rails.env.production?
 
   def to_param
