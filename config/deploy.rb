@@ -41,7 +41,7 @@ ssh_options[:forward_agent] = true
 
 # Имя вашего проекта в панели управления.
 # Не меняйте это значение без необходимости, оно используется дальше.
-set :application,     "ozerki"
+set :application,     "hostel"
 
 # Сервер размещения проекта.
 set :deploy_server,   "fluorine.locum.ru"
