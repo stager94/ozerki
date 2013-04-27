@@ -10,4 +10,4 @@ production:
   reconnect: false
   database: skmz_ozerki15
   username: skmz_ozerki15
-  password: skmz
+  password: skmzs
