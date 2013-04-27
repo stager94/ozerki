@@ -1,11 +1,12 @@
 Hostel::Application.routes.draw do
+  map.home '/', :controller => "application", :action => "index"
+
+  root to: "application#index"
 
   ActiveAdmin.routes(self)
   devise_for :admin_users, ActiveAdmin::Devise.config
 
   mount Ckeditor::Engine => '/ckeditor'
-  
-  root to: "application#index"
 
   resources :pages, path: :page, only: [:show]
   resources :category_news, path: :category, only: [:index] do
