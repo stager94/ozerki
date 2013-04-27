@@ -151,4 +151,5 @@ ActiveAdmin.setup do |config|
   # config.csv_options = {}
   config.register_javascript 'ckeditor/ckeditor.js' 
   config.register_javascript 'ckeditor/init.js'
+  config.register_javascript 'ckeditor/config.js'
 end

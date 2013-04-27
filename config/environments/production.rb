@@ -13,7 +13,7 @@ Hostel::Application.configure do
   config.action_dispatch.x_sendfile_header = "X-Sendfile"
 
   # Compress JavaScripts and CSS
-  config.assets.compress = true
+  config.assets.compress = false
 
   # Don't fallback to assets pipeline if a precompiled asset is missed
   config.assets.compile = true
@@ -66,4 +66,5 @@ Hostel::Application.configure do
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
   config.assets.precompile += Ckeditor.assets
+  config.assets.precompile += %w( ckeditor/**/*.js ckeditor/**/*.css )
 end
