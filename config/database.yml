@@ -9,5 +9,5 @@ production:
   host: mysql5.locum.ru
   reconnect: false
   database: skmz_hostel23
-  username: skmz_hostel23
-  password: arQ1dgQx
+  username: skmz_hostel24
+  password: VYWWvdTn
