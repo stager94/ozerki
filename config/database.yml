@@ -6,6 +6,7 @@ development:
 production:
   adapter: mysql2
   encoding: utf8
+  host: mysql5.locum.ru
   reconnect: false
   database: skmz_ozerki24
   username: skmz_ozerki24
