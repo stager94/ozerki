@@ -8,6 +8,6 @@ production:
   encoding: utf8
   host: mysql5.locum.ru
   reconnect: false
-  database: skmz_hostel96
-  username: skmz_hostel96
-  password: QzMuoFeI
+  database: skmz_hostel24
+  username: skmz_hostel24
+  password: VYWWvdTn
