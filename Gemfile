@@ -20,6 +20,10 @@ gem 'geocoder'
 gem 'fancybox2-rails', '~> 0.2.4'
 gem 'sublimevideo_rails'
 gem 'youtube_search'
+gem 'capistrano_colors', '0.5.4', :require => false
+gem 'capistrano'
+gem 'rvm-capistrano'
+gem 'unicorn'
 
 group :assets do
 	gem 'sass-rails',   '~> 3.2.3'
@@ -30,10 +34,6 @@ end
 group :development do
 	gem 'sqlite3'
 	gem 'pry'
-	gem 'capistrano_colors', '0.5.4', :require => false
-	gem 'capistrano'
-	gem 'rvm-capistrano'
-	gem 'unicorn'
 end
 
 group :production do
