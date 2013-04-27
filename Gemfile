@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.12'
 gem 'haml'
-gem 'paperclip'
 gem 'rails-i18n'
 gem 'russian', '~> 0.6.0'
 gem 'activeadmin', '~> 0.5.1'
