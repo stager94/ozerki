@@ -1,6 +1,4 @@
 Hostel::Application.routes.draw do
-  map.home '/', :controller => "application", :action => "index"
-
   root to: "application#index"
 
   ActiveAdmin.routes(self)
