@@ -1,12 +1,15 @@
 = title "Главная страница"
 
-.span7.none.w724
-	- @news.each do |article|
-		= render 'shared/partials/root_new', article: article
+- cache "main_page_cache" do
+	.span7.none.w724
+		- @news.each do |article|
+			= render 'shared/partials/root_new', article: article
 .span3.rml20-max979
 	= render 'shared/sidebar'
 .clr-fx
 
+- cache "map_cache", expires_in: 12.hours do
+	= map_model
 
-= map_model
-.well= gallery_module
+- cache "gallery_on_main_cache", expires_in: 12.hours do
+	.well= gallery_module

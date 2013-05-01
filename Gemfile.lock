@@ -150,6 +150,8 @@ GEM
       coderay (~> 1.0.5)
       method_source (~> 0.8)
       slop (~> 3.4)
+    quiet_assets (1.0.2)
+      railties (>= 3.1, < 5.0)
     rack (1.4.5)
     rack-cache (1.2)
       rack (>= 0.4)
@@ -244,6 +246,7 @@ DEPENDENCIES
   mysql2
   paperclip
   pry
+  quiet_assets
   rails (= 3.2.12)
   rails-i18n
   russian (~> 0.6.0)

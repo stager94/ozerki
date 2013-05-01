@@ -16,4 +16,7 @@ Hostel::Application.routes.draw do
   resources :testimonals, path: :testimonals, only: [:index, :create]
   resources :videos, path: :video, only: [:index]
 
+  resource :cache do
+    get :clear_fragment
+  end
 end

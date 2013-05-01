@@ -5,3 +5,11 @@ ru:
     twitter: 'Твиттер'
     youtube: 'YouTube'
     odnoklassniki: 'Одноклассники'
+  cache:
+    clear_text: 'Очистка кэша'
+    footer_cache: 'Обновить футер'
+    slider_cache: 'Обновить слайдер'
+    main_page: 'Обновить содержание главной страницы'
+    infoline_cache: 'Обновить инфолинию'
+    gallery_on_main_cache: 'Обновить галерею на главной странице'
+    map_cache: 'Обновить карту'

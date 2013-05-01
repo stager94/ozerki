@@ -17,11 +17,19 @@
       .row
         .span11
           = image_tag 'template/logo.png', class: 'mt40'
-          = render 'shared/slider'
+
+          - cache "slider_cache" do
+            = render 'shared/slider'
+
           = render 'shared/menu'
-          = infoline_module
+
+          - cache "infoline_cache" do
+            = infoline_module
+
           - unless !@h1
             %h1=@h1
           = render_breadcrumbs
           = yield
-    = render 'shared/footer'
+
+    - cache "footer_cache" do
+      = render 'shared/footer'
