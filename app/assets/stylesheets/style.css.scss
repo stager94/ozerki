@@ -383,35 +383,82 @@ nav.pagination{
 
 /* Socials */
 .social-icon{
-  width: 30px;
   height: 28px;
   display: inline-block;
+  padding-left: 28px;
+  line-height: 28px;
+
+  .text{
+    background: #c8c8c8;
+    padding: 0 5px;
+    color: white;
+    font-weight: normal;
+  }
 
   &:hover{
-    background-position: 0 28px;
+    overflow: hidden;
+    background-position: 0 -38px !important;
     cursor: pointer;
+  }
+
+  &.vkontakte{
+    background: url(socials/vk.png) no-repeat top left;
+
+    &:hover{
+      .text{
+        background: #49739f;
+      }
+    }
+  }
+
+  &.facebook{
+    background: url(socials/facebook.png) no-repeat top left;
+
+    &:hover{
+      .text{
+        background: #4a6d9d;
+      }
+    }
+  }
+
+  &.twitter{
+    background: url(socials/twitter.png) no-repeat top left;
+
+    &:hover{
+      .text{
+        background: #3bc1ed;
+      }
+    }
+  }
+
+  &.youtube{
+    background: url(socials/youtube.png) no-repeat top left;
+
+    &:hover{
+      .text{
+        background: #bf2f29;
+      }
+    }
+  }
+
+  &.odnoklassniki{
+    background: url(socials/ok.png) no-repeat top left;
+
+    &:hover{
+      .text{
+        background: #f18f32;
+      }
+    }
   }
 }
 
-.vkontakte{
-  background: url(socials/vk.png);
+@media (max-width: 1000px){
+  .social-icon{
+    .text{ display: none; visibility: hidden; }
+  }
 }
 
-.facebook{
-  background: url(socials/facebook.png);
-}
 
-.twitter{
-  background: url(socials/twitter.png);
-}
-
-.youtube{
-  background: url(socials/youtube.png);
-}
-
-.odnoklassniki{
-  background: url(socials/ok.png);
-}
 
 #photos-wrapper{
   width: 100%;
@@ -746,4 +793,32 @@ nav.pagination{
   font-weight: bold;
   text-align: center;
   width: 100%;
+}
+
+table{
+  &.tbl{
+    border-spacing: 2px;
+    tr:nth-child(odd){
+      td{
+        background: #eee;
+      }
+    }
+
+    tr{
+      td{
+        padding: 10px;
+        border: 1px solid white;
+      }
+
+      th{
+        padding: 10px;
+        text-transform: uppercase;
+        font-size: 0.85em;
+        font-weight: normal;
+        background: #99b433;
+        color: white;
+        border: 1px solid white;
+      }
+    }
+  }
 }

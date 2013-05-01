@@ -42,38 +42,6 @@ div.main{
 	}
 }
 
-/* Socials */
-.social-icon{
-  width: 30px;
-  height: 28px;
-  display: inline-block;
-
-  &:hover{
-    background-position: 0 28px;
-    cursor: pointer;
-  }
-}
-
-.vkontakte{
-  background: url(socials/vk.png);
-}
-
-.facebook{
-  background: url(socials/facebook.png);
-}
-
-.twitter{
-  background: url(socials/twitter.png);
-}
-
-.youtube{
-  background: url(socials/youtube.png);
-}
-
-.odnoklassniki{
-  background: url(socials/ok.png);
-}
-
 body.active_admin {
   .cke_toolbar {
     .cke_button {

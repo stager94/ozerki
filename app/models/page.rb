@@ -1,6 +1,7 @@
 class Page < ActiveRecord::Base
 	before_create :create_alias
 	before_update :create_alias
+  after_update :clear_page_cache
 
   attr_accessible :slug, :author, :keywords, :snippet, :text, :title
 
@@ -13,6 +14,10 @@ class Page < ActiveRecord::Base
 
   def category
     CategoryNew.find(self.category_new_id)
+  end
+
+  def clear_page_cache
+    ActionController::Base.new.expire_fragment "page_#{id}_cache"
   end
 
   private
