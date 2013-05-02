@@ -2,15 +2,18 @@
 	.rml20-max979{
 		margin-left: 0 !important;
 	}
+	.mt40{
+		margin-top: 10px;
+	}
 }
 
 @media (min-width: 1024px){
 	.mt40{
-		margin-top: 40px;
+		margin-top: 28px;
 	}
 
 	.mt70{
-		margin-top: 70px;
+		margin-top: 25px;
 	}
 }
 
