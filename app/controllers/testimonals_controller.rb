@@ -6,8 +6,8 @@ class TestimonalsController < ApplicationController
 		@testimonals = Testimonal.displayed.page(params[:page]).per(5)
 		@testimonal = Testimonal.new
 		# binding.pry
-		# @geoposition = get_address_text Geocoder.search([request.location.latitude,request.location.longitude])
-		@geoposition = get_address_text Geocoder.search([50.4333,30.5167])
+		@geoposition = get_address_text Geocoder.search([request.location.latitude,request.location.longitude])
+		# @geoposition = get_address_text Geocoder.search([50.4333,30.5167])
 	end
 
 	def create
