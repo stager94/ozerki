@@ -13,7 +13,7 @@ class TestimonalsController < ApplicationController
 
 		@testimonal = Testimonal.new(testimonal)
 		@testimonal.save if @testimonal.valid?
-  	respond_with(@testimonal)
+  		respond_with(@testimonal)
 	end
 
 	private

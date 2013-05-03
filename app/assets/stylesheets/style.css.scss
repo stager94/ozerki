@@ -51,6 +51,14 @@ footer{
     width: 920px;
     margin: 0 auto;
   }
+
+  a{
+    color: #333 !important;
+
+    &:hover{
+      color: #4a6d9d !important;
+    }
+  }
 }
 
 .block-title{

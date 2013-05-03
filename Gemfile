@@ -24,6 +24,8 @@ gem 'capistrano_colors', '0.5.4', :require => false
 gem 'capistrano'
 gem 'rvm-capistrano'
 gem 'capistrano-ext'
+gem 'i18n-country-translations'
+gem 'carmen'
 
 group :assets do
 	gem 'sass-rails',   '~> 3.2.3'
