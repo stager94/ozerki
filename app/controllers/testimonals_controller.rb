@@ -5,6 +5,8 @@ class TestimonalsController < ApplicationController
 	def index
 		@testimonals = Testimonal.displayed.page(params[:page]).per(5)
 		@testimonal = Testimonal.new
+		# binding.pry
+		@geoposition = Geocoder.search([request.location.latitude,request.location.longitude]).first
 	end
 
 	def create
@@ -13,6 +15,7 @@ class TestimonalsController < ApplicationController
 
 		@testimonal = Testimonal.new(testimonal)
 		@testimonal.save if @testimonal.valid?
+
   		respond_with(@testimonal)
 	end
 
