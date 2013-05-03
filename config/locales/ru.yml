@@ -13,3 +13,13 @@ ru:
     infoline_cache: 'Обновить инфолинию'
     gallery_on_main_cache: 'Обновить галерею на главной странице'
     map_cache: 'Обновить карту'
+  room:
+    free_zero: 'Свободно'
+    free_one: 'Свободна'
+    free_few: 'Свободны'
+
+    zero: 'комнат'
+    one: 'комната'
+    few: 'комнаты'
+
+    free_place: 'Свободно мест:'

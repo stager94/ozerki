@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130419202210) do
+ActiveRecord::Schema.define(:version => 20130503111317) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -51,9 +51,10 @@ ActiveRecord::Schema.define(:version => 20130419202210) do
     t.integer  "room_number"
     t.integer  "free_room"
     t.boolean  "display"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
+    t.datetime "created_at",                     :null => false
+    t.datetime "updated_at",                     :null => false
     t.string   "apartment_class"
+    t.integer  "free_place",      :default => 0
   end
 
   create_table "category_galleries", :force => true do |t|

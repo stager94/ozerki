@@ -11,6 +11,7 @@ ActiveAdmin.register Apartment do
 		column :apartment_class
 		column :room_number
 		column :free_room
+		column :free_place
 		column :display do |f|
       if f.display == true
         raw "<span class='status_tag complete'>true</span>"
@@ -27,6 +28,7 @@ ActiveAdmin.register Apartment do
 			row :apartment_class
 			row :room_number
 			row :free_room
+			row :free_place
 			row :display do |f|
 	      if f.display == true
 	        raw "<span class='status_tag complete'>true</span>"
@@ -43,6 +45,7 @@ ActiveAdmin.register Apartment do
 			f.input :apartment_class
 			f.input :room_number
 			f.input :free_room
+			f.input :free_place
 			f.input :display
 		end
 

@@ -74,6 +74,7 @@ ru:
         display: 'Отображать?'
         free_room: 'Количество свободных комнат'
         room_number: 'Общее количество комнат'
+        free_place: 'Количество свободных мест'
         apartment_class: 'Класс'
         created_at: 'Создано'
         updated_at: 'Обновлено'

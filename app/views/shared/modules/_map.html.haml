@@ -5,5 +5,5 @@
 			%div{class: "#{house.apartment_class} house-item"}
 				.item-title= house.title
 				= image_tag house.image
-				.item-badge{class: house.badge}
+				.item-badge{class: house.badge, data: {toggle: :tooltip, placement: :bottom, original: {title: "Здание #{house.title} \n #{house.free_room_text} \n #{house.free_place_text}"} }}
 					= house.free_room

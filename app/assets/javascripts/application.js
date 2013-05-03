@@ -15,6 +15,7 @@
 //= require jquery.webticker
 //= require jquery.slides
 //= require twitter/bootstrap
+//= require tooltip
 //= require mousewheel
 //= require fancybox
 //= require ckeditor/init
@@ -23,6 +24,8 @@
 //= require_tree .
 
 $(document).ready(function(){
+  $('.item-badge').tooltip();
+
   $('#webtricker').liMarquee({
       direction: 'left',
       //Указывает направление движения содержимого контейнера (left | up)

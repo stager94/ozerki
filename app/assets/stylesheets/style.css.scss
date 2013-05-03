@@ -553,7 +553,8 @@ nav.pagination{
   color: white;
   position: absolute;
   margin-top: -17px;
-  margin-left: 20px;  
+  margin-left: 20px;
+  cursor: pointer; 
 
   &.green{
     background: url(green_badge.png) no-repeat top left !important;
