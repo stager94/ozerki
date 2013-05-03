@@ -823,3 +823,24 @@ table{
     }
   }
 }
+
+.footer-logo{
+  width: 102px;
+  height: 50px;
+  float: left;
+  margin: 0 10px 0 0;
+  background: url(template/footer-logo-greyscale.png) no-repeat top left;
+  display: block;
+
+  &:hover{
+    background: url(template/footer-logo.png) no-repeat top left;
+  }
+}
+
+.socials{
+  margin: 0 0 10px 0;
+}
+
+.copyright-text{
+  padding: 7px 0;
+}

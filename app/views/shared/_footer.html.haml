@@ -1,4 +1,11 @@
-%footer 
+%footer
 	.inline-footer
-		%div= social_model
-		%div &copy; 2013 ПАО "Старокраматорский машиностроительный завод"
+		%div.socials= social_model
+
+		= link_to root_path do
+			.footer-logo
+		%div.copyright-text
+			&copy; 2013 ПАО "Старокраматорский машиностроительный завод"
+			%br
+			= link_to 'http://vk.com/stager94', target: '_blank' do
+				= raw "&copy; Developed by Stanislav Gernyak"
