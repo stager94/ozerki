@@ -6,7 +6,7 @@ class TestimonalsController < ApplicationController
 		@testimonals = Testimonal.displayed.page(params[:page]).per(5)
 		@testimonal = Testimonal.new
 		# binding.pry
-		@geoposition = Geocoder.search([request.location.latitude,request.location.longitude]).first
+		@geoposition = get_address_text Geocoder.search([request.location.latitude,request.location.longitude])
 	end
 
 	def create
@@ -24,5 +24,23 @@ class TestimonalsController < ApplicationController
 		@h1 = I18n.t 'pages.testimonals'
 		add_breadcrumb I18n.t('pages.home'), root_path
 		add_breadcrumb I18n.t('pages.testimonals'), testimonals_path
+	end
+
+
+	def get_address_text(address)
+		array = Array.new
+
+		result = request.location.country
+		result = result
+		
+		unless address.blank?
+			array[0] = address.first.address_components[1]['long_name'] unless address.first.address_components[3]['long_name'].blank?
+			array[1] = address.first.address_components[2]['long_name'] unless address.first.address_components[3]['long_name'].blank?
+			array[2] = address.first.address_components[3]['long_name'] unless address.first.address_components[3]['long_name'].blank?
+
+			result = array.join(', ')
+		end
+
+		result
 	end
 end
