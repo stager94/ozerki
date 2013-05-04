@@ -35,17 +35,25 @@ class TestimonalsController < ApplicationController
 		result = result
 		
 		unless address.blank?
-			country = address.first.address_components.select {|u| u["types"][0] == 'country'}
-			locality = address.first.address_components.select {|u| u["types"][0] == 'locality'}
-			sublocality = address.first.address_components.select {|u| u["types"][0] == 'sublocality'}
+			address_hash = Hash.new
 
-			array[2] = country[0]['long_name'] unless country.blank?
-			array[1] = locality[0]['long_name'] unless locality.blank?
-			array[0] = sublocality[0]['long_name'] unless sublocality.blank?
+			address.first.address_components.each do |ad|
+				address_hash["#{ad['types'][0]}"] = ad
+			end
 
-			# array[0] = address.first.address_components[1]['long_name'] unless address.first.address_components[3]['long_name'].blank?
-			# array[1] = address.first.address_components[2]['long_name'] unless address.first.address_components[3]['long_name'].blank?
-			# array[2] = address.first.address_components[3]['long_name'] unless address.first.address_components[3]['long_name'].blank?
+
+			array[2] = address_hash['country']['long_name'] unless address_hash['country'].blank?
+			array[1] = address_hash['sublocality']['long_name'] unless address_hash['sublocality'].blank?
+			array[0] = address_hash['locality']['long_name'] unless address_hash['locality'].blank?
+
+			if address_hash['sublocality'].blank? && !address_hash['administrative_area_level_2'].blank?
+				array[1] = address_hash['administrative_area_level_2']['long_name']
+			end
+			
+			if address_hash['locality'].blank? && !address_hash['administrative_area_level_1'].blank?
+				array[0] = address_hash['administrative_area_level_1']['long_name']
+			end
+
 
 			result = array.join(', ')
 		end
