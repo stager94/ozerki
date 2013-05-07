@@ -5,6 +5,7 @@ ru:
     twitter: 'Твиттер'
     youtube: 'YouTube'
     odnoklassniki: 'Одноклассники'
+    mail_ru: 'Мой мир mail.ru'
   cache:
     clear_text: 'Очистка кэша'
     footer_cache: 'Обновить футер'

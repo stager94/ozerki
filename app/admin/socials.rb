@@ -16,6 +16,7 @@ ActiveAdmin.register Social do
                                                       ["#{I18n.t('socials.facebook')}", "facebook"], 
                                                       ["#{I18n.t('socials.twitter')}", "twitter"],
                                                       ["#{I18n.t('socials.odnoklassniki')}", "odnoklassniki"],
+                                                      ["#{I18n.t('socials.mail_ru')}", "mail-ru"],
                                                       ["#{I18n.t('socials.youtube')}", "youtube"]]
       f.input :position
       f.input :display

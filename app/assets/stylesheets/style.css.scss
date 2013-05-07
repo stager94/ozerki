@@ -399,7 +399,7 @@ nav.pagination{
 
   .text{
     background: #c8c8c8;
-    padding: 0 5px;
+    padding: 0 5px 0 0;
     color: white;
     font-weight: normal;
   }
@@ -459,6 +459,16 @@ nav.pagination{
       }
     }
   }
+
+  &.mail-ru{
+    background: url(socials/mail.ru.png) no-repeat top left;
+
+    &:hover{
+      .text{
+        background: #0076ad;
+      }
+    }
+  }
 }
 
 @media (max-width: 1000px){
@@ -488,16 +498,26 @@ nav.pagination{
   strong{
     font-size: 16px;
     font-weight: bold;
-    clear: both;
     display: block;
   }
 
+  .image-part{
+    float: left;
+    width: 75px;
+    height: 62px;
+  }
+
+  .info-part{
+    padding-left: 80px;
+    min-height: 62px;
+  }
+
   a{
-    color: #80fffb;
+    color: #fff;
     text-decoration: underline;
 
     &:hover{
-      color: #80fffb;
+      color: rgb(255, 189, 189);
       text-decoration: none;
     }
   }
@@ -852,4 +872,23 @@ table{
 
 .copyright-text{
   padding: 7px 0;
+}
+
+.red-badge{
+  height: 20px;
+  border-left: 10px solid #ac3939;
+  padding-left: 2px;
+}
+
+.yellow-badge{
+  height: 20px;
+  border-left: 10px solid #cbb017;
+  padding-left: 2px;
+}
+
+.green-badge{
+  height: 20px;
+  border-left: 10px solid #21921a;
+  padding-left: 2px;
+  margin-bottom: 10px;
 }
