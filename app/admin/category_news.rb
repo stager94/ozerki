@@ -47,6 +47,7 @@ ActiveAdmin.register CategoryNew do
 
   show do
     attributes_table do
+      row :id
       row :title
       row :parent_id do |category|
         link_to CategoryNew.find(category.parent_id).title, admin_category_news_path(category.parent_id) if category.parent_id
@@ -63,6 +64,7 @@ ActiveAdmin.register CategoryNew do
 
 	form do |f|
       f.inputs "Edit" do
+        f.input :id
 	      f.input :parent_id, as: :select, collection: nested_set_options(CategoryNew) {|i| "#{'--' * i.level} #{i.title}" }
   	  	f.input :title
  				f.input :slug

@@ -8,7 +8,7 @@ class CategoryNew < ActiveRecord::Base
 	attr_protected :lft, :rgt
 
 	scope :main, order('lft ASC')
-  attr_accessible :keywords, :parent_id, :slug, :snippet, :title, :display, :lft, :rgt, :depth
+  attr_accessible :id, :keywords, :parent_id, :slug, :snippet, :title, :display, :lft, :rgt, :depth
 
   validates_presence_of :title
   validates_uniqueness_of :slug, :title

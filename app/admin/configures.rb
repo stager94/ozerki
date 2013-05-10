@@ -2,8 +2,6 @@ ActiveAdmin.register Configure do
   menu :parent => I18n.t('admin.menu.settings')
 
 	config.clear_sidebar_sections!
-	config.batch_actions = false
-	config.clear_action_items!
 
   index as: :block, download_links: false do |configure|
   	div for: configure do
