@@ -6,10 +6,10 @@ development:
 production:
   adapter: mysql2
   encoding: utf8
-  host: mysql5.locum.ru
-  database: skmz_hostel41
+  database: skmz_hostel_production
   username: root
   password: skmzskmz
+  
 # production:
 #   adapter: sqlite3
 #   database: db/skmz.hostel.dev.sqlite3
