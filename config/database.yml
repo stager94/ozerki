@@ -8,8 +8,8 @@ production:
   encoding: utf8
   host: mysql5.locum.ru
   database: skmz_hostel41
-  username: skmz_hostel41
-  password: QQmc2E9A
+  username: root
+  password: skmzskmz
 # production:
 #   adapter: sqlite3
 #   database: db/skmz.hostel.dev.sqlite3
