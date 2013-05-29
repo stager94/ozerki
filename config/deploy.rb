@@ -4,7 +4,7 @@ require 'capistrano_colors'
 # require 'capistrano/ext/multistage'
 # require 'capistrano_recipes'
 
-# ssh_options[:forward_agent] = true
+ssh_options[:forward_agent] = true
 default_run_options[:pty] = true
 
 set :rvm_path, '/usr/local/rvm'
