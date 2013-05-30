@@ -33,7 +33,7 @@ Hostel::Application.configure do
   # config.force_ssl = true
 
   # See everything in the log (default is :info)
-  config.log_level = :warn
+  # config.log_level = :warn
   config.consider_all_requests_local = true
 
   # Prepend all log lines with the following tags
