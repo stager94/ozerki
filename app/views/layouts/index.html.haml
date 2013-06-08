@@ -5,6 +5,7 @@
       = yield :title
       = Configure.first[:title_separator]
       = Configure.first[:site_title]
+    = favicon_link_tag
     %meta{name: "description", content: "#{@meta_description}"}
     %meta{name: "keywords", content: "#{@meta_keywords}"}
     - if @meta_author
