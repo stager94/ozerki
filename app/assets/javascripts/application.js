@@ -15,7 +15,6 @@
 //= require jquery.webticker
 //= require jquery.slides
 //= require twitter/bootstrap
-//= require tooltip
 //= require mousewheel
 //= require fancybox
 //= require ckeditor/init
