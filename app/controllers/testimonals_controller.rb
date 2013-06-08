@@ -42,16 +42,16 @@ class TestimonalsController < ApplicationController
 			end
 
 
-			array[2] = address_hash['country']['long_name'] unless address_hash['country'].blank?
-			array[0] = address_hash['sublocality']['long_name'] unless address_hash['sublocality'].blank?
-			array[1] = address_hash['locality']['long_name'] unless address_hash['locality'].blank?
+			array[1] = address_hash['country']['long_name'] unless address_hash['country'].blank?
+			# array[0] = address_hash['sublocality']['long_name'] unless address_hash['sublocality'].blank?
+			array[0] = address_hash['locality']['long_name'] unless address_hash['locality'].blank?
 
-			if address_hash['sublocality'].blank? && !address_hash['administrative_area_level_2'].blank?
-				array[0] = address_hash['administrative_area_level_2']['long_name']
-			end
+			# if address_hash['sublocality'].blank? && !address_hash['administrative_area_level_2'].blank?
+			# 	array[0] = address_hash['administrative_area_level_2']['long_name']
+			# end
 			
 			if address_hash['locality'].blank? && !address_hash['administrative_area_level_1'].blank?
-				array[1] = address_hash['administrative_area_level_1']['long_name']
+				array[0] = address_hash['administrative_area_level_1']['long_name']
 			end
 
 
