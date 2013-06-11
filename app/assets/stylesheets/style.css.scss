@@ -46,6 +46,7 @@ footer{
   /*line-height: 50px;*/
   font: bold 14px 'PT Sans';
   background: #eee;
+  display: table !important;
 
   .inline-footer{
     width: 920px;
@@ -866,12 +867,27 @@ table{
   }
 }
 
+.developed-by{
+  width: 132px;
+  height: 49px;
+  float: right;
+  margin: 0 10px 0 0;
+  background: url(template/stager.png) no-repeat top left;
+  display: block;
+
+  &:hover{
+    background: url(template/stager_ac.png) no-repeat top left;
+  }
+}
+
+
 .socials{
   margin: 0 0 10px 0;
 }
 
 .copyright-text{
   padding: 7px 0;
+  float: left;
 }
 
 .red-badge{
@@ -891,4 +907,8 @@ table{
   border-left: 10px solid #21921a;
   padding-left: 2px;
   margin-bottom: 10px;
+}
+
+.gsAddInfo2{
+  background-color: rgb(241, 241, 241);
 }
