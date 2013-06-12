@@ -11,6 +11,7 @@
  *= require_self
  *= require style
  *= require bootstrap
+ *= require datepicker
  *= require margins
  *= require testimonals
  *= require sizes

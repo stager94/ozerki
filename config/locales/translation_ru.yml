@@ -35,6 +35,7 @@ ru:
     testimonals: 'Отзывы'
     gallery: 'Фотогалерея'
     video: 'Видео'
+    booking: 'Бронирование номера'
   errors:
     validates:
       empty: 'Не все поля заполнены!'

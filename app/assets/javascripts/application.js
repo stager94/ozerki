@@ -20,6 +20,8 @@
 //= require ckeditor/init
 //= require ckeditor/config
 //= require ckeditor/ckeditor
+//= require bootstrap-datepicker
+//= require bootstrap-datepicker-ru
 //= require_tree .
 
 $(document).ready(function(){

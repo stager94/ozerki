@@ -1,1 +1,32 @@
-Booking
+= title "Бронирование номера"
+
+.well
+	%h2{class: "text-center"} Заявка на бронирование номера
+	= form_for @book, html: { class: "form-horizontal" }, remote: true do |f|
+		.control-group
+			.controls
+				%ul#form-errors.text-error
+				%ul#form-notices.text-info
+
+		.control-group
+			= f.label :name, class: :'control-label'
+			.controls= f.text_field :name, class: :span5
+		
+		.control-group
+			= f.label :email, class: :'control-label'
+			.controls= f.text_field :email, class: :span5
+
+		.control-group
+			= f.label :from, class: :'control-label'
+			.controls= f.text_field :from, class: :span5, data: { behaviour: :datepicker }
+
+		.control-group
+			= f.label :phone, class: :'control-label'
+			.controls= f.text_field :phone, class: :span5
+
+		.control-group
+			= f.label :places, class: :'control-label'
+			.controls= f.text_field :places, class: :span5
+
+		.control-group
+			.controls= f.submit "Бронировать", class: "button"
