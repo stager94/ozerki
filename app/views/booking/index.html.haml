@@ -3,6 +3,10 @@
 .well
 	%h2{class: "text-center"} Заявка на бронирование номера
 	= form_for @book, html: { class: "form-horizontal" }, remote: true do |f|
+
+		.control-group
+			%label Для получения счета на предоплату за проживание на базе отдыха «Озерки» просим заполнить следующую форму:
+
 		.control-group
 			.controls
 				%ul#form-errors.text-error
@@ -17,16 +21,20 @@
 			.controls= f.text_field :email, class: :span5
 
 		.control-group
-			= f.label :from, class: :'control-label'
-			.controls= f.text_field :from, class: :span5, data: { datepicker: :datepicker }
-
-		.control-group
 			= f.label :phone, class: :'control-label'
 			.controls= f.text_field :phone, class: :span5
 
 		.control-group
 			= f.label :places, class: :'control-label'
 			.controls= f.text_field :places, class: :span5
+
+		.control-group
+			= f.label :from, class: :'control-label'
+			.controls= f.text_field :from, class: :span5, data: { datepicker: :datepicker }
+
+		.control-group
+			= f.label :to, class: :'control-label'
+			.controls= f.text_field :to, class: :span5, data: { datepicker: :datepicker }
 
 		.control-group
 			.controls= f.submit "Бронировать", class: "button"

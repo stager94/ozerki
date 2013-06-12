@@ -1,0 +1,8 @@
+<% if @booking.valid? %>
+	$('#form-errors').html('');
+	$('#form-notices').html('Ваша заявка принята. Вскоре она будет обработана и на Ваш email будет отправлен счет для предоплаты! Спасибо за Ваш выбор!');
+	$('#new_booking').closest('form').find("input[type=text], textarea").val("");
+<% else %>
+	$('#form-notices').html('');
+	$('#form-errors').html("<%= j(raw generate_errors_list_for @booking.errors) %>");
+<% end %>

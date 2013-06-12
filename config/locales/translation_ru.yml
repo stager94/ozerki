@@ -70,6 +70,13 @@ ru:
       apartment: 'Домики'
 
     attributes:
+      booking:
+        name: 'Фамилия Имя Отчество'
+        email: 'Email'
+        from: 'Дата заезда'
+        to: 'Дата отъезда'
+        phone: 'Номер телефона'
+        places: 'Количество мест'
       apartment:
         title: 'Название'
         display: 'Отображать?'

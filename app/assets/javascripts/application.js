@@ -21,20 +21,23 @@
 //= require ckeditor/init
 //= require ckeditor/config
 //= require ckeditor/ckeditor
+//= require datepicker-ru
 //= require_tree .
 
 $(document).ready(function(){
-  $('#booking_from').datepicker({
+  $('input[data-datepicker=datepicker]').datepicker({
     // inline: true,
     //nextText: '&rarr;',
     //prevText: '&larr;',
     showOtherMonths: true,
     //dateFormat: 'dd MM yy',
     dayNamesMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чтв', 'Пт', 'Сб'],
+    regional: "ru-RU",
+    dateFormat: "DD, d MM, yy",
     //showOn: "button",
     //buttonImage: "img/calendar-blue.png",
     //buttonImageOnly: true,
-  });
+  }, $.datepicker.regional['ru']);
   
   $('.item-badge').tooltip();
 
