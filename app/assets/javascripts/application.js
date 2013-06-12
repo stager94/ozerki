@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery-ui
 //= require jquery.webticker
 //= require jquery.slides
 //= require twitter/bootstrap
@@ -20,11 +21,21 @@
 //= require ckeditor/init
 //= require ckeditor/config
 //= require ckeditor/ckeditor
-//= require bootstrap-datepicker
-//= require bootstrap-datepicker-ru
 //= require_tree .
 
 $(document).ready(function(){
+  $('#booking_from').datepicker({
+    // inline: true,
+    //nextText: '&rarr;',
+    //prevText: '&larr;',
+    showOtherMonths: true,
+    //dateFormat: 'dd MM yy',
+    dayNamesMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чтв', 'Пт', 'Сб'],
+    //showOn: "button",
+    //buttonImage: "img/calendar-blue.png",
+    //buttonImageOnly: true,
+  });
+  
   $('.item-badge').tooltip();
 
   $('#webtricker').liMarquee({

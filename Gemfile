@@ -31,6 +31,8 @@ gem 'rvm-capistrano'
 gem 'capistrano-ext'
 gem 'i18n-country-translations'
 gem 'carmen'
+gem 'bootstrap-datetimepicker-rails'
+gem 'bootstrap-datepicker-rails'
 
 group :assets do
 	gem 'sass-rails',   '~> 3.2.3'
@@ -48,7 +50,7 @@ group :production do
 	gem 'mysql2'
 end
 
-gem 'jquery-rails', '2.3.0'
+gem 'jquery-rails', '2.2.1'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

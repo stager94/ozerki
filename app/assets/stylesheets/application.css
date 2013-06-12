@@ -12,6 +12,7 @@
  *= require style
  *= require bootstrap
  *= require datepicker
+ *= require bootstrap-datepicker
  *= require margins
  *= require testimonals
  *= require sizes
