@@ -11,7 +11,7 @@ class BookingController < ApplicationController
 
 		@booking = Booking.new(booking)
 		@booking.save if @booking.valid?
-		MessagesMailer.book.deliver
+		MessagesMailer.book(booking).deliver
   	respond_with(@booking)
 	end
 

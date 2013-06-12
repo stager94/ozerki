@@ -27,3 +27,6 @@ ru:
   errors_messages:
     from: 'Неверно задана дата заезда'
     to: 'Неверно задана дата отъезда'
+  masseges_mailer:
+    subjects:
+      booking: 'Новая заявка на бронирование номера'
