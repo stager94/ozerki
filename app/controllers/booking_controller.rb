@@ -1,7 +1,7 @@
 class BookingController < ApplicationController
 	before_filter :settings
 	respond_to :html, :js
-	
+
 	def index
 		@book = Booking.new
 	end
@@ -11,7 +11,7 @@ class BookingController < ApplicationController
 
 		@booking = Booking.new(booking)
 		@booking.save if @booking.valid?
-
+		MessagesMailer.book.deliver
   	respond_with(@booking)
 	end
 
