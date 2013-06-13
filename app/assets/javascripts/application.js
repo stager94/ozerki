@@ -15,6 +15,7 @@
 //= require jquery-ui
 //= require jquery.webticker
 //= require jquery.slides
+//= require jquery_elastic
 //= require twitter/bootstrap
 //= require mousewheel
 //= require fancybox
@@ -51,6 +52,8 @@ $(document).ready(function(){
   }, $.datepicker.regional['ru']);
 
   $("input[data-mask=phone]").mask("(999) 999-9999");
+
+  $("textarea").elastic();
   
   $('.item-badge').tooltip();
 
