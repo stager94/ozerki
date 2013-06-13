@@ -1,6 +1,7 @@
 <% if @testimonal.valid? %>
 	// window.location.href = "<%= testimonals_path %>";
 	$('#form-errors').html('');
+	alertify.success("Ув. <%= @testimonal[:name]%>! Ваш отзыв был поставлен в очередь на модерацию. Благодарим за терпение :)");
 	$('#form-notices').html('Спасибо за отзыв. После модерации он обязательно появится в списке на сайте!');
 	$('#new_testimonal').closest('form').find("input[type=text], textarea").val("");
 <% else %>
