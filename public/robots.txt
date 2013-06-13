@@ -1,10 +1,10 @@
 User-agent: Yandex
 Disallow: /admin/
 Allow: /{sitemap}
-Sitemap: http://ozerki.dn.ua/{sitemap}
+Sitemap: http://ozerki.dn.ua/sitemap.xml.gz
 Host: ozerki.dn.ua
 
 User-agent: *
 Disallow: /admin/
-Allow: /{sitemap}
-Sitemap: http://ozerki.dn.ua/{sitemap}
+Allow: /sitemap.xml.gz
+Sitemap: http://ozerki.dn.ua/sitemap.xml.gz
