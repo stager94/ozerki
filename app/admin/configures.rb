@@ -6,7 +6,7 @@ ActiveAdmin.register Configure do
   index as: :block, download_links: false do |configure|
   	div for: configure do
 	  	h2 "#{I18n.t('activerecord.models.configure')}"
-	  	attributes_table_for Configure.first, :site_title, :title_separator, :news_id, :news_per_page, :module_news_per_page, :site_snippet, :site_keywords, :book_email, :book_days_num
+	  	attributes_table_for Configure.first, :site_title, :title_separator, :news_id, :news_per_page, :module_news_per_page, :site_snippet, :site_keywords, :book_email, :book_days_num, :email
 	  	div do
 	  		link_to "#{I18n.t 'admin.edit'}", edit_admin_configure_path(configure)
 	  	end
@@ -26,6 +26,7 @@ ActiveAdmin.register Configure do
   		row :site_keywords
       row :book_email
       row :book_days_num
+      row :email
   	end
   end
 
@@ -40,6 +41,7 @@ ActiveAdmin.register Configure do
       f.input :site_keywords
       f.input :book_email
       f.input :book_days_num
+      f.input :email
     end
     f.buttons
   end
