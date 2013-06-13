@@ -25,20 +25,30 @@
 //= require_tree .
 
 $(document).ready(function(){
-  $('input[data-datepicker=datepicker]').datepicker({
-    // inline: true,
-    //nextText: '&rarr;',
-    //prevText: '&larr;',
+  $('#booking_from').datepicker({
     showOtherMonths: true,
-    //dateFormat: 'dd MM yy',
     dayNamesMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чтв', 'Пт', 'Сб'],
     regional: "ru-RU",
     dateFormat: "d MM yy",
-    //showOn: "button",
-    //buttonImage: "img/calendar-blue.png",
-    //buttonImageOnly: true,
+    minDate: "+1d",
+    maxDate: "+45d",
+    onClose: function(selectedDate) {
+      $( "#booking_to" ).datepicker( "option", "minDate", selectedDate );
+    }
   }, $.datepicker.regional['ru']);
   
+  $('#booking_to').datepicker({
+    showOtherMonths: true,
+    dayNamesMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чтв', 'Пт', 'Сб'],
+    regional: "ru-RU",
+    dateFormat: "d MM yy",
+    minDate: "+1d",
+    maxDate: "+45d",
+    onClose: function(selectedDate) {
+      $( "#booking_from" ).datepicker( "option", "maxDate", selectedDate );
+    }
+  }, $.datepicker.regional['ru']);
+
   $('.item-badge').tooltip();
 
   $('#webtricker').liMarquee({
