@@ -106,6 +106,8 @@ footer{
 }
 
 @media (max-width: 767px){
+
+
   footer{
     .inline-footer{
       width: 90%;
@@ -113,6 +115,24 @@ footer{
     .counters{
       clear: both;
       margin: 0 !important;
+      text-align: center !important;
+    }
+    .developed-by{
+      float: initial !important;
+      clear: both !important;
+      width: 100% !important;
+      background-position: top center !important;
+      margin-bottom: 10px !important;
+    }
+
+    .footer-logo{
+      float: initial !important;
+      width: 100% !important;
+      background-position: top center !important;
+    }
+
+    .socials{
+      text-align: center !important;
     }
   }
   .block-title{
