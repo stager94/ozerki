@@ -50,7 +50,7 @@ ActiveAdmin.register Infoline do
   form do |f|
     f.inputs I18n.t 'admin.general' do
       f.input :title
-      f.input :route, as: :select, collection: [["#{I18n.t 'admin.collect.new'}", 'new'], ["#{I18n.t 'admin.collect.page'}", 'page'], ["#{I18n.t 'admin.collect.path'}", 'path']]
+      f.input :route, as: :select, collection: [["#{I18n.t 'admin.collect.new'}", 'new'], ["#{I18n.t 'admin.collect.page'}", 'page'], ["#{I18n.t 'admin.collect.path'}", 'path'], ["#{I18n.t 'admin.collect.static'}", 'static']]
       f.input :new
       f.input :page
       f.input :path
