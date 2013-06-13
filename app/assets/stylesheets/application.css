@@ -21,5 +21,6 @@
  *= require fancybox
  *= require videos
  *= require pickerdate
+ *= alertify.default
  *= require_tree .
  */
