@@ -63,6 +63,11 @@ footer{
       color: #4a6d9d !important;
     }
   }
+
+  .counters{
+    margin-top: 19px;
+    margin-left: 497px;
+  }
 }
 
 .block-title{
@@ -105,6 +110,10 @@ footer{
     .inline-footer{
       width: 90%;
     }
+    .counters{
+      clear: both;
+      margin: 0 !important;
+    }
   }
   .block-title{
     margin-top: 30px;
@@ -146,6 +155,10 @@ footer{
   footer{
     .inline-footer{
       width: 700px;
+    }
+    .counters{
+      clear: both;
+      margin: 0 !important;
     }
   }
   #gallery-module{
@@ -861,7 +874,7 @@ table{
   width: 102px;
   height: 50px;
   float: left;
-  margin: 0 10px 0 0;
+  margin: 0 10px 10px 0;
   background: url(template/footer-logo-greyscale.png) no-repeat top left;
   display: block;
 
