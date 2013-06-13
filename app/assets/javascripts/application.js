@@ -24,9 +24,13 @@
 //= require ckeditor/ckeditor
 //= require datepicker-ru
 //= require maskedinput
+//= airport
 //= require_tree .
 
 $(document).ready(function(){
+
+  $(  " #text"  ).airport([ 'Внимание', 'Акции!!!' ]);
+
   $('#booking_from').datepicker({
     showOtherMonths: true,
     dayNamesMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чтв', 'Пт', 'Сб'],
