@@ -16,6 +16,7 @@ class PagesController < ApplicationController
 		add_breadcrumb @page.title, page_path(@page)
 
 		@meta_description = @page.snippet
-		@meta_keywords = @page.keywords
+		@meta_keywords    = @page.keywords
+		@meta_author      = @page.author unless @page.author.blank?
 	end
 end
