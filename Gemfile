@@ -33,6 +33,7 @@ gem 'i18n-country-translations'
 gem 'carmen'
 gem 'bootstrap-datetimepicker-rails'
 gem 'bootstrap-datepicker-rails'
+gem 'maskedinput-rails'
 
 group :assets do
 	gem 'sass-rails',   '~> 3.2.3'

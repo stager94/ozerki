@@ -22,7 +22,7 @@
 
 		.control-group
 			= f.label :phone, class: :'control-label'
-			.controls= f.text_field :phone, class: :span5
+			.controls= f.text_field :phone, class: :span5, data: { mask: :phone }
 
 		.control-group
 			= f.label :places, class: :'control-label'

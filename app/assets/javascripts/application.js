@@ -22,6 +22,7 @@
 //= require ckeditor/config
 //= require ckeditor/ckeditor
 //= require datepicker-ru
+//= require maskedinput
 //= require_tree .
 
 $(document).ready(function(){
@@ -48,6 +49,8 @@ $(document).ready(function(){
       $("#booking_from").datepicker("option", "maxDate", selectedDate);
     }
   }, $.datepicker.regional['ru']);
+
+  $("input[data-mask=phone]").mask("(999) 999-9999");
   
   $('.item-badge').tooltip();
 
