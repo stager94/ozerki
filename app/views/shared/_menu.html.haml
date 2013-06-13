@@ -4,6 +4,7 @@
 - kontacts  = Page.find(2)
 - history   = Page.find(3)
 - price     = Page.find(4)
+- dosug     = Page.find(5)
 .navbar.navbar-inverse
   .navbar-inner
     .container
@@ -18,8 +19,8 @@
             = link_to "Главная", root_path
           %li{class: params[:controller] == 'pages' && params[:id] == uslugi.to_param  ? "active" : ""}
             = link_to "Услуги", page_path(uslugi)
-          %li{class: @active_menu == 'home' ? "" : ""}
-            = link_to "Досуг", root_path
+          %li{class: params[:controller] == 'pages' && params[:id] == dosug.to_param  ? "active" : ""}
+            = link_to "Досуг", page_path(dosug)
           %li{class: params[:controller] == 'pages' && params[:id] == price.to_param  ? "active" : ""}
             = link_to "Цены", page_path(price)
           %li{class: params[:controller] == 'news' && params[:category_news_id] == akcii.to_param ? "active" : ""}
