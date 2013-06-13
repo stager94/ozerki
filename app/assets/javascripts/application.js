@@ -33,7 +33,7 @@ $(document).ready(function(){
     minDate: "+1d",
     maxDate: "+45d",
     onClose: function(selectedDate) {
-      $( "#booking_to" ).datepicker( "option", "minDate", selectedDate );
+      $("#booking_to").datepicker("option", "minDate", selectedDate);
     }
   }, $.datepicker.regional['ru']);
   
@@ -45,10 +45,10 @@ $(document).ready(function(){
     minDate: "+1d",
     maxDate: "+45d",
     onClose: function(selectedDate) {
-      $( "#booking_from" ).datepicker( "option", "maxDate", selectedDate );
+      $("#booking_from").datepicker("option", "maxDate", selectedDate);
     }
   }, $.datepicker.regional['ru']);
-
+  
   $('.item-badge').tooltip();
 
   $('#webtricker').liMarquee({
