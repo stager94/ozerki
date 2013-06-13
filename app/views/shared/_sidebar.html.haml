@@ -1,3 +1,10 @@
+/ Бронирование
+.metro-block.red
+	%div.image-part= image_tag 'booking.png'
+	%div.info-part
+		= link_to bookings_path do
+			Оставить онлайн заявку на бронирование номера
+
 / Новости
 = news_module
 
@@ -8,12 +15,6 @@
 		%strong Не знаете как доехать?
 		Подробная карта проезда в разделе
 		= link_to '"Контакты"', page_path(Page.find(2))
-
-/ Вопросы
-.metro-block.red
-	%div.info-part
-		= link_to bookings_path do
-			Оставить онлайн заявку на бронирование номера
 
 / Погода
 = weather_module

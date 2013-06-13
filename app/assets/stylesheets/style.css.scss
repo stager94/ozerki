@@ -274,21 +274,21 @@ nav.pagination{
 
 /*Plugin CSS*/
 .str_wrap {
-    overflow:hidden;
-    //zoom:1;
-    /*width:100%;*/
-    font-size:13px;
-    line-height:16px;
-    position:relative;
-    -moz-user-select: none;
-    -khtml-user-select: none;
-    user-select: none;  
-    background:#f5f5f5;
-    white-space:nowrap;
+  overflow:hidden;
+  //zoom:1;
+  /*width:100%;*/
+  font-size:13px;
+  line-height:16px;
+  position:relative;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;  
+  background:#ffc40d;
+  white-space:nowrap;
 }
 
 .str_wrap.str_active {
-    background:#f1f1f1;
+    background:#f5a802;
 }
 .str_move { 
     white-space:nowrap;
