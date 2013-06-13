@@ -11,6 +11,8 @@ namespace :configure do
 		configure[:module_news_per_page] = 3
 		configure[:site_snippet]     	 	 = I18n.t 'configure.site_snippet'
 		configure[:site_keywords]		     = I18n.t 'configure.site_keywords'
+		configure[:book_email]           = 'book@ozerki.dn.ua'
+		configure[:book_days_num]        = 45
 
 		if configure.save
 			puts I18n.t 'configure.success'

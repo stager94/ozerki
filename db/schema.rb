@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130613115757) do
+ActiveRecord::Schema.define(:version => 20130613121436) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -127,13 +127,14 @@ ActiveRecord::Schema.define(:version => 20130613115757) do
     t.string   "title_separator"
     t.string   "news_per_page"
     t.string   "module_news_per_page"
-    t.datetime "created_at",                           :null => false
-    t.datetime "updated_at",                           :null => false
+    t.datetime "created_at",                                               :null => false
+    t.datetime "updated_at",                                               :null => false
     t.string   "site_keywords"
     t.text     "site_snippet"
     t.integer  "news_id"
     t.string   "book_email"
     t.integer  "book_days_num",        :default => 45
+    t.string   "email",                :default => "noreply@ozerki.dn.ua"
   end
 
   create_table "galleries", :force => true do |t|
