@@ -1,5 +1,5 @@
 class MessagesMailer < ActionMailer::Base
-  default to: "stager94@gmail.com"
+  default to: "aho@skmz.dn.ua"
 
   def book(params)
     @name   = params[:name]
