@@ -40,6 +40,8 @@ role :db,  domain, :primary => true
 #   run "ln -s #{deploy_to}/shared/config/database.yml #{current_release}/config/database.yml"
 # end
 
+after "deploy:update_code", "deploy:copy_old_sitemap"
+
 # Далее идут правила для перезапуска unicorn. Их стоит просто принять на веру - они работают.
 # В случае с Rails 3 приложениями стоит заменять bundle exec unicorn_rails на bundle exec unicorn
 namespace :deploy do
@@ -51,5 +53,8 @@ namespace :deploy do
   end
   task :stop do
     run "if [ -f #{unicorn_pid} ] && [ -e /proc/$(cat #{unicorn_pid}) ]; then kill -QUIT `cat #{unicorn_pid}`; fi"
+  end
+	task :copy_old_sitemap do
+    run "if [ -e #{previous_release}/public/sitemap.xml.gz ]; then cp #{previous_release}/public/sitemap* #{current_release}/public/; fi"
   end
 end
