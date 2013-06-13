@@ -35,6 +35,8 @@ gem 'bootstrap-datetimepicker-rails'
 gem 'bootstrap-datepicker-rails'
 gem 'maskedinput-rails'
 gem 'jquery-elastic-rails'
+gem 'sitemap_generator'
+# gem 'sitemap_generator/tasks'
 
 group :assets do
 	gem 'sass-rails',   '~> 3.2.3'
