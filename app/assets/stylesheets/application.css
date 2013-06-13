@@ -20,5 +20,6 @@
  *= category_galleries
  *= require fancybox
  *= require videos
+ *= require pickerdate
  *= require_tree .
  */

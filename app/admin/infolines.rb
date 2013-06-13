@@ -3,7 +3,7 @@ ActiveAdmin.register Infoline do
   menu :parent => I18n.t('admin.menu.news')
   
   filter :title
-  filter :route, as: :select, collection: [["#{I18n.t 'admin.collect.new'}", 'new'], ["#{I18n.t 'admin.collect.page'}", 'page'], ["#{I18n.t 'admin.collect.path'}", 'path']]
+  filter :route, as: :select, collection: [["#{I18n.t 'admin.collect.new'}", 'new'], ["#{I18n.t 'admin.collect.page'}", 'page'], ["#{I18n.t 'admin.collect.path'}", 'path'], ["#{I18n.t 'admin.collect.static'}", 'static']]
   filter :new
   filter :page
   filter :path

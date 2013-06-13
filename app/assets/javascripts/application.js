@@ -24,36 +24,54 @@
 //= require ckeditor/ckeditor
 //= require datepicker-ru
 //= require maskedinput
-//= airport
+//= require airport
+//= require legacy
+//= require picker
+//= require pickerdate
 //= require_tree .
+
+// Russian
+
+$.extend( $.fn.pickadate.defaults, {
+    monthsFull: [ 'Января', 'Февраля', 'Марта', 'Апреля', 'Мая', 'Июня', 'Июля', 'Августа', 'Сентября', 'Октября', 'Ноября', 'Декабря' ],
+    monthsShort: [ 'Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек' ],
+    weekdaysFull: [ 'воскресенье', 'понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота' ],
+    weekdaysShort: [ 'вс', 'пн', 'вт', 'ср', 'чт', 'пт', 'сб' ],
+    today: 'сегодня',
+    clear: 'удалить',
+    firstDay: 1,
+    format: 'd mmmm yyyy г.',
+    formatSubmit: 'yyyy/mm/dd'
+});
 
 $(document).ready(function(){
 
-  $(  " #text"  ).airport([ 'Внимание', 'Акции!!!' ]);
 
-  $('#booking_from').datepicker({
-    showOtherMonths: true,
-    dayNamesMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чтв', 'Пт', 'Сб'],
-    regional: "ru-RU",
-    dateFormat: "d MM yy",
-    minDate: "+1d",
-    maxDate: "+45d",
-    onClose: function(selectedDate) {
-      $("#booking_to").datepicker("option", "minDate", selectedDate);
-    }
-  }, $.datepicker.regional['ru']);
+  $("#text").airport([ 'Внимание', 'Акции!!!' ]);
+
+  // $('#booking_from').datepicker({
+  //   showOtherMonths: true,
+  //   dayNamesMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чтв', 'Пт', 'Сб'],
+  //   regional: "ru-RU",
+  //   dateFormat: "d MM yy",
+  //   minDate: "+1d",
+  //   maxDate: "+45d",
+  //   onClose: function(selectedDate) {
+  //     $("#booking_to").datepicker("option", "minDate", selectedDate);
+  //   }
+  // }, $.datepicker.regional['ru']);
   
-  $('#booking_to').datepicker({
-    showOtherMonths: true,
-    dayNamesMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чтв', 'Пт', 'Сб'],
-    regional: "ru-RU",
-    dateFormat: "d MM yy",
-    minDate: "+1d",
-    maxDate: "+45d",
-    onClose: function(selectedDate) {
-      $("#booking_from").datepicker("option", "maxDate", selectedDate);
-    }
-  }, $.datepicker.regional['ru']);
+  // $('#booking_to').datepicker({
+  //   showOtherMonths: true,
+  //   dayNamesMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чтв', 'Пт', 'Сб'],
+  //   regional: "ru-RU",
+  //   dateFormat: "d MM yy",
+  //   minDate: "+1d",
+  //   maxDate: "+45d",
+  //   onClose: function(selectedDate) {
+  //     $("#booking_from").datepicker("option", "maxDate", selectedDate);
+  //   }
+  // }, $.datepicker.regional['ru']);
 
   $("input[data-mask=phone]").mask("(999) 999-9999");
 

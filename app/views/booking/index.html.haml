@@ -1,5 +1,26 @@
 = title "Бронирование номера"
 
+:javascript
+	$(document).ready(function(){
+		var today = new Date();
+	  var max_date = new Date();
+	  max_date.setDate(today.getDate()+#{@book_days_num});
+
+	  $('#booking_from').pickadate({
+	    today: '',
+	    clear: '',
+	    min: true,
+	    max: max_date
+	  });
+
+	  $('#booking_to').pickadate({
+	    today: '',
+	    clear: '',
+	    min: true,
+	    max: max_date
+	  });
+	});
+
 .well
 	%h2{class: "text-center"} Заявка на бронирование номера
 	= form_for @book, html: { class: "form-horizontal" }, remote: true do |f|
@@ -30,11 +51,13 @@
 
 		.control-group
 			= f.label :from, class: :'control-label'
-			.controls= f.text_field :from, class: :span5, data: { datepicker: :datepicker }
-
+			.controls
+				= text_field_tag :from, nil, class: :span5, data: { datepicker: :datepicker }, id: :booking_from
+ 
 		.control-group
 			= f.label :to, class: :'control-label'
-			.controls= f.text_field :to, class: :span5, data: { datepicker: :datepicker }
+			.controls
+				= text_field_tag :to, nil, class: :span5, data: { datepicker: :datepicker }, id: :booking_to
 
 		.control-group
 			.controls= f.submit "Бронировать", class: "button"
