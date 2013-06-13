@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
     add_breadcrumb I18n.t('pages.home'), root_path
   	@news              = New.root
     @h1                = I18n.t 'pages.home'
-    @meta_description  = @configs[:site_snippet]
+    @meta_description  = @config[:site_snippet]
     @meta_keywords     = @config[:site_keywords]
 
     render layout: "index"
