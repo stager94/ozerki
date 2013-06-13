@@ -1,6 +1,6 @@
 User-agent: Yandex
 Disallow: /admin/
-Allow: /{sitemap}
+Allow: /sitemap.xml.gz
 Sitemap: http://ozerki.dn.ua/sitemap.xml.gz
 Host: ozerki.dn.ua
 
