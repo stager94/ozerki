@@ -33,7 +33,7 @@ $(document).ready(function(){
     //dateFormat: 'dd MM yy',
     dayNamesMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чтв', 'Пт', 'Сб'],
     regional: "ru-RU",
-    dateFormat: "DD, d MM, yy",
+    dateFormat: "d MM yy",
     //showOn: "button",
     //buttonImage: "img/calendar-blue.png",
     //buttonImageOnly: true,
