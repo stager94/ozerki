@@ -26,6 +26,9 @@ ActiveAdmin.register Configure do
   		row :site_keywords
       row :book_email
       row :book_days_num
+      row :book_excel do |c|
+        link_to "#{c.book_excel_file_name}", "#{c.book_excel}"
+      end
   	end
   end
 
@@ -40,6 +43,7 @@ ActiveAdmin.register Configure do
       f.input :site_keywords
       f.input :book_email
       f.input :book_days_num
+      f.input :book_excel, as: :file
     end
     f.buttons
   end
