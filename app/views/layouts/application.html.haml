@@ -19,7 +19,8 @@
     .container
       .row
         .span11
-          = image_tag 'template/logo.png', class: 'mt40'
+          = link_to root_path do
+            = image_tag 'template/logo.png', class: 'mt40'
 
           - cache "slider_cache" do
             = render 'shared/slider'
