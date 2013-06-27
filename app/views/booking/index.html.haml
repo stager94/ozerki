@@ -50,6 +50,10 @@
 			.controls= f.text_field :places, class: :span5
 
 		.control-group
+			= f.label :rooms, class: :'control-label'
+			.controls= f.text_field :rooms, class: :span5
+
+		.control-group
 			= f.label :from, class: :'control-label'
 			.controls
 				= text_field_tag :from, nil, class: :span5, data: { datepicker: :datepicker }, id: :booking_from

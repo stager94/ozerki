@@ -8,6 +8,7 @@ class MessagesMailer < ActionMailer::Base
     @from          = params[:from]
     @to            = params[:to]
     @places        = params[:places]
+    @rooms         = params[:rooms]
     @recipient     = Configure.first[:book_email]
 
   	mail to: @recipient, from: @email, subject: I18n.t('masseges_mailer.subjects.booking')

@@ -14,11 +14,13 @@ class BookingController < ApplicationController
 		booking[:email]  = params[:booking]["email"]
 		booking[:phone]  = params[:booking]["phone"]
 		booking[:places] = params[:booking]["places"]
-		booking[:from] = params[:from]
-		booking[:to] = params[:to]
+		booking[:rooms]  = params[:booking][:rooms]
+		booking[:from]   = params[:from]
+		booking[:to]     = params[:to]
+
 
 		@booking = Booking.new(booking)
-		@booking.save if @booking.valid?
+		# @booking.save if @booking.valid?
 		MessagesMailer.book(booking).deliver if @booking.valid?
   	respond_with(@booking)
 	end
