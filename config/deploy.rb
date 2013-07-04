@@ -15,7 +15,7 @@ set :rvm_type, :system
 
 set :application, "ozerki"
 set :rails_env, "production"
-set :domain, "root@198.199.88.251" # Это необходимо для деплоя через ssh. Именно ради этого я настоятельно советовал сразу же залить на сервер свой ключ, чтобы не вводить паролей.
+set :domain, "root@192.241.207.138" # Это необходимо для деплоя через ssh. Именно ради этого я настоятельно советовал сразу же залить на сервер свой ключ, чтобы не вводить паролей.
 set :deploy_to, "/var/www/#{application}"
 # set :user,        'root'
 set :use_sudo,    false
