@@ -9,9 +9,8 @@ development:
 #   database: skmz_hostel_production
 #   username: root
 #   password: skmzskmz
-  
-# production:
-#   adapter: sqlite3
-#   database: db/skmz.hostel.dev.sqlite3
-#   pool: 5
-#   timeout: 5000
+production:
+  adapter: sqlite3
+  database: db/skmz.hostel.dev.sqlite3
+  pool: 5
+  timeout: 5000
