@@ -1,4 +1,5 @@
 ActiveAdmin.register Page do
+	I18n.locale = :ru
 	menu :parent => I18n.t('admin.menu.news')
 
 	filter :title
