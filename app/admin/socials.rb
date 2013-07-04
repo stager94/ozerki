@@ -1,4 +1,5 @@
 ActiveAdmin.register Social do
+  I18n.locale = :ru
   menu :parent => I18n.t('admin.menu.settings')
 
   filter :title
