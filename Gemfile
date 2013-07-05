@@ -37,6 +37,7 @@ gem 'maskedinput-rails'
 gem 'jquery-elastic-rails'
 gem 'sitemap_generator'
 # gem 'sitemap_generator/tasks'
+gem 'select2-rails'
 
 group :assets do
 	gem 'sass-rails',   '~> 3.2.3'

@@ -1,4 +1,9 @@
 Hostel::Application.routes.draw do
+  namespace :api do
+    resources :news, only: [:index]
+  end
+
+
   root to: "application#index"
 
   ActiveAdmin.routes(self)
