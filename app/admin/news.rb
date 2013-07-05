@@ -18,6 +18,8 @@ ActiveAdmin.register New do
 			raw "#{f.title} <h6>#{f.slug}</h6>"
 		end
 
+		column :lower_title
+
 		column :category_new_id do |f|
 			link_to "#{f.category.title}", admin_category_news_path(f.category) unless !f.category_new_id
 		end

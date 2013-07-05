@@ -1,9 +1,12 @@
+# coding: utf-8
 class New < ActiveRecord::Base
   belongs_to :category_new
   acts_as_taggable
 
 	before_create :create_alias
 	before_update :create_alias
+  before_update :set_lower_title
+  before_create :set_lower_title
 	
   attr_accessible :slug, :author, :content, :display, :root, :snippet, :title, :precontent, :category_new_id, :tag_list, :position, :news_id
 
@@ -35,5 +38,10 @@ class New < ActiveRecord::Base
   private
   def create_alias
 		self.slug = self.title.parameterize unless !self.slug.blank?
+  end
+
+  def set_lower_title
+    new_title = self.title
+    self.lower_title = new_title.mb_chars.downcase.to_s
   end
 end

@@ -1,7 +1,9 @@
+# coding: utf-8
 class Api::NewsController < ApplicationController
 	def index
-		news = New.all
-		count = New.count
-		render json: {count: count, news: news}
+		term = params[:data]
+		news = New.where("LOWER(lower_title) LIKE ?", "%#{term.mb_chars.downcase.to_s}%")
+
+		render json: news
 	end
 end
