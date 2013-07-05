@@ -1,6 +1,9 @@
 Hostel::Application.routes.draw do
   namespace :api do
-    resources :news, only: [:index]
+    scope "v1" do
+      resources :news, only: [:index]
+      resources :pages, only: [:index]
+    end
   end
 
 

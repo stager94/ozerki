@@ -17,7 +17,7 @@ $(document).ready(function(){
 		placeholder: 'Выберите необходимую новость',
 		minimumInputLength: 1,
 		ajax: {
-			url: "/api/news.json",
+			url: "/api/v1/news.json",
 			dataType: 'json',
       data: function (term, page) {
       	return {
@@ -35,4 +35,30 @@ $(document).ready(function(){
     	return data.title
     }
 	});	
+});
+
+$(document).ready(function(){
+  $('#infoline_page_id').select2({
+    width: '700px',
+    placeholder: 'Выберите необходимую страницу',
+    minimumInputLength: 1,
+    ajax: {
+      url: "/api/v1/pages.json",
+      dataType: 'json',
+      data: function (term, page) {
+        return {
+          data: term
+        };
+      },
+      results: function (data, page) {
+          return {results: data};
+      }
+    },
+    formatResult: function (data) {
+      return "<div class='select2-user-result'>" + data.title + "</div>"
+    },
+    formatSelection: function (data) {
+      return data.title
+    }
+  }); 
 });

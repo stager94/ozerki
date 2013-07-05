@@ -9,6 +9,7 @@ ActiveAdmin.register Page do
 		selectable_column
 		id_column
 		column :title
+		column :lower_title
 		column :slug
 		column :author
 		column :created_at

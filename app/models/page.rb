@@ -3,6 +3,9 @@ class Page < ActiveRecord::Base
 	before_update :create_alias
   after_update :clear_page_cache
 
+  before_update :set_lower_title
+  before_create :set_lower_title
+
   attr_accessible :slug, :author, :keywords, :snippet, :text, :title
 
   validates_presence_of :title, :text, :snippet, :keywords
@@ -23,5 +26,10 @@ class Page < ActiveRecord::Base
   private
   def create_alias
 		self.slug = self.title.parameterize unless !self.slug.blank?
+  end
+
+  def set_lower_title
+    new_title = self.title
+    self.lower_title = new_title.mb_chars.downcase.to_s
   end
 end

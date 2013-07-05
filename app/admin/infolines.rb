@@ -56,10 +56,10 @@ ActiveAdmin.register Infoline do
       f.input :display
     end
     f.inputs "Choose a new" do
-      f.input :new, as: :hidden
+      f.input :new_id, as: :hidden
     end
     f.inputs "Choose a page" do
-      f.input :page
+      f.input :page_id, as: :hidden
     end
     f.buttons
   end
