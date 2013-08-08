@@ -957,3 +957,9 @@ table{
 .display-block{
   display: block;
 }
+
+.small-padding {
+  .nav-list {
+    padding: 0;
+  }
+}
