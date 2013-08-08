@@ -6,7 +6,7 @@ App.factory 'Time', ['$resource', '$timeout', ($resource, $timeout) ->
 	$resource = {}
 	(tick = ->
 		$resource.now = new Date().toString()
-		$timeout tick, 1000
+		$timeout tick, 3000
 	)()
 	$resource
 ]
