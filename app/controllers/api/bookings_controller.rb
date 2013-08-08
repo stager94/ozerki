@@ -1,7 +1,7 @@
 class Api::BookingsController < ApplicationController
 	def index
 		result = Booking.all.count
-		render json: result
+		render json: [count: result]
 	end
 
 	def list
