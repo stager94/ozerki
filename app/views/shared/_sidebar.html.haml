@@ -6,6 +6,13 @@
 		= link_to bookings_path do
 			Оставить онлайн заявку на бронирование номера
 
+.well
+	%ul.nav.nav-list
+		%li.nav-header Информация о бронировании
+		%li
+			Общее количество заявок
+			%span.badge.pull-right{ng: {controller: 'BookingCtrl'}} {{booking_count[0][0]}}
+
 / Новости
 = news_module
 

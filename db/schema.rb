@@ -122,10 +122,8 @@ ActiveRecord::Schema.define(:version => 20130705203631) do
   create_table "configurations", :force => true do |t|
     t.string   "site_title"
     t.string   "title_separator"
-    t.datetime "created_at",           :null => false
-    t.datetime "updated_at",           :null => false
-    t.string   "news_per_page"
-    t.string   "module_news_per_page"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
   end
 
   create_table "configures", :force => true do |t|

@@ -1,5 +1,5 @@
 !!!
-%html
+%html{"ng-app" => "ozerki"}
   %head
     %title
       = yield :title
@@ -12,8 +12,11 @@
       %meta{name: "Author", content: "#{@meta_author}"}
     %meta{:content => "504e035072202841", :name => "yandex-verification"}/
     %meta{:content => "RgczP1Wh61-EPYVftq4LSmA57PI3bKRd6y_OrlBN0xQ", :name => "google-site-verification"}/
-    = stylesheet_link_tag    "application", :media => "all"
+    %script{src: "//ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js"}
+    %script{src: "//ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular-resource.min.js"}
     = javascript_include_tag "application"
+    = stylesheet_link_tag    "application", :media => "all"
+
     = csrf_meta_tags
   %body
     .container

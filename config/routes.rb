@@ -3,6 +3,7 @@ Hostel::Application.routes.draw do
     scope "v1" do
       resources :news, only: [:index]
       resources :pages, only: [:index]
+      resources :bookings, only: [:index]
     end
   end
 
