@@ -3,4 +3,12 @@ class Api::BookingsController < ApplicationController
 		result = Booking.all.count
 		render json: result
 	end
+
+	def list
+		result = nil
+		if params[:token].present? && params[:token] == 'secret'
+			result = Booking.all
+		end
+		render json: result
+	end
 end
