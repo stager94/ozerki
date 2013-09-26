@@ -28,8 +28,6 @@
 //= require legacy
 //= require picker
 //= require pickerdate
-//= require app
-//= require_tree ./angular
 //= require_tree .
 
 // Russian
