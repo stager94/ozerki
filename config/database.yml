@@ -1,8 +1,14 @@
+# development:
+#   adapter: sqlite3
+#   database: db/skmz.hostel.dev.sqlite3
+#   pool: 5
+#   timeout: 5000
 development:
-  adapter: sqlite3
-  database: db/skmz.hostel.dev.sqlite3
-  pool: 5
-  timeout: 5000
+  adapter: mysql2
+  encoding: utf8
+  database: skmz_hostel_dev
+  username: root
+  password: admin
 production:
   adapter: mysql2
   encoding: utf8

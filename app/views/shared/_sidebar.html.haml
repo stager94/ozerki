@@ -11,7 +11,7 @@
 		%li.nav-header Информация о бронировании
 		%li
 			Общее количество заявок
-			%span.badge.pull-right{ng: {controller: 'BookingCtrl'}} {{booking_count[0]['count']}}
+			%span.badge.pull-right= Booking.count
 
 / Новости
 = news_module

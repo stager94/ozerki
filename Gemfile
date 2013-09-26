@@ -46,7 +46,7 @@ group :assets do
 end
 
 group :development do
-	gem 'sqlite3'
+	gem 'mysql2'
 	gem 'pry'
 	gem 'quiet_assets'
 	gem 'letter_opener'
