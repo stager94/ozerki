@@ -24,7 +24,6 @@ gem 'geocoder'
 gem 'fancybox2-rails', '~> 0.2.4'
 gem 'sublimevideo_rails'
 gem 'youtube_search'
-gem 'unicorn'
 gem 'capistrano_colors', '0.5.4', :require => false
 gem 'capistrano'
 gem 'rvm-capistrano'
@@ -53,6 +52,7 @@ group :development do
 end
 
 group :production do
+	gem 'unicorn', '~> 3.6.2', :require => nil
 	gem 'mysql2'
 end
 
