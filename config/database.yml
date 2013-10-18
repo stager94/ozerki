@@ -14,7 +14,7 @@ production:
   encoding: utf8
   database: skmz_hostel_production
   username: root
-  password: skmzskmz
+  password: 
 # production:
 #   adapter: sqlite3
 #   database: db/skmz.hostel.dev.sqlite3
