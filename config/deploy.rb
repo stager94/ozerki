@@ -1,3 +1,4 @@
+# coding: utf-8
 require 'bundler/capistrano' # Для работы bundler. При изменении гемов bundler автоматически обновит все гемы на сервере, чтобы они в точности соответствовали гемам разработчика. 
 require "rvm/capistrano"
 require 'capistrano_colors'
@@ -10,12 +11,12 @@ default_run_options[:pty] = true
 set :rvm_path, '/usr/local/rvm'
 
 set :using_rvm, true
-set :rvm_ruby_string, 'ruby-1.9.3-p392'
+set :rvm_ruby_string, 'ruby-1.9.3-p429'
 set :rvm_type, :system
 
 set :application, "ozerki"
 set :rails_env, "production"
-set :domain, "root@192.241.207.138" # Это необходимо для деплоя через ssh. Именно ради этого я настоятельно советовал сразу же залить на сервер свой ключ, чтобы не вводить паролей.
+set :domain, "root@146.185.156.130" # Это необходимо для деплоя через ssh. Именно ради этого я настоятельно советовал сразу же залить на сервер свой ключ, чтобы не вводить паролей.
 set :deploy_to, "/var/www/#{application}"
 # set :user,        'root'
 set :use_sudo,    false
