@@ -37,6 +37,7 @@ gem 'jquery-elastic-rails'
 gem 'sitemap_generator'
 # gem 'sitemap_generator/tasks'
 gem 'select2-rails'
+gem 'newrelic_rpm'
 
 group :assets do
 	gem 'sass-rails',   '~> 3.2.3'

@@ -11,12 +11,12 @@ default_run_options[:pty] = true
 set :rvm_path, '/usr/local/rvm'
 
 set :using_rvm, true
-set :rvm_ruby_string, 'ruby-1.9.3-p429'
+set :rvm_ruby_string, 'ruby-1.9.3-p392'
 set :rvm_type, :system
 
 set :application, "ozerki"
 set :rails_env, "production"
-set :domain, "root@146.185.156.130"
+set :domain, "root@192.241.207.138"
 set :deploy_to, "/var/www/#{application}"
 
 set :use_sudo,    false
